@@ -10,7 +10,7 @@ const base64Icon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAA
 
 const LikeBtn = ({liked, likes, toggle}) => (
   <TouchableOpacity /*onPress={toggle}*/ style={styles.row}>
-    {liked ? <Image style={{width: 20, height: 20,}} source={{uri: base64Icon}}/> : <Image style={{width: 24, height: 24}} source={{uri: base64Icon}}/>}
+    {liked ? <Image style={{width: 20, height: 20}} source={{uri: base64Icon}}/> : <Image style={{width: 24, height: 24,tintColor: '#eee'}} source={{uri: base64Icon}}/>}
 
     <Text style={styles.text}>{likes}</Text>
   </TouchableOpacity>

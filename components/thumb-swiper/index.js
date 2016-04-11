@@ -57,6 +57,7 @@ const ThumbSwiper = () => (
     scrollEventThrottle={200}
     contentContainerStyle={styles.scrollView}>
     {THUMBS.map(createThumbRow)}
+    <Text>hello</Text>
   </ScrollView>
 );
 
@@ -64,7 +65,6 @@ export default ThumbSwiper;
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: '#fff',
     justifyContent: 'space-between',
     //paddingLeft: 10
   },

@@ -6,7 +6,7 @@ import React, {
 
 import Heading from './heading'
 import Avatar from './avatar'
-import DateItem from './date'
+import DateItem from './date-item'
 
 const MediaBlock = ({src, timestamp, heading}) => (
   <View style={styles.header}>

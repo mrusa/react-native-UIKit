@@ -1,7 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
+'use strict'
 
 import React, {
   AppRegistry,
@@ -15,11 +12,19 @@ import React, {
   ScrollView
 } from 'react-native';
 
+import {defaultColor, primary, secondary, info} from './components/variables'
+
+import {
+  Button, Heading, Divider, Avatar, Card, MediaBlock, Close, Message, LikeBtn,
+  Gallery, InputField, Time, DateItem, Calendar,  ThumbSwiper, ModalCustom, GalleryTiles
+} from './components'
+
+/*
 //import Heading from './components/heading'
 import Divider from './components/divider'
 //import Avatar from './components/avatar'
 import Card from './components/card'
-import Button from './components/button'
+//import Button from './components/button'
 //import DateItem from './components/date'
 import MediaBlock from './components/media-block'
 import Close from './components/close'
@@ -29,17 +34,22 @@ import LikeBtn from './components/like-btn'
 import Gallery from './components/gallery'
 import InputField from './components/input-field'
 import Time from './components/time'
+import DateItem from './components/date-item'
 
 import Calendar from './components/CalendarIOS'
 import ThumbGrid from './components/thumbgrid'
 import ThumbSwiper from './components/thumb-swiper'
+import ModalCustom from './components/modal-custom'
+*/
 
 const App = () => (
     <ScrollView style={styles.container}>
 
-    <ThumbGrid/>
+    {/*<ModalCustom/>*/}
 
-      {/*<Calendar
+    <GalleryTiles/>
+{/*
+      <Calendar
         scrollEnabled={true}              // False disables swiping. Default: True
         showControls={true}               // False hides prev/next buttons. Default: False
         titleFormat={'MMMM YYYY'}         // Format for displaying current month. Default: 'MMMM YYYY'
@@ -55,11 +65,11 @@ const App = () => (
         startDate={'2016-04-01'}          // The first month that will display. Default: current month
         selectedDate={'2015-08-15'}       // Day to be selected
         customStyle={{day: {fontSize: 15, textAlign: 'center'}}} // Customize any pre-defined styles
-       />*/}
-      {/*<Gallery/>*/}
-
+       />
+      <Gallery/>
+*/}
       <View style={styles.block}>
-
+        <ThumbSwiper/>
         <MediaBlock src={'https://facebook.github.io/react/img/logo_og.png'}
           heading={'HYPEBEAST'}
           timestamp={1460227647478}
@@ -78,14 +88,15 @@ const App = () => (
           <Text>Comment</Text>
           <Text>Share</Text>
         </View>
-        <ThumbSwiper/>
+
       </View>
 
       <View style={styles.block}>
         <Time timestamp={1460227647478}/>
+        <DateItem timestamp={1460227647478}/>
         <InputField/>
-        <LikeBtn liked={true} likes={232} toggle={() => alert('liked')}/>
-        <Button radius={5}>Submit</Button>
+        <LikeBtn liked={false} likes={232} toggle={() => alert('liked')}/>
+        <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
         <Close/>
         <Message/>
       </View>

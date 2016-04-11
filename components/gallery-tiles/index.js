@@ -13,7 +13,7 @@ var {height, width} = Dimensions.get('window');
 
 const Thumb = ({data}) => (
   <Image
-    style={{width: width/3.05, height: width/3.05, alignItems:'center', marginBottom: width/3*0.025 }}
+    style={{width: width/3.05, height: width/3.05, marginBottom: width/3*0.025  }}
     source={{uri: data.src}}
   />
 );
@@ -31,7 +31,16 @@ var data = [
     {'name': 'row 3', 'age': 22, 'src':'http://dummyimage.com/200x200/eee/fff'},
 ];
 
-class ThumbGrid extends Component {
+const GalleryTiles = () => (
+  <ListView
+    contentContainerStyle={{justifyContent: 'space-between', flexDirection: 'row', flexWrap: 'wrap'}}
+    dataSource={ds.cloneWithRows(data)}
+    renderRow={(rowData) => <Thumb data={rowData}/>}
+    pageSize={1}
+  />
+);
+/*
+class GalleryTiles extends Component {
   constructor(props){
     super(props)
     this.state = {
@@ -42,13 +51,13 @@ class ThumbGrid extends Component {
   //  const { data } = this.props.route;
     return (
         <ListView
-          contentContainerStyle={{justifyContent: 'space-between', backgroundColor: '#fff', flexDirection: 'row', flexWrap: 'wrap'}}
-          dataSource={this.state.dataSource}
+          contentContainerStyle={{justifyContent: 'center', flexDirection: 'row', flexWrap: 'wrap'}}
+          dataSource={ds.cloneWithRows(data)}
           renderRow={(rowData) => <Thumb data={rowData}/>}
           pageSize={1}
         />
     );
   }
 }
-
-export default ThumbGrid;
+*/
+export default GalleryTiles;

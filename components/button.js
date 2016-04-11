@@ -6,23 +6,24 @@ import React, {
   View,
 } from 'react-native';
 
-const Button = ({children, radius}) => (
-  <TouchableOpacity style={[styles.btn, {borderRadius: radius || 0}]}>
-    <Text style={styles.text}>
+
+const Button = ({children, radius, type, invert, backgroundColor, color}) => (
+  <TouchableOpacity style={[styles.btn, {borderRadius: radius || 0, backgroundColor: backgroundColor}]}>
+    <Text style={[styles.text,{color: color}]}>
       {children}
     </Text>
   </TouchableOpacity>
 );
 
+
+
 var styles = StyleSheet.create({
   btn: {
-    backgroundColor: '#08e',
     padding: 10,
   },
   text: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#fff',
     textAlign: 'center'
   }
 });
