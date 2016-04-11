@@ -7,9 +7,9 @@ import React, {
 
 import {gutter, error} from '../variables'
 
-const FieldError = ({errorMsg}) => (
+const FieldError = ({errorMsg, error}) => (
   <View style={styles.container}>
-    <Text style={styles.error}>{errorMsg}</Text>
+    {error ? <Text style={styles.error}>{errorMsg}</Text> : null}
   </View>
 );
 

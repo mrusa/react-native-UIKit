@@ -17,7 +17,7 @@ import {defaultColor, primary, secondary, info} from './components/variables'
 import {
   Button, Heading, Divider, Avatar, Card, MediaBlock, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell
+  ReviewCell, MapSection
 } from './components'
 
 
@@ -28,6 +28,8 @@ const App = () => (
 
     {/*<ModalCustom/>*/}
     <Gallery/>
+
+    {/*<MapSection/>*/}
 
     <View style={{backgroundColor: '#fff'}}>
       <ReviewCell

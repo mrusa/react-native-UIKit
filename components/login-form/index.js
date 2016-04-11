@@ -19,7 +19,7 @@ const LoginForm = () => (
   <View style={styles.form}>
     <InputField placeHolder={'email'}/>
     <InputField placeHolder={'password'}/>
-    <FieldError errorMsg={'username or password incorrect'}/>
+    <FieldError errorMsg={'username or password incorrect'} error={true}/>
     <Button color={'#fff'} backgroundColor={secondary} radius={5}>Submit</Button>
     <LoginFb/>
   </View>
