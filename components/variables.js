@@ -9,7 +9,9 @@ export const info = '#007BF8';
 
 export const textBody = '#222'
 export const grey = '#979797';
-
+export const lightGrey = '#eee';
+export const darkGrey = '#838582'
+// spacing
 export const gutter = 10;
 
 const btnText = '#fff';

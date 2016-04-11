@@ -7,22 +7,33 @@ import React, {
   TouchableOpacity
 } from 'react-native';
 
-import {info, grey} from '../variables'
+import {info, grey, lightGrey} from '../variables'
 import {Time} from '../'
 
-const base64Icon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAANvAAADbwHCDHiHAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAADZQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARy+jrgAAABF0Uk5TAAECEj9DSElKS0xNd5qe+PlSX0SAAAAAT0lEQVQ4y63Txw0AIBADQXKO/TdLBWAk3313JB7ISv2e9foN+h7mCdxEIgiIKCCSgMiLF0VA1B/RKICeKGTPZEefhXokeyA7HA6cHhzv7Q6z0wYnJ7jqZAAAAABJRU5ErkJggg==';
+function isActive(active){
+  if(active){
+    return {
+      backgroundColor: info
+    }
+  }
+  else {
+    return {
+      backgroundColor: lightGrey
+    }
+  }
+}
 
-const Message = ({message, read}) => (
+const Message = ({user, title, timestamp, message, active}) => (
   <TouchableOpacity style={styles.row}>
-    <View style={styles.dot}></View>
+    <View style={[isActive(active), styles.dot]}></View>
     <View style={styles.message}>
       <View style={styles.header}>
-        <Text style={styles.user}>Jon Snow</Text>
-        <Time color={grey} timestamp={1460227617421}/>
+        <Text style={styles.user}>{user}</Text>
+        <Time color={grey} timestamp={timestamp}/>
         <Image source={require('./assets/more.png')} style={[styles.more,{height: 12, width: 7}]}/>
       </View>
-      <Text style={styles.title}>Winter is Coming</Text>
-      <Text style={styles.bodyText}>Hey Rob, have you seen the weather report on tv ?</Text>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.bodyText}>{message}</Text>
     </View>
   </TouchableOpacity>
 );
@@ -70,7 +81,6 @@ const styles = StyleSheet.create({
 
   },
   dot: {
-    backgroundColor: info,
     width: 10,
     height: 10,
     borderRadius: 5,

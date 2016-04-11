@@ -16,7 +16,8 @@ import {defaultColor, primary, secondary, info} from './components/variables'
 
 import {
   Button, Heading, Divider, Avatar, Card, MediaBlock, Close, AlertMessage, LikeBtn,
-  Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message
+  Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
+  ReviewCell
 } from './components'
 
 
@@ -28,6 +29,18 @@ const App = () => (
     {/*<ModalCustom/>*/}
     <Gallery/>
 
+    <View style={{backgroundColor: '#fff'}}>
+      <ReviewCell
+        title={'Full Circle'}
+        description={'Grocery . $$ . 24 miles'}
+        onPress={() => console.log('pressed')}
+      />
+      <ReviewCell
+        title={'Full Circle'}
+        description={'Grocery . $$ . 24 miles'}
+        onPress={() => console.log('pressed')}
+      />
+    </View>
 
     <LoginForm/>
     <GalleryTiles/>
@@ -71,11 +84,23 @@ const App = () => (
           <Text>Comment</Text>
           <Text>Share</Text>
         </View>
-        
+
       </View>
 
-      <Message/>
-      <Message/>
+      <Message
+        active={true}
+        user={'Jon Snow'}
+        title={'Winter is Coming'}
+        message={'Hey Rob, have you seen the weather report on tv ?'}
+        timestamp={1460227617421}
+      />
+      <Message
+        active={true}
+        user={'Jon Snow'}
+        title={'Winter is Coming'}
+        message={'Hey Rob, have you seen the weather report on tv ?'}
+        timestamp={1460227617421}
+      />
 
       <View style={styles.block}>
         <Time timestamp={1460227647478}/>

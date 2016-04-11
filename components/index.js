@@ -15,8 +15,10 @@ export { default as GalleryTiles  } from './gallery-tiles'
 export { default as ThumbSwiper } from './thumb-swiper'
 export { default as ModalCustom } from './modal-custom'
 
-
 export { default as Message } from './message'
 export { default as LoginForm } from './login-form'
 export { default as LoginFb } from './login-fb'
 export { default as FieldError } from './field-error'
+
+export { default as ReviewCell } from './review-cell'
+export { default as RatingBox } from './rating-box'
