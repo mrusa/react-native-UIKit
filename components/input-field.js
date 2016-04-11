@@ -7,6 +7,8 @@ import React, {
   TextInput
 } from 'react-native';
 
+import {gutter} from './variables'
+
 export default class InputField extends Component {
   constructor(){
     super()
@@ -15,12 +17,13 @@ export default class InputField extends Component {
     }
   }
   render(){
+    const {placeHolder} = this.props;
     return(
       <TextInput
          style={styles.input}
          onChangeText={(text) => this.setState({text})}
          value={this.state.text}
-         placeholder={'Write something here..'}
+         placeholder={placeHolder}
          placeholderTextColor={'#9197A3'}
        />
     )
@@ -35,5 +38,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 3,
     backgroundColor: '#FAFAFA',
+    marginBottom: gutter
   }
 });

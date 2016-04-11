@@ -6,6 +6,7 @@ import React, {
   View,
 } from 'react-native';
 
+import {gutter} from './variables'
 
 const Button = ({children, radius, type, invert, backgroundColor, color}) => (
   <TouchableOpacity style={[styles.btn, {borderRadius: radius || 0, backgroundColor: backgroundColor}]}>
@@ -20,6 +21,7 @@ const Button = ({children, radius, type, invert, backgroundColor, color}) => (
 var styles = StyleSheet.create({
   btn: {
     padding: 10,
+    marginBottom: gutter
   },
   text: {
     fontSize: 18,

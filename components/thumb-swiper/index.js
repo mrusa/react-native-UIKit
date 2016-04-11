@@ -49,6 +49,7 @@ const ThumbSwiper = () => (
     decelerationRate={'fast'}
     directionalLockEnabled={true}
     //pagingEnabled={true} // NOTE jumps to next
+    directionalLockEnabled={true}
     showsHorizontalScrollIndicator={false}
     removeClippedSubviews={true} // NOTE experimental feature
     ref={(scrollView) => { _scrollView = scrollView; }}
@@ -57,7 +58,6 @@ const ThumbSwiper = () => (
     scrollEventThrottle={200}
     contentContainerStyle={styles.scrollView}>
     {THUMBS.map(createThumbRow)}
-    <Text>hello</Text>
   </ScrollView>
 );
 

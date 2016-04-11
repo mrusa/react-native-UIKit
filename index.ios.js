@@ -16,37 +16,16 @@ import {defaultColor, primary, secondary, info} from './components/variables'
 
 import {
   Button, Heading, Divider, Avatar, Card, MediaBlock, Close, Message, LikeBtn,
-  Gallery, InputField, Time, DateItem, Calendar,  ThumbSwiper, ModalCustom, GalleryTiles
+  Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm
 } from './components'
 
-/*
-//import Heading from './components/heading'
-import Divider from './components/divider'
-//import Avatar from './components/avatar'
-import Card from './components/card'
-//import Button from './components/button'
-//import DateItem from './components/date'
-import MediaBlock from './components/media-block'
-import Close from './components/close'
-import Message from './components/message'
-import LikeBtn from './components/like-btn'
-
-import Gallery from './components/gallery'
-import InputField from './components/input-field'
-import Time from './components/time'
-import DateItem from './components/date-item'
-
-import Calendar from './components/CalendarIOS'
-import ThumbGrid from './components/thumbgrid'
-import ThumbSwiper from './components/thumb-swiper'
-import ModalCustom from './components/modal-custom'
-*/
 
 const App = () => (
     <ScrollView style={styles.container}>
 
     {/*<ModalCustom/>*/}
-
+<Gallery/>
+    <LoginForm/>
     <GalleryTiles/>
 {/*
       <Calendar
@@ -66,7 +45,7 @@ const App = () => (
         selectedDate={'2015-08-15'}       // Day to be selected
         customStyle={{day: {fontSize: 15, textAlign: 'center'}}} // Customize any pre-defined styles
        />
-      <Gallery/>
+
 */}
       <View style={styles.block}>
         <ThumbSwiper/>
@@ -94,7 +73,7 @@ const App = () => (
       <View style={styles.block}>
         <Time timestamp={1460227647478}/>
         <DateItem timestamp={1460227647478}/>
-        <InputField/>
+        <InputField />
         <LikeBtn liked={false} likes={232} toggle={() => alert('liked')}/>
         <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
         <Close/>
