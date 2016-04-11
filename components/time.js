@@ -1,6 +1,7 @@
 import React, {
   Component,
   StyleSheet,
+  defaultProps,
   View,
   Text,
   Image,
@@ -9,11 +10,17 @@ import React, {
 
 import moment from 'moment'
 
-const Time = ({timestamp}) => (
-  <Text style={styles.time}>{moment(timestamp).format('LT')}</Text>
+const Time = ({timestamp, color}) => (
+  <Text style={[styles.time, {color: color}]}>{moment(timestamp).format('LT')}</Text>
 );
 
 export default Time;
+
+
+Time.defaultProps = {
+  color: '#222',
+}
+
 
 var styles = StyleSheet.create({
   time: {

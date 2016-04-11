@@ -15,16 +15,20 @@ import React, {
 import {defaultColor, primary, secondary, info} from './components/variables'
 
 import {
-  Button, Heading, Divider, Avatar, Card, MediaBlock, Close, Message, LikeBtn,
-  Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm
+  Button, Heading, Divider, Avatar, Card, MediaBlock, Close, AlertMessage, LikeBtn,
+  Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message
 } from './components'
+
+
 
 
 const App = () => (
     <ScrollView style={styles.container}>
 
     {/*<ModalCustom/>*/}
-<Gallery/>
+    <Gallery/>
+
+
     <LoginForm/>
     <GalleryTiles/>
 {/*
@@ -67,8 +71,11 @@ const App = () => (
           <Text>Comment</Text>
           <Text>Share</Text>
         </View>
-
+        
       </View>
+
+      <Message/>
+      <Message/>
 
       <View style={styles.block}>
         <Time timestamp={1460227647478}/>
@@ -77,7 +84,7 @@ const App = () => (
         <LikeBtn liked={false} likes={232} toggle={() => alert('liked')}/>
         <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
         <Close/>
-        <Message/>
+        <AlertMessage/>
       </View>
 
     </ScrollView>

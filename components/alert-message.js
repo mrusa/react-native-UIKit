@@ -8,7 +8,7 @@ import React, {
 
 import Close from './close'
 
-const Message = () => (
+const AlertMessage = () => (
   <View style={styles.row}>
     <Text style={styles.text}>I am the message text here</Text>
     <Close/>
@@ -34,4 +34,4 @@ var styles = StyleSheet.create({
   }
 })
 
-export default Message;
+export default AlertMessage;
