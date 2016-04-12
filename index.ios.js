@@ -15,15 +15,41 @@ import React, {
 import {defaultColor, primary, lightGrey, secondary, info} from './components/variables'
 
 import {
-  Button, Heading, Divider, Avatar, Card, MediaBlock, Close, AlertMessage, LikeBtn,
+  Button, Heading, Divider, Avatar, Card, AvartarHeader, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp
 } from './components'
 
-
+const ImageFull = ({src, height}) => (
+  <Image source={{uri: src}} style={{resizeMode: 'cover', height: height}} />
+);
 
 const App = () => (
     <ScrollView style={styles.container}>
+      <View style={{padding: 10, backgroundColor: '#fff'}}>
+        <AvartarHeader
+          src={'https://s3.amazonaws.com/uifaces/faces/twitter/mattchevy/128.jpg'}
+          heading={'HYPEBEAST'}
+          timestamp={1460227647478}
+          circle={true}
+        />
+      </View>
+      <ImageFull
+        src={'http://i1.2photo.ru/u/w/539022.jpg'}
+        height={300}
+      />
+
+      <View style={{padding: 10, backgroundColor: '#fff'}}>
+        <AvartarHeader src={'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg'}
+          heading={'HYPEBEAST'}
+          timestamp={1460227647478}
+          circle={true}
+        />
+      </View>
+      <ImageFull
+        src={'http://i1.2photo.ru/u/w/539022.jpg'}
+        height={300}
+      />
 
       <GalleryOffset
         imagesArray={[
@@ -32,17 +58,26 @@ const App = () => (
           'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
           'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
         ]}
-        display={'row'}
-        />
+        display={'row'}/>
 
-        <MapSection
-          lat={40.712784}
-          lng={-74.005941}
-          />
 
     {/*<ModalCustom/>*/}
     <Gallery
-      height={300}
+      images={[
+        'http://i1.2photo.ru/u/w/539022.jpg',
+        'http://imgs.abduzeedo.com/files/paul0v2/under-night/01.jpg',
+        'https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg',
+        'https://7f9c61237bd6e732e57e-5fa18836a2ae6b5e7c49abcc89b20237.ssl.cf1.rackcdn.com/4955281_shay-maria-and-ashley-schultz-are-sizzling_c5cb80fa_m.jpg?bg=CABBC0',
+        'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-29.jpeg',
+        'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-28.jpeg',
+        'http://swagsyndicate.com/wp-content/uploads/2010/07/loud-obnoxious-announce-agenda-campaign-1.jpg',
+        'https://heavyeditorial.files.wordpress.com/2014/03/319.jpg?quality=65&strip=all&w=640',
+        'http://payload389.cargocollective.com/1/5/174502/10090906/cbnc4_670.jpg',
+        'https://s-media-cache-ak0.pinimg.com/736x/c7/b5/a3/c7b5a33aa1b3225f8727545eb39bd674.jpg',
+        'http://imfmag.com/wp-content/uploads/2012/08/7792592148_4191fe2b87_b.jpg',
+        'http://40.media.tumblr.com/d3ce5dd86ba8d83273e041b0300055d3/tumblr_inline_nr4okgFmlL1rn5se3_1280.jpg'
+       ]}
+      heightGallery={500}
     />
     <Search
       placeHolder={'Search'}
@@ -89,11 +124,15 @@ const App = () => (
 
 */}
       <View style={styles.block}>
+
         <ThumbSwiper/>
-        <MediaBlock src={'https://facebook.github.io/react/img/logo_og.png'}
+
+        <AvartarHeader src={'https://facebook.github.io/react/img/logo_og.png'}
           heading={'HYPEBEAST'}
           timestamp={1460227647478}
-          />
+          src={'https://facebook.github.io/react/img/logo_og.png'}
+          circle={true}
+        />
 
         <Text style={styles.mainTitle}>Title goes Here</Text>
 
@@ -111,6 +150,7 @@ const App = () => (
 
       </View>
 
+<View style={{backgroundColor: '#eee'}}>
       <Message
         active={true}
         user={'Jon Snow'}
@@ -125,12 +165,28 @@ const App = () => (
         message={'Hey Rob, have you seen the weather report on tv ?'}
         timestamp={1460227617421}
       />
+  </View>
+      <MapSection
+        height={300}
+        region={{
+          latitude: 40.712784,
+          longitude: -74.005941,
+          latitudeDelta: 10,
+          longitudeDelta: 10,}
+        }
+        annotations={[{
+          latitude: 40.712784,
+          longitude: -74.005941,
+          title: 'New York',
+          subtitle: 'This is cool!'}]
+        }
+        />
 
       <View style={styles.block}>
         <Time timestamp={1460227647478}/>
         <DateItem timestamp={1460227647478}/>
         <InputField />
-        <LikeBtn liked={false} likes={232} onPress={() => alert('liked')}/>
+        <LikeBtn active={true} color={primary} likes={232} onPress={() => alert('liked')}/>
         <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
         <Close/>
         <AlertMessage/>

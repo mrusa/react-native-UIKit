@@ -26,6 +26,6 @@ export default Heading;
 var styles = StyleSheet.create({
   title: {
     marginLeft: 10,
-    fontWeight: 'bold',
+    fontWeight: '600',
   }
 })

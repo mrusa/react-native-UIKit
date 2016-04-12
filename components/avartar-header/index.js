@@ -4,19 +4,18 @@ import React, {
   View,
 } from 'react-native';
 
-import Heading from './heading'
-import Avatar from './avatar'
-import DateItem from './date-item'
 
-const MediaBlock = ({src, timestamp, heading}) => (
+import {Heading, Avatar, DateItem } from '../'
+
+const AvartarHeader = ({src, timestamp, heading, circle}) => (
   <View style={styles.header}>
     <Avatar
-      circle={false}
-      size={48}
-      src="https://facebook.github.io/react/img/logo_og.png"
+      circle={circle}
+      size={40}
+      src={src}
     />
     <View style={styles.titleContainer}>
-      <Heading size={20} weight={'bold'}>HYPEBEAST</Heading>
+      <Heading size={15} weight={'600'}>HYPEBEAST</Heading>
       <DateItem timestamp={timestamp}/>
     </View>
   </View>
@@ -30,5 +29,11 @@ var styles = StyleSheet.create({
     flex:1,
     //backgroundColor: 'blue',
   },
+  titleContainer: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: 40
+  //  paddingBottom: 10,
+  }
 });
-export default MediaBlock;
+export default AvartarHeader;

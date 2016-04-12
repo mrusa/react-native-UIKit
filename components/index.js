@@ -2,7 +2,9 @@ export { default as Button } from './button'
 export { default as Heading } from './heading'
 export { default as Divider } from './divider'
 export { default as Card } from './card'
-export { default as MediaBlock } from './media-block'
+
+export { default as Avatar } from './avatar'
+export { default as AvartarHeader } from './avartar-header'
 export { default as Close } from './close'
 export { default as AlertMessage } from './alert-message'
 export { default as LikeBtn } from './like-btn'
@@ -28,3 +30,6 @@ export { default as MapSection } from './map-section'
 export { default as Search } from './search'
 
 export { default as GalleryOffset} from './gallery-offset'
+
+// animations
+export { default as FadeInUp} from './animations/fade-in-up'

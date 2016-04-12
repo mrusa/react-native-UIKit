@@ -1,4 +1,4 @@
-
+/*
 const THUMBS = [
   'http://i1.2photo.ru/u/w/539022.jpg',
   'http://imgs.abduzeedo.com/files/paul0v2/under-night/01.jpg',
@@ -13,7 +13,7 @@ const THUMBS = [
   'http://imfmag.com/wp-content/uploads/2012/08/7792592148_4191fe2b87_b.jpg',
   'http://40.media.tumblr.com/d3ce5dd86ba8d83273e041b0300055d3/tumblr_inline_nr4okgFmlL1rn5se3_1280.jpg'
  ];
-
+*/
 import React from 'react-native'
 
 var {
@@ -42,7 +42,7 @@ const GalleryItem = ({key, uri, heightGallery}) => (
 );
 const createThumbRow = (uri, i) => <GalleryItem key={i} uri={uri} />;
 
-const Gallery = () => (
+const Gallery = ({images, heightGallery}) => (
   <ScrollView
     horizontal={true}
     decelerationRate={'fast'}
@@ -55,8 +55,8 @@ const Gallery = () => (
     onScroll={() => { console.log('onScroll!'); }}
     scrollEventThrottle={200}
     style={styles.scrollView}
-    heightGallery>
-    {THUMBS.map(createThumbRow)}
+    heightGallery={heightGallery}>
+    {images.map(createThumbRow)}
   </ScrollView>
 );
 
