@@ -12,12 +12,12 @@ import React, {
   ScrollView
 } from 'react-native';
 
-import {galleryImages, restaurantData, userPosts, messages, cardData} from './data.js'
+import {galleryImages, restaurantData, userPosts, messages, cardData, users} from './data.js'
 
-import {defaultColor, primary, lightGrey, secondary, info} from './components/variables'
+import {defaultColor, primary, lightGrey, secondary, info,} from './components/variables'
 
 import {
-  Button, Heading, Divider, Avatar, Card, AvartarHeader, Close, AlertMessage, LikeBtn,
+  Button, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
   ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull, ProfileHeader
 } from './components'
@@ -27,14 +27,19 @@ import {
 const App = () => (
     <ScrollView style={styles.container}>
 
-      <ProfileHeader/>
-        <GalleryTiles
-          images={galleryImages}
-          />
-        
+      <ProfileHeader
+        title={users[0].title}
+        summary={users[0].summary}
+        profileImg={users[0].profileImg}
+        backgroundImg={users[0].backgroundImg}
+      />
+      <GalleryTiles
+        images={galleryImages}
+        />
+
     {userPosts.map((item, i) => (
       <View key={i} style={{}}>
-        <AvartarHeader src={item.avartar}
+        <AvatarHeader src={item.avartar}
           heading={item.user}
           timestamp={item.timestamp}
           circle={true}
@@ -58,7 +63,7 @@ const App = () => (
 
     {cardData.map((item, i) => (
       <View key={i} style={{backgroundColor: '#fff', paddingBottom: 30}}>
-        <AvartarHeader src={item.avartar}
+        <AvatarHeader src={item.avartar}
           heading={item.user}
           timestamp={item.timestamp}
           circle={true}
@@ -135,7 +140,7 @@ const App = () => (
           onPress={(i) => console.log(i)}
         />
 
-        <AvartarHeader
+        <AvatarHeader
           src={'https://facebook.github.io/react/img/logo_og.png'}
           heading={'HYPEBEAST'}
           timestamp={1460227647478}

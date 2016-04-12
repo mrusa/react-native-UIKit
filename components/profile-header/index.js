@@ -11,17 +11,17 @@ import React, {
 
 const {height, width} = Dimensions.get('window');
 
-const ProfileHeader = () => (
+const ProfileHeader = ({title, summary, profileImg, backgroundImg, }) => (
   <View style={styles.container}>
     <Image
-      source={{uri: 'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg'}}
+      source={{uri: backgroundImg}}
       style={styles.backgroundImg}>
     </Image>
-    <Text style={styles.title}>John Doe</Text>
-    <Text style={styles.summary}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Text>
+    <Text style={styles.title}>{title}</Text>
+    <Text style={styles.summary}>{summary}</Text>
     <View style={styles.shadow}></View>
     <Image
-      source={{uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/esthercrawford/128.jpg'}}
+      source={{uri: profileImg}}
       style={styles.profileImg}/>
   </View>
 );

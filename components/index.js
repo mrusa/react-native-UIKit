@@ -4,7 +4,7 @@ export { default as Divider } from './divider'
 export { default as Card } from './card'
 
 export { default as Avatar } from './avatar'
-export { default as AvartarHeader } from './avartar-header'
+export { default as AvatarHeader } from './avatar-header'
 export { default as Close } from './close'
 export { default as AlertMessage } from './alert-message'
 export { default as LikeBtn } from './like-btn'

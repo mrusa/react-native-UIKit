@@ -12,6 +12,14 @@ export const galleryImages = [
   'http://d1menid873kwlk.cloudfront.net/wp-content/uploads/2011/02/night-7.jpg'
 ];
 
+export const users = [
+  {
+    title: 'John Doe',
+    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    profileImg: 'https://s3.amazonaws.com/uifaces/faces/twitter/esthercrawford/128.jpg',
+    backgroundImg: 'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg'
+  }
+]
 
 export const restaurantData = [
   {

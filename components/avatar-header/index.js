@@ -8,7 +8,7 @@ import {gutter} from '../variables'
 
 import {Heading, Avatar, DateItem } from '../'
 
-const AvartarHeader = ({src, timestamp, heading, circle, backgroundColor, height, gutter}) => (
+const AvatarHeader = ({src, timestamp, heading, circle, backgroundColor, height, gutter}) => (
   <View style={[styles.header, {backgroundColor: backgroundColor, padding: gutter}]}>
     <Avatar
       circle={circle}
@@ -35,4 +35,4 @@ var styles = StyleSheet.create({
   //  paddingBottom: 10,
   }
 });
-export default AvartarHeader;
+export default AvatarHeader;
