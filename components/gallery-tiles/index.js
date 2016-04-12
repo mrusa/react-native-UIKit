@@ -11,10 +11,11 @@ import React, {
 
 var {height, width} = Dimensions.get('window');
 
-const Thumb = ({data}) => (
+const Thumb = ({data}, i) => (
   <Image
+    key={i}
     style={{width: width/3.05, height: width/3.05, marginBottom: width/3*0.025  }}
-    source={{uri: data.src}}
+    source={{uri: data}}
   />
 );
 
@@ -31,10 +32,10 @@ var data = [
     {'name': 'row 3', 'age': 22, 'src':'http://dummyimage.com/200x200/eee/fff'},
 ];
 
-const GalleryTiles = () => (
+const GalleryTiles = ({images}) => (
   <ListView
     contentContainerStyle={{justifyContent: 'space-between', flexDirection: 'row', flexWrap: 'wrap'}}
-    dataSource={ds.cloneWithRows(data)}
+    dataSource={ds.cloneWithRows(images)}
     renderRow={(rowData) => <Thumb data={rowData}/>}
     pageSize={1}
   />

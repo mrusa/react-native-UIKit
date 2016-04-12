@@ -27,7 +27,7 @@ var {
   StyleSheet,
   Dimensions,
   Text,
-  TouchableHighlight,
+  TouchableOpacity,
   ScrollView,
 } = React;
 
@@ -38,12 +38,14 @@ const {
 
 //import GalleryItem from './gallery-item';
 
-const Thumb = ({key, uri}) => (
-  <Image key={key} style={styles.img} source={{uri: uri}} />
+const Thumb = ({key, uri, onPress}) => (
+  <TouchableOpacity onPress={onPress}>
+    <Image key={key} style={styles.img} source={{uri: uri}} />
+  </TouchableOpacity>
 );
-const createThumbRow = (uri, i) => <Thumb key={i} uri={uri} />;
+//const createThumbRow = (uri, i) => <Thumb key={i} uri={uri}/>;
 
-const ThumbSwiper = () => (
+const ThumbSwiper = ({images, onPress}) => (
   <ScrollView
     horizontal={true}
     decelerationRate={'fast'}
@@ -57,7 +59,7 @@ const ThumbSwiper = () => (
     onScroll={() => { console.log('onScroll!'); }}
     scrollEventThrottle={200}
     contentContainerStyle={styles.scrollView}>
-    {THUMBS.map(createThumbRow)}
+    {images.map((uri, i) => <Thumb key={i} onPress={onPress} uri={uri}/>)}
   </ScrollView>
 );
 

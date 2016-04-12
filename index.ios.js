@@ -12,71 +12,48 @@ import React, {
   ScrollView
 } from 'react-native';
 
+import {galleryImages, restaurantData, userPosts} from './data.js'
+
 import {defaultColor, primary, lightGrey, secondary, info} from './components/variables'
 
 import {
   Button, Heading, Divider, Avatar, Card, AvartarHeader, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull
 } from './components'
 
-const ImageFull = ({src, height}) => (
-  <Image source={{uri: src}} style={{resizeMode: 'cover', height: height}} />
-);
+
 
 const App = () => (
     <ScrollView style={styles.container}>
-      <View style={{padding: 10, backgroundColor: '#fff'}}>
-        <AvartarHeader
-          src={'https://s3.amazonaws.com/uifaces/faces/twitter/mattchevy/128.jpg'}
-          heading={'HYPEBEAST'}
-          timestamp={1460227647478}
-          circle={true}
-        />
-      </View>
-      <ImageFull
-        src={'http://i1.2photo.ru/u/w/539022.jpg'}
-        height={300}
-      />
 
-      <View style={{padding: 10, backgroundColor: '#fff'}}>
-        <AvartarHeader src={'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg'}
-          heading={'HYPEBEAST'}
-          timestamp={1460227647478}
+
+    {userPosts.map((item, i) => (
+      <View key={i}>
+        <AvartarHeader src={item.avartar}
+          heading={item.user}
+          timestamp={item.timestamp}
           circle={true}
+          backgroundColor={'#fff'}
+        />
+        <ImageFull
+          src={item.src}
+          height={300}
+          onPress={() => console.log('pressed')}
         />
       </View>
-      <ImageFull
-        src={'http://i1.2photo.ru/u/w/539022.jpg'}
-        height={300}
-      />
+    ))}
+
+
 
       <GalleryOffset
-        imagesArray={[
-          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
-          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
-          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
-          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
-        ]}
+        imagesArray={galleryImages}
         display={'row'}/>
 
 
     {/*<ModalCustom/>*/}
     <Gallery
-      images={[
-        'http://i1.2photo.ru/u/w/539022.jpg',
-        'http://imgs.abduzeedo.com/files/paul0v2/under-night/01.jpg',
-        'https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg',
-        'https://7f9c61237bd6e732e57e-5fa18836a2ae6b5e7c49abcc89b20237.ssl.cf1.rackcdn.com/4955281_shay-maria-and-ashley-schultz-are-sizzling_c5cb80fa_m.jpg?bg=CABBC0',
-        'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-29.jpeg',
-        'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-28.jpeg',
-        'http://swagsyndicate.com/wp-content/uploads/2010/07/loud-obnoxious-announce-agenda-campaign-1.jpg',
-        'https://heavyeditorial.files.wordpress.com/2014/03/319.jpg?quality=65&strip=all&w=640',
-        'http://payload389.cargocollective.com/1/5/174502/10090906/cbnc4_670.jpg',
-        'https://s-media-cache-ak0.pinimg.com/736x/c7/b5/a3/c7b5a33aa1b3225f8727545eb39bd674.jpg',
-        'http://imfmag.com/wp-content/uploads/2012/08/7792592148_4191fe2b87_b.jpg',
-        'http://40.media.tumblr.com/d3ce5dd86ba8d83273e041b0300055d3/tumblr_inline_nr4okgFmlL1rn5se3_1280.jpg'
-       ]}
+      images={galleryImages}
       heightGallery={500}
     />
     <Search
@@ -87,22 +64,21 @@ const App = () => (
     />
 
     <View style={{backgroundColor: '#fff'}}>
-      <ReviewCell
-        title={'Full Circle'}
-        description={'Grocery . $$ . 24 miles'}
-        src={'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg'}
-        onPress={() => console.log('pressed')}
-      />
-      <ReviewCell
-        title={'Full Circle'}
-        description={'Grocery . $$ . 24 miles'}
-        src={'http://modernfoodarts.com/wp-content/uploads/2015/02/andels_Hotel_Berlin_-_Restaurant_delight_-_Copyright_Eisenbacher_062.jpg'}
-        onPress={() => console.log('pressed')}
-      />
+      {restaurantData.map((item, i) => (
+        <ReviewCell
+          key={i}
+          title={item.title}
+          description={item.description}
+          src={item.src}
+          onPress={() => console.log('pressed')}
+        />
+      ))}
     </View>
 
     <LoginForm/>
-    <GalleryTiles/>
+    <GalleryTiles
+      images={galleryImages}
+      />
 {/*
       <Calendar
         scrollEnabled={true}              // False disables swiping. Default: True
@@ -125,7 +101,10 @@ const App = () => (
 */}
       <View style={styles.block}>
 
-        <ThumbSwiper/>
+        <ThumbSwiper
+          images={galleryImages}
+          onPress={(i) => console.log(i)}
+        />
 
         <AvartarHeader src={'https://facebook.github.io/react/img/logo_og.png'}
           heading={'HYPEBEAST'}

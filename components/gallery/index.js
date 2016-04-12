@@ -1,19 +1,4 @@
-/*
-const THUMBS = [
-  'http://i1.2photo.ru/u/w/539022.jpg',
-  'http://imgs.abduzeedo.com/files/paul0v2/under-night/01.jpg',
-  'https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg',
-  'https://7f9c61237bd6e732e57e-5fa18836a2ae6b5e7c49abcc89b20237.ssl.cf1.rackcdn.com/4955281_shay-maria-and-ashley-schultz-are-sizzling_c5cb80fa_m.jpg?bg=CABBC0',
-  'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-29.jpeg',
-  'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-28.jpeg',
-  'http://swagsyndicate.com/wp-content/uploads/2010/07/loud-obnoxious-announce-agenda-campaign-1.jpg',
-  'https://heavyeditorial.files.wordpress.com/2014/03/319.jpg?quality=65&strip=all&w=640',
-  'http://payload389.cargocollective.com/1/5/174502/10090906/cbnc4_670.jpg',
-  'https://s-media-cache-ak0.pinimg.com/736x/c7/b5/a3/c7b5a33aa1b3225f8727545eb39bd674.jpg',
-  'http://imfmag.com/wp-content/uploads/2012/08/7792592148_4191fe2b87_b.jpg',
-  'http://40.media.tumblr.com/d3ce5dd86ba8d83273e041b0300055d3/tumblr_inline_nr4okgFmlL1rn5se3_1280.jpg'
- ];
-*/
+
 import React from 'react-native'
 
 var {

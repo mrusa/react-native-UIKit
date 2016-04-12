@@ -4,18 +4,19 @@ import React, {
   View,
 } from 'react-native';
 
+import {gutter} from '../variables'
 
 import {Heading, Avatar, DateItem } from '../'
 
-const AvartarHeader = ({src, timestamp, heading, circle}) => (
-  <View style={styles.header}>
+const AvartarHeader = ({src, timestamp, heading, circle, backgroundColor}) => (
+  <View style={[styles.header, {backgroundColor: backgroundColor}]}>
     <Avatar
       circle={circle}
       size={40}
       src={src}
     />
     <View style={styles.titleContainer}>
-      <Heading size={15} weight={'600'}>John Doe</Heading>
+      <Heading size={15} weight={'600'}>{heading}</Heading>
       <DateItem timestamp={timestamp}/>
     </View>
   </View>
@@ -25,7 +26,7 @@ var styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    //justifyContent: 'space-between',
+    padding: gutter,
     flex:1,
     //backgroundColor: 'blue',
   },

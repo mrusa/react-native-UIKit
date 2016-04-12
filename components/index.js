@@ -31,5 +31,8 @@ export { default as Search } from './search'
 
 export { default as GalleryOffset} from './gallery-offset'
 
+export { default as ImageFull} from './image-full'
+
+
 // animations
 export { default as FadeInUp} from './animations/fade-in-up'
