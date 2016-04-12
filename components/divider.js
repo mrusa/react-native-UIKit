@@ -4,8 +4,8 @@ import React, {
   View,
 } from 'react-native';
 
-const Divider = (props) => (
-  <View style={styles.seperator}></View>
+const Divider = ({color}) => (
+  <View style={[styles.seperator, {borderColor: color}]}></View>
 );
 
 export default Divider;
@@ -13,10 +13,8 @@ export default Divider;
 var styles = StyleSheet.create({
   seperator: {
     borderTopWidth: 1,
-    borderColor: '#D8D8D8',
     height: 1,
-    flex:1,
-    marginVertical: 15,
+    marginVertical: 10,
   },
 
 });

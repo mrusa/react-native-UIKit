@@ -8,14 +8,14 @@ import {gutter} from '../variables'
 
 import {Heading, Avatar, DateItem } from '../'
 
-const AvartarHeader = ({src, timestamp, heading, circle, backgroundColor}) => (
+const AvartarHeader = ({src, timestamp, heading, circle, backgroundColor, height}) => (
   <View style={[styles.header, {backgroundColor: backgroundColor}]}>
     <Avatar
       circle={circle}
-      size={40}
+      size={height}
       src={src}
     />
-    <View style={styles.titleContainer}>
+  <View style={[styles.titleContainer, {height: height}]}>
       <Heading size={15} weight={'600'}>{heading}</Heading>
       <DateItem timestamp={timestamp}/>
     </View>
@@ -33,7 +33,6 @@ var styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: 40
   //  paddingBottom: 10,
   }
 });

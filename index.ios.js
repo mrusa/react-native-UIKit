@@ -12,7 +12,7 @@ import React, {
   ScrollView
 } from 'react-native';
 
-import {galleryImages, restaurantData, userPosts} from './data.js'
+import {galleryImages, restaurantData, userPosts, messages} from './data.js'
 
 import {defaultColor, primary, lightGrey, secondary, info} from './components/variables'
 
@@ -29,18 +29,25 @@ const App = () => (
 
 
     {userPosts.map((item, i) => (
-      <View key={i}>
+      <View key={i} style={{}}>
         <AvartarHeader src={item.avartar}
           heading={item.user}
           timestamp={item.timestamp}
           circle={true}
           backgroundColor={'#fff'}
+          height={40}
         />
         <ImageFull
           src={item.src}
           height={300}
           onPress={() => console.log('pressed')}
         />
+
+      <View style={{paddingTop: 10, paddingHorizontal: 10, backgroundColor: '#fff'}}>
+        <LikeBtn active={true} color={primary} likes={232} onPress={() => console.log('liked')}/>
+        <Divider color={'#eee'}/>
+      </View>
+
       </View>
     ))}
 
@@ -106,11 +113,13 @@ const App = () => (
           onPress={(i) => console.log(i)}
         />
 
-        <AvartarHeader src={'https://facebook.github.io/react/img/logo_og.png'}
+        <AvartarHeader
+          src={'https://facebook.github.io/react/img/logo_og.png'}
           heading={'HYPEBEAST'}
           timestamp={1460227647478}
           src={'https://facebook.github.io/react/img/logo_og.png'}
           circle={true}
+          height={40}
         />
 
         <Text style={styles.mainTitle}>Title goes Here</Text>
@@ -119,7 +128,7 @@ const App = () => (
           src='http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg'
           title="This is the article description title here saying stuff"/>
 
-        <Divider/>
+        <Divider color={'#eee'}/>
 
         <View style={styles.shareContainer}>
           <Text>Like</Text>
@@ -129,22 +138,21 @@ const App = () => (
 
       </View>
 
-<View style={{backgroundColor: '#eee'}}>
-      <Message
-        active={true}
-        user={'Jon Snow'}
-        title={'Winter is Coming'}
-        message={'Hey Rob, have you seen the weather report on tv ?'}
-        timestamp={1460227617421}
-      />
-      <Message
-        active={true}
-        user={'Jon Snow'}
-        title={'Winter is Coming'}
-        message={'Hey Rob, have you seen the weather report on tv ?'}
-        timestamp={1460227617421}
-      />
-  </View>
+      <View style={{backgroundColor: '#eee'}}>
+
+        {messages.map((item, i) => (
+          <Message
+            key={i}
+            active={item.active}
+            user={item.user}
+            title={item.title}
+            message={item.message}
+            timestamp={item.timestamp}
+          />
+        ))}
+
+      </View>
+
       <MapSection
         height={300}
         region={{
@@ -165,7 +173,7 @@ const App = () => (
         <Time timestamp={1460227647478}/>
         <DateItem timestamp={1460227647478}/>
         <InputField />
-        <LikeBtn active={true} color={primary} likes={232} onPress={() => alert('liked')}/>
+        <LikeBtn active={true} color={primary} likes={232} onPress={() => console.log('liked')}/>
         <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
         <Close/>
         <AlertMessage/>

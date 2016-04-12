@@ -29,7 +29,7 @@ export const userPosts = [
     user: 'John Doe',
     avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg',
     src: 'http://i1.2photo.ru/u/w/539022.jpg',
-    timestamp: 1460227647478,
+    timestamp: 1460227642478,
   },
   {
     user: 'Laura Smith',
@@ -38,3 +38,27 @@ export const userPosts = [
     timestamp: 1460227647478,
   }
 ];
+
+export const messages = [
+  {
+    user: 'Jon Snow',
+    title:'Winter is Coming',
+    message: 'Hey Rob, have you seen the weather report on tv ?',
+    timestamp: 1460227317421,
+    active: false,
+  },
+  {
+    user: 'Jon Snow',
+    title:'Winter is Coming',
+    message: 'Hey Rob, have you seen the weather report on tv ?',
+    timestamp: 1460227614421,
+    active: true,
+  },
+  {
+    user: 'Jon Snow',
+    title:'Winter is Coming',
+    message: 'Hey Rob, have you seen the weather report on tv ?',
+    timestamp: 1460227617121,
+    active: true,
+  },
+]

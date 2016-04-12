@@ -1,7 +1,7 @@
 # react-native-UIKit
 
 
-A collection of stateless (or as minimally stateless as possible) stylized UI components for fast prototyping and development.
+A collection of stateless (or minimally stateful) stylized UI components for rapid prototyping.
 
 
 work in progress..
