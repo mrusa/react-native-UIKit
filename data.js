@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 export const galleryImages = [
   'http://i1.2photo.ru/u/w/539022.jpg',
   'http://imgs.abduzeedo.com/files/paul0v2/under-night/01.jpg',
@@ -60,5 +62,37 @@ export const messages = [
     message: 'Hey Rob, have you seen the weather report on tv ?',
     timestamp: 1460227617121,
     active: true,
+  },
+]
+
+
+export const cardData = [
+  {
+    user: 'John Doe',
+    avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/flamekaizar/128.jpg',
+    timestamp: 1460227642478,
+    src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
+    title: "This is the article description title here saying stuff",
+  },
+  {
+    user: 'John Doe',
+    avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg',
+    timestamp: 1460227642478,
+    src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
+    title: "This is the article description title here saying stuff",
+  },
+  {
+    user: 'John Doe',
+    avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg',
+    timestamp: 1460227642478,
+    src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
+    title: "This is the article description title here saying stuff",
+  },
+  {
+    user: 'John Doe',
+    avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg',
+    timestamp: 1460227642478,
+    src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
+    title: "This is the article description title here saying stuff",
   },
 ]

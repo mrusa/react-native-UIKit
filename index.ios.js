@@ -12,7 +12,7 @@ import React, {
   ScrollView
 } from 'react-native';
 
-import {galleryImages, restaurantData, userPosts, messages} from './data.js'
+import {galleryImages, restaurantData, userPosts, messages, cardData} from './data.js'
 
 import {defaultColor, primary, lightGrey, secondary, info} from './components/variables'
 
@@ -36,6 +36,7 @@ const App = () => (
           circle={true}
           backgroundColor={'#fff'}
           height={40}
+          gutter={10}
         />
         <ImageFull
           src={item.src}
@@ -51,6 +52,25 @@ const App = () => (
       </View>
     ))}
 
+    {cardData.map((item, i) => (
+      <View key={i} style={{backgroundColor: '#fff', paddingBottom: 30}}>
+        <AvartarHeader src={item.avartar}
+          heading={item.user}
+          timestamp={item.timestamp}
+          circle={true}
+          backgroundColor={'#fff'}
+          height={40}
+          gutter={10}
+          />
+        <Card
+          key={i}
+          onPress={() => console.log('card pressed')}
+          src={item.src}
+          title={item.title}
+          gutter={10}
+          />
+      </View>
+    ))}
 
 
       <GalleryOffset
@@ -124,9 +144,7 @@ const App = () => (
 
         <Text style={styles.mainTitle}>Title goes Here</Text>
 
-        <Card
-          src='http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg'
-          title="This is the article description title here saying stuff"/>
+
 
         <Divider color={'#eee'}/>
 

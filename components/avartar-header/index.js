@@ -8,8 +8,8 @@ import {gutter} from '../variables'
 
 import {Heading, Avatar, DateItem } from '../'
 
-const AvartarHeader = ({src, timestamp, heading, circle, backgroundColor, height}) => (
-  <View style={[styles.header, {backgroundColor: backgroundColor}]}>
+const AvartarHeader = ({src, timestamp, heading, circle, backgroundColor, height, gutter}) => (
+  <View style={[styles.header, {backgroundColor: backgroundColor, padding: gutter}]}>
     <Avatar
       circle={circle}
       size={height}
@@ -26,7 +26,6 @@ var styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    padding: gutter,
     flex:1,
     //backgroundColor: 'blue',
   },

@@ -7,11 +7,11 @@ import React, {
   TouchableOpacity
 } from 'react-native';
 
-const Card = ({src, title}) => (
-  <View style={styles.cardShadow}>
+const Card = ({src, title, gutter, onPress}) => (
+  <View style={[styles.cardShadow, {marginHorizontal: gutter}]}>
     <View style={styles.card}>
       <View style={styles.clipRadius}>
-        <TouchableOpacity onPress={() => alert('pressed..')}>
+        <TouchableOpacity onPress={onPress}>
           <Image source={{uri: src}} style={styles.img}/>
         </TouchableOpacity>
         <View style={styles.imgBorderBtm}></View>
