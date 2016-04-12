@@ -7,6 +7,8 @@ import React, {
   TouchableOpacity
 } from 'react-native';
 
+import _ from 'lodash'
+
 const Card = ({src, title, gutter, onPress}) => (
   <View style={[styles.cardShadow, {marginHorizontal: gutter}]}>
     <View style={styles.card}>
@@ -16,7 +18,7 @@ const Card = ({src, title, gutter, onPress}) => (
         </TouchableOpacity>
         <View style={styles.imgBorderBtm}></View>
         <View style={styles.lowerSection}>
-          <Text style={styles.title}>{title} </Text>
+          <Text style={styles.title}>{_.truncate(title, {'length': 64, 'separator': /,? +/})} </Text>
           <Text style={styles.subTitle}>Title here ... </Text>
         </View>
       </View>

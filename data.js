@@ -72,7 +72,7 @@ export const cardData = [
     avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/flamekaizar/128.jpg',
     timestamp: 1460227642478,
     src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
-    title: "This is the article description title here saying stuff",
+    title: "This is the article description title here saying stuff. This is the article description title here saying stuff. This is the article description title here saying stuff. This is the article description title here saying stuff. This is the article description title here saying stuff.",
   },
   {
     user: 'John Doe',

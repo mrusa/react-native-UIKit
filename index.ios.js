@@ -19,7 +19,7 @@ import {defaultColor, primary, lightGrey, secondary, info} from './components/va
 import {
   Button, Heading, Divider, Avatar, Card, AvartarHeader, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull, ProfileHeader
 } from './components'
 
 
@@ -27,7 +27,11 @@ import {
 const App = () => (
     <ScrollView style={styles.container}>
 
-
+      <ProfileHeader/>
+        <GalleryTiles
+          images={galleryImages}
+          />
+        
     {userPosts.map((item, i) => (
       <View key={i} style={{}}>
         <AvartarHeader src={item.avartar}
@@ -103,9 +107,7 @@ const App = () => (
     </View>
 
     <LoginForm/>
-    <GalleryTiles
-      images={galleryImages}
-      />
+
 {/*
       <Calendar
         scrollEnabled={true}              // False disables swiping. Default: True
