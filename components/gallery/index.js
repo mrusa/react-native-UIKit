@@ -1,8 +1,8 @@
 
 const THUMBS = [
-  'http://dullanddanger.com/wp-content/uploads/2014/09/shay-maria-57.jpg',
-  'http://mevanity.com/wp-content/uploads/2015/10/modernambition-shay-maria-mdrna-instagram.jpeg',
-  'http://dopamine36.com/wp-content/uploads/2013/09/Shay-maria-4.jpg',
+  'http://i1.2photo.ru/u/w/539022.jpg',
+  'http://imgs.abduzeedo.com/files/paul0v2/under-night/01.jpg',
+  'https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg',
   'https://7f9c61237bd6e732e57e-5fa18836a2ae6b5e7c49abcc89b20237.ssl.cf1.rackcdn.com/4955281_shay-maria-and-ashley-schultz-are-sizzling_c5cb80fa_m.jpg?bg=CABBC0',
   'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-29.jpeg',
   'http://cdn.rsvlts.com/wp-content/uploads/2013/01/shay-maria-dsteezy-28.jpeg',
@@ -34,9 +34,10 @@ const {
 
 //import GalleryItem from './gallery-item';
 
-const GalleryItem = ({key, uri}) => (
+// TODO set height as props
+const GalleryItem = ({key, uri, heightGallery}) => (
   <View style={styles.thumb} key={key}>
-    <Image style={styles.img} source={{uri: uri}} />
+    <Image style={[styles.img, {height: 300}]} source={{uri: uri}} />
   </View>
 );
 const createThumbRow = (uri, i) => <GalleryItem key={i} uri={uri} />;
@@ -53,7 +54,8 @@ const Gallery = () => (
     automaticallyAdjustContentInsets={false}
     onScroll={() => { console.log('onScroll!'); }}
     scrollEventThrottle={200}
-    style={styles.scrollView}>
+    style={styles.scrollView}
+    heightGallery>
     {THUMBS.map(createThumbRow)}
   </ScrollView>
 );

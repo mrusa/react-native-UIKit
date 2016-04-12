@@ -23,7 +23,7 @@ export default class MapSection extends Component {
         title: 'New York',
         subtitle: 'This is cool!'
       }],
-    }
+    } 
   }
   render(){
     const region = {
@@ -47,3 +47,11 @@ export default class MapSection extends Component {
     );
   }
 }
+
+
+
+const styles = StyleSheet.create({
+  map: {
+    height: 300,
+  }
+});

@@ -12,14 +12,14 @@ import {gutter, grey, lightGrey} from '../variables'
 
 import {RatingBox} from '../'
 
-const ReviewCell = ({title, description, onPress}) => (
+const ReviewCell = ({title, description, src, onPress}) => (
   <TouchableOpacity style={styles.row} onPress={onPress}>
     <View style={styles.content}>
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.description}>{description}</Text>
       <RatingBox/>
     </View>
-    <Image source={require('./assets/thumb.jpeg')} style={[styles.thumb,{height: 75, width: 70}]}/>
+    <Image source={{uri: src}} style={[styles.thumb,{height: 75, width: 70}]}/>
   </TouchableOpacity>
 );
 

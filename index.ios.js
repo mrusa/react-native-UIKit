@@ -12,34 +12,56 @@ import React, {
   ScrollView
 } from 'react-native';
 
-import {defaultColor, primary, secondary, info} from './components/variables'
+import {defaultColor, primary, lightGrey, secondary, info} from './components/variables'
 
 import {
   Button, Heading, Divider, Avatar, Card, MediaBlock, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell, MapSection
+  ReviewCell, MapSection, Search, GalleryOffset
 } from './components'
-
 
 
 
 const App = () => (
     <ScrollView style={styles.container}>
 
-    {/*<ModalCustom/>*/}
-    <Gallery/>
+      <GalleryOffset
+        imagesArray={[
+          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
+          'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg',
+        ]}
+        display={'row'}
+        />
 
-    {/*<MapSection/>*/}
+        <MapSection
+          lat={40.712784}
+          lng={-74.005941}
+          />
+
+    {/*<ModalCustom/>*/}
+    <Gallery
+      height={300}
+    />
+    <Search
+      placeHolder={'Search'}
+      backgroundColor={lightGrey}
+      innerBackground={'#FAFAFA'}
+      radius={5}
+    />
 
     <View style={{backgroundColor: '#fff'}}>
       <ReviewCell
         title={'Full Circle'}
         description={'Grocery . $$ . 24 miles'}
+        src={'https://media-cdn.tripadvisor.com/media/photo-s/03/c4/95/72/carne-y-vino-restaurant.jpg'}
         onPress={() => console.log('pressed')}
       />
       <ReviewCell
         title={'Full Circle'}
         description={'Grocery . $$ . 24 miles'}
+        src={'http://modernfoodarts.com/wp-content/uploads/2015/02/andels_Hotel_Berlin_-_Restaurant_delight_-_Copyright_Eisenbacher_062.jpg'}
         onPress={() => console.log('pressed')}
       />
     </View>
@@ -108,7 +130,7 @@ const App = () => (
         <Time timestamp={1460227647478}/>
         <DateItem timestamp={1460227647478}/>
         <InputField />
-        <LikeBtn liked={false} likes={232} toggle={() => alert('liked')}/>
+        <LikeBtn liked={false} likes={232} onPress={() => alert('liked')}/>
         <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
         <Close/>
         <AlertMessage/>

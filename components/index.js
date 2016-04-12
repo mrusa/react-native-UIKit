@@ -24,3 +24,7 @@ export { default as ReviewCell } from './review-cell'
 export { default as RatingBox } from './rating-box'
 
 export { default as MapSection } from './map-section'
+
+export { default as Search } from './search'
+
+export { default as GalleryOffset} from './gallery-offset'

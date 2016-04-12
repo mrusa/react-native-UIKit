@@ -46,10 +46,3 @@ export default class MapSection extends Component {
     );
   }
 }
-
-
-var styles = StyleSheet.create({
-  map: {
-    height: 300,
-  }
-});
