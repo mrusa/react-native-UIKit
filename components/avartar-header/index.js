@@ -15,7 +15,7 @@ const AvartarHeader = ({src, timestamp, heading, circle}) => (
       src={src}
     />
     <View style={styles.titleContainer}>
-      <Heading size={15} weight={'600'}>HYPEBEAST</Heading>
+      <Heading size={15} weight={'600'}>John Doe</Heading>
       <DateItem timestamp={timestamp}/>
     </View>
   </View>

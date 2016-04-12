@@ -1,4 +1,7 @@
 # react-native-UIKit
 
 
-work in progress 
+A collection of stateless (with a couple of exceptions) UI components for fast prototyping and development.
+
+
+work in progress
