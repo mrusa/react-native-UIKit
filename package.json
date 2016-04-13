@@ -1,12 +1,10 @@
 {
   "name": "react-native-uikit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Collection of Presentation Components for React Native",
   "private": false,
-  "scripts": {
-    "start": "lib/index.js"
-  },
-    "repository": {
+  "main": "lib/index.js",
+  "repository": {
     "type": "git",
     "url": "https://github.com/andyfenelon/react-native-UIKit"
   },
