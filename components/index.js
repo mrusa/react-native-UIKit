@@ -34,6 +34,7 @@ export { default as GalleryOffset} from './gallery-offset'
 export { default as ImageFull} from './image-full'
 
 export { default as ProfileHeader} from './profile-header'
+export { default as ArticleText} from './article-text'
 
 // animations
 export { default as FadeInUp} from './animations/fade-in-up'

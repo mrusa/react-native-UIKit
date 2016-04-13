@@ -1,5 +1,4 @@
 import React, {
-  Component,
   StyleSheet,
   Image,
   View,
@@ -28,4 +27,14 @@ var styles = StyleSheet.create({
   }
 })
 
+Avatar.defaultProps = {
+  size: 40,
+  circle: false
+}
+Avatar.propTypes = {
+  src: React.PropTypes.string,
+  size: React.PropTypes.number,
+  circle: React.PropTypes.bool,
+  onPress: React.PropTypes.func,
+}
 export default Avatar;

@@ -19,13 +19,48 @@ import {defaultColor, primary, lightGrey, secondary, info,} from './components/v
 import {
   Button, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull, ProfileHeader
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull, ProfileHeader, ArticleText
 } from './components'
 
 
 
 const App = () => (
     <ScrollView style={styles.container}>
+
+    {userPosts.map((item, i) => (
+        <View key={i} style={{}}>
+          <AvatarHeader src={item.avartar}
+            heading={item.username}
+            timestamp={item.timestamp}
+            circle={true}
+            backgroundColor={'#fff'}
+            height={40}
+            gutter={10}
+          />
+          <ImageFull
+            src={item.src}
+            height={300}
+            onPress={() => console.log('pressed')}
+          />
+
+        <View style={{paddingTop: 10, paddingHorizontal: 10, backgroundColor: '#fff'}}>
+          <LikeBtn
+            active={true}
+            color={primary}
+            likes={232}
+            onPress={() => console.log('liked')}
+          />
+          <ArticleText
+            username={item.username}
+            text={item.text}
+            highLightColor={primary}
+            onPress={() => console.log('link to profile')}
+          />
+          <Divider color={'#eee'}/>
+        </View>
+
+        </View>
+      ))}
 
       <ProfileHeader
         title={users[0].title}
@@ -37,29 +72,7 @@ const App = () => (
         images={galleryImages}
         />
 
-    {userPosts.map((item, i) => (
-      <View key={i} style={{}}>
-        <AvatarHeader src={item.avartar}
-          heading={item.user}
-          timestamp={item.timestamp}
-          circle={true}
-          backgroundColor={'#fff'}
-          height={40}
-          gutter={10}
-        />
-        <ImageFull
-          src={item.src}
-          height={300}
-          onPress={() => console.log('pressed')}
-        />
 
-      <View style={{paddingTop: 10, paddingHorizontal: 10, backgroundColor: '#fff'}}>
-        <LikeBtn active={true} color={primary} likes={232} onPress={() => console.log('liked')}/>
-        <Divider color={'#eee'}/>
-      </View>
-
-      </View>
-    ))}
 
     {cardData.map((item, i) => (
       <View key={i} style={{backgroundColor: '#fff', paddingBottom: 30}}>
@@ -70,6 +83,7 @@ const App = () => (
           backgroundColor={'#fff'}
           height={40}
           gutter={10}
+
           />
         <Card
           key={i}
@@ -77,6 +91,8 @@ const App = () => (
           src={item.src}
           title={item.title}
           gutter={10}
+          link={item.link}
+          radius={5}
           />
       </View>
     ))}
@@ -199,9 +215,15 @@ const App = () => (
         <DateItem timestamp={1460227647478}/>
         <InputField />
         <LikeBtn active={true} color={primary} likes={232} onPress={() => console.log('liked')}/>
-        <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
+        <Button
+          color={'#fff'}
+          backgroundColor={primary}
+          radius={5}>
+          Submit
+        </Button>
         <Close/>
-        <AlertMessage/>
+
+        <AlertMessage backgroundColor={'#1c7'} color={'#fff'}/>
       </View>
 
     </ScrollView>

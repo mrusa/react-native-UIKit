@@ -36,16 +36,18 @@ export const restaurantData = [
 
 export const userPosts = [
   {
-    user: 'John Doe',
+    username: 'John Doe',
     avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg',
     src: 'http://i1.2photo.ru/u/w/539022.jpg',
     timestamp: 1460227642478,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
   },
   {
-    user: 'Laura Smith',
+    username: 'Laura Smith',
     avartar: 'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg',
     src: 'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg',
     timestamp: 1460227647478,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
   }
 ];
 
@@ -81,6 +83,7 @@ export const cardData = [
     timestamp: 1460227642478,
     src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
     title: "This is the article description title here saying stuff. This is the article description title here saying stuff. This is the article description title here saying stuff. This is the article description title here saying stuff. This is the article description title here saying stuff.",
+    link: 'www.example.com'
   },
   {
     user: 'John Doe',
@@ -88,6 +91,7 @@ export const cardData = [
     timestamp: 1460227642478,
     src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
     title: "This is the article description title here saying stuff",
+    link: 'www.example.com'
   },
   {
     user: 'John Doe',
@@ -95,6 +99,7 @@ export const cardData = [
     timestamp: 1460227642478,
     src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
     title: "This is the article description title here saying stuff",
+    link: 'www.example.com'
   },
   {
     user: 'John Doe',
@@ -102,5 +107,6 @@ export const cardData = [
     timestamp: 1460227642478,
     src: 'http://questgarden.com/84/77/7/090712062416/images/Purple%20Mountain%20Magesties.jpg',
     title: "This is the article description title here saying stuff",
+    link: 'www.example.com'
   },
 ]

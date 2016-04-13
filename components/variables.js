@@ -15,3 +15,10 @@ export const darkGrey = '#838582'
 export const gutter = 10;
 
 const btnText = '#fff';
+
+
+// alert message
+export const alertMessage = {
+  color: 'blue',
+  backgroundColor: 'red'
+}

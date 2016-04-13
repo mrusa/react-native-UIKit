@@ -9,8 +9,8 @@ import React, {
 
 import _ from 'lodash'
 
-const Card = ({src, title, gutter, onPress}) => (
-  <View style={[styles.cardShadow, {marginHorizontal: gutter}]}>
+const Card = ({src, title, link, radius, gutter, onPress}) => (
+  <View style={[styles.cardShadow, {marginHorizontal: gutter, borderRadius: radius,}]}>
     <View style={styles.card}>
       <View style={styles.clipRadius}>
         <TouchableOpacity onPress={onPress}>
@@ -19,26 +19,24 @@ const Card = ({src, title, gutter, onPress}) => (
         <View style={styles.imgBorderBtm}></View>
         <View style={styles.lowerSection}>
           <Text style={styles.title}>{_.truncate(title, {'length': 64, 'separator': /,? +/})} </Text>
-          <Text style={styles.subTitle}>Title here ... </Text>
+          <TouchableOpacity onPress={onPress}>
+            <Text style={styles.link}>{link}</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
   </View>
 );
 
-export default Card;
-
 var styles = StyleSheet.create({
   card: {
     backgroundColor: '#fff',
     borderColor: '#D8D8D8',
     borderWidth: 1,
-    borderRadius: 4,
     shadowColor: '#D8D8D8',
     shadowRadius: 2,
     shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.6,
-  //  overflow: 'hidden'
   },
   cardShadow: {
   },
@@ -53,12 +51,12 @@ var styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '500'
   },
-  subTitle: {
+  link: {
     fontSize: 15,
-    marginTop:5
+    marginTop:5,
+    color: '#979DA8'
   },
   img: {
-    //borderRadius: 4,
     height: 200,
     resizeMode: 'cover'
   },
@@ -67,5 +65,19 @@ var styles = StyleSheet.create({
     borderTopWidth: 1,
     height: 1,
   }
-
 })
+
+Card.defaultProps = {
+  gutter: gutter,
+  radius: 4
+}
+
+Card.propTypes = {
+  src: React.PropTypes.string,
+  title: React.PropTypes.string,
+  link: React.PropTypes.string,
+  gutter: React.PropTypes.number,
+  onPress: React.PropTypes.func,
+}
+
+export default Card;

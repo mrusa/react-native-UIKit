@@ -10,7 +10,9 @@ import React, {
   Dimensions
 } from 'react-native';
 
-var {height, width} = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
+
+import {gutter} from '../variables'
 
 const GalleryOffset = ({imagesArray, display}) => {
 
@@ -42,8 +44,9 @@ const GalleryOffset = ({imagesArray, display}) => {
 
 }
 
-const spacing = 0.025;
-const gutter = width/2*spacing;
+//const spacing = 0.025;
+//const gutter = width/2*spacing;
+//const {gutter} = this.props;
 
 const styles = StyleSheet.create({
   row: {
@@ -63,27 +66,29 @@ const styles = StyleSheet.create({
   lowerSectionColumn: {
     flexDirection: 'column',
     justifyContent: 'space-between',
-    width: width/2.025-gutter,
-    height: width-gutter,
+    width: width/2.025-(width/2*0.025),
+    height: width-(width/2*0.025),
   },
   full: {
-    width: width - gutter*2,
+    width: width - (width/2*0.025)*2,
     height: width/2.05,
     marginBottom: width/2*0.025
   },
   mainHalf: {
-    height: width-gutter-gutter,
+    height: width-(width/2*0.025)*2,
     marginBottom: width/2*0.025,
-    width: width/2.025-gutter,
+    width: width/2.025-(width/2*0.025),
   },
   half: {
-    width: width/2.025-gutter,
-    height: width/2.025-gutter,
+    width: width/2.025-(width/2*0.025),
+    height: width/2.025-(width/2*0.025),
     marginBottom: width/2*0.025
   }
 })
 
 GalleryOffset.defaultProps = {
-  display: 'column'
+  display: 'column',
+  spacing: 0.025,
+  gutter: 10
 }
 export default GalleryOffset;

@@ -7,7 +7,7 @@ import React, {
   TextInput
 } from 'react-native';
 
-import {gutter} from './variables'
+import {gutter} from '../variables'
 
 export default class InputField extends Component {
   constructor(){
