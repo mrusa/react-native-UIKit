@@ -40,6 +40,7 @@ export default class Search extends Component {
 Search.defaultProps = {
   placeHolder: 'Search',
   backgroundColor: lightGrey,
+  //backgroundColor: primary,
   innerBackground: '#FAFAFA',
   radius: 5,
   borderColor: '#D8D8D8',

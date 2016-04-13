@@ -1,5 +1,7 @@
 export const defaultColor = '#222';
-export const primary = '#08e';
+// export const primary = '#08e';
+export const primary = '#0094EA';
+
 export const secondary = '#1c7'
 
 export const error = '#fa0008'
