@@ -18,13 +18,15 @@ import {defaultColor, primary, lightGrey, secondary, info,} from './components/v
 import {
   Button, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
   Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull, ProfileHeader, ArticleText
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull, ProfileHeader, ArticleText, ListBasic
 } from './components'
 
 
 
 const App = () => (
     <ScrollView style={styles.container}>
+
+      <ListBasic items={['row 1', 'row 2']}/>
 
     {userPosts.map((item, i) => (
         <View key={i} style={{}}>

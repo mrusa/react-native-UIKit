@@ -24,6 +24,7 @@ export { default as FieldError } from './field-error'
 
 export { default as ReviewCell } from './review-cell'
 export { default as RatingBox } from './rating-box'
+export { default as ListBasic } from './list-basic'
 
 export { default as MapSection } from './map-section'
 
