@@ -22,11 +22,11 @@ export default class Search extends Component {
     }
   }
   render(){
-    const {placeHolder, backgroundColor, innerBackground, radius} = this.props;
+    const {placeHolder, backgroundColor, innerBackground, borderColor, border, radius} = this.props;
     return(
       <View style={[styles.holder, {backgroundColor: backgroundColor}]}>
         <TextInput
-           style={[styles.input, {backgroundColor:innerBackground, borderRadius: radius}]}
+           style={[styles.input, {backgroundColor:innerBackground, borderRadius: radius, borderColor: borderColor, borderWidth: border ? 1 : 0}]}
            onChangeText={(text) => this.setState({text})}
            value={this.state.text}
            placeholder={placeHolder}
@@ -42,12 +42,16 @@ Search.defaultProps = {
   backgroundColor: lightGrey,
   innerBackground: '#FAFAFA',
   radius: 5,
+  borderColor: '#D8D8D8',
+  border: true,
 }
 Search.propTypes = {
   placeHolder: React.PropTypes.string,
   backgroundColor: React.PropTypes.string,
   innerBackground: React.PropTypes.string,
   radius: React.PropTypes.number,
+  borderColor: React.PropTypes.string,
+  border: React.PropTypes.bool,
 }
 
 const styles = StyleSheet.create({
@@ -62,8 +66,6 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderColor: '#D8D8D8',
-    borderWidth: 1,
     paddingHorizontal: 10,
     paddingRight: 30,
   }

@@ -25,8 +25,19 @@ import {
 
 const App = () => (
     <ScrollView style={styles.container}>
-
-      <ListBasic items={['row 1', 'row 2']}/>
+      <Search
+        //placeHolder={'Search'}
+        // backgroundColor={'red'}
+        //innerBackground={'blue'}
+        //radius={5}
+        // borderColor={'green'}
+        // border={false}
+      />
+    <ListBasic onPress={(i) => alert(id)} items={[
+          {id: 0, title:'This is row 1 here hello'},
+          {id: 1, title:'And I am row 2, hello there'},
+          {id: 2, title:'And I am row 3, hello there'}
+        ]}/>
 
     {userPosts.map((item, i) => (
         <View key={i} style={{}}>
