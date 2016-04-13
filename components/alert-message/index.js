@@ -11,7 +11,7 @@ import {Close} from '../'
 const AlertMessage = ({backgroundColor, color}) => (
   <View style={[styles.row, {backgroundColor:backgroundColor}]}>
     <Text style={[styles.text, {color: color}]}>I am the message text here</Text>
-    <Close/>
+    <Close color={color}/>
   </View>
 );
 

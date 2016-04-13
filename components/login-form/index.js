@@ -10,33 +10,28 @@ import React, {
 
 import {defaultColor, primary, secondary, info} from '../variables'
 
-import {
-  Button,InputField, LoginFb, FieldError
-} from '../'
+import { Button,InputField, LoginFb, FieldError } from '../'
 
-
-const LoginForm = () => (
+const LoginForm = ({backgroundColor, radius, color}) => (
   <View style={styles.form}>
-    <InputField placeHolder={'email'}/>
-    <InputField placeHolder={'password'}/>
+    <InputField placeHolder={'email'} radius={radius}/>
+    <InputField placeHolder={'password'} radius={radius}/>
     <FieldError errorMsg={'username or password incorrect'} error={true}/>
-    <Button color={'#fff'} backgroundColor={primary} radius={5}>Submit</Button>
+    <Button color={'#fff'} backgroundColor={backgroundColor} radius={radius}>Submit</Button>
     <LoginFb/>
   </View>
 );
 
-export default LoginForm;
-
-
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   form: {
     paddingHorizontal: 10,
     flexDirection: 'column',
-    //height: 200,
     justifyContent: 'space-between',
-    //alignItems: 'center',
-    //backgroundColor: 'red',
     marginTop: 30,
     marginBottom: 50,
   },
 });
+LoginForm.defaultProps = {
+
+}
+export default LoginForm;

@@ -1,3 +1,5 @@
+'use strict';
+
 import React, {
   StyleSheet,
   TouchableOpacity,
@@ -11,18 +13,16 @@ const LoginFb = ({onPress}) => (
     <Image source={require('./assets/fb-login-button.png')}/>
   </TouchableOpacity>
 );
-/*
-LoginFb.propTypes = {
-    onPress: PropTypes.func.isRequired
-};
-*/
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   outer: {
     alignItems: 'center',
     marginBottom: gutter
   },
 });
 
+LoginFb.propTypes = {
+  onPress: React.PropTypes.func,
+};
 
 export default LoginFb;

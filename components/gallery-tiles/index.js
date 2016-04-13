@@ -1,5 +1,4 @@
 import React, {
-  Component,
   StyleSheet,
   View,
   Text,
@@ -9,56 +8,38 @@ import React, {
   Dimensions
 } from 'react-native';
 
-var {height, width} = Dimensions.get('window');
+const {height, width} = Dimensions.get('window');
 
 const Thumb = ({data}, i) => (
   <Image
-    key={i}
     style={{width: width/3.05, height: width/3.05, marginBottom: width/3*0.025  }}
     source={{uri: data}}
   />
 );
 
-var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-var data = [
-    {'name': 'row 1', 'age': 3, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 2', 'age': 33, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 3', 'age': 22, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 3', 'age': 22, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 3', 'age': 22, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 1', 'age': 3, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 2', 'age': 33, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 3', 'age': 22, 'src':'http://dummyimage.com/200x200/eee/fff'},
-    {'name': 'row 3', 'age': 22, 'src':'http://dummyimage.com/200x200/eee/fff'},
-];
+const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
 const GalleryTiles = ({images}) => (
   <ListView
-    contentContainerStyle={{justifyContent: 'space-between', flexDirection: 'row', flexWrap: 'wrap'}}
+    contentContainerStyle={styles.container}
     dataSource={ds.cloneWithRows(images)}
     renderRow={(rowData) => <Thumb data={rowData}/>}
     pageSize={1}
   />
 );
-/*
-class GalleryTiles extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      dataSource: ds.cloneWithRows(data),
-    }
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   }
-  render() {
-  //  const { data } = this.props.route;
-    return (
-        <ListView
-          contentContainerStyle={{justifyContent: 'center', flexDirection: 'row', flexWrap: 'wrap'}}
-          dataSource={ds.cloneWithRows(data)}
-          renderRow={(rowData) => <Thumb data={rowData}/>}
-          pageSize={1}
-        />
-    );
-  }
+})
+
+GalleryTiles.defaultProps = {
+  images: []
 }
-*/
+GalleryTiles.propTypes = {
+  images: React.PropTypes.array,
+}
 export default GalleryTiles;

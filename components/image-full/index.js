@@ -1,3 +1,5 @@
+'use strict';
+
 import React, {
   Image,
   TouchableOpacity,
@@ -9,4 +11,12 @@ const ImageFull = ({src, height, onPress}) => (
   </TouchableOpacity>
 );
 
+ImageFull.defaultProps = {
+  height: 300
+}
+ImageFull.propTypes = {
+  src: React.PropTypes.string,
+  height: React.PropTypes.number,
+  onPress: React.PropTypes.func,
+}
 export default ImageFull;

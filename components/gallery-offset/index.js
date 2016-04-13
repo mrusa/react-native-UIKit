@@ -51,7 +51,6 @@ const GalleryOffset = ({imagesArray, display, onPress}) => {
   }
 }
 
-
 const styles = StyleSheet.create({
   row: {
     flexDirection: 'column',
