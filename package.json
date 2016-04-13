@@ -1,14 +1,27 @@
 {
   "name": "react-native-uikit",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "A Collection of Presentation Components for React Native",
   "private": false,
   "scripts": {
     "start": "lib/index.js"
   },
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/andyfenelon/react-native-UIKit"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "native",
+    "uikit",
+    "react-component",
+    "react-native-component"
+  ],
+  "author": "Andy Fenelon",
+  "license": "MIT",
   "dependencies": {
     "lodash": "^4.10.0",
-    "moment": "^2.12.0",
-    "react": "^0.14.8",
-    "react-native": "^0.23.1"
+    "moment": "^2.12.0"
   }
 }
