@@ -1,3 +1,4 @@
+'use strict';
 import React, {
   Component,
   StyleSheet,
@@ -7,6 +8,7 @@ import React, {
   TextInput,
   View
 } from 'react-native';
+
 
 import {primary, lightGrey, gutter} from '../variables'
 
@@ -35,11 +37,21 @@ export default class Search extends Component {
     )
   }
 }
+Search.defaultProps = {
+  placeHolder: 'Search',
+  backgroundColor: lightGrey,
+  innerBackground: '#FAFAFA',
+  radius: 5,
+}
+Search.propTypes = {
+  placeHolder: React.PropTypes.string,
+  backgroundColor: React.PropTypes.string,
+  innerBackground: React.PropTypes.string,
+  radius: React.PropTypes.number,
+}
 
 const styles = StyleSheet.create({
   holder: {
-    //flex: 1,
-    //backgroundColor: backgroundColor,
     padding: 10,
   },
   icon: {
@@ -53,9 +65,6 @@ const styles = StyleSheet.create({
     borderColor: '#D8D8D8',
     borderWidth: 1,
     paddingHorizontal: 10,
-    borderRadius: 3,
     paddingRight: 30,
-    //backgroundColor: innerBackground,
-    //marginBottom: gutter
   }
 });

@@ -1,4 +1,4 @@
-
+'use strict';
 import React, {
   Component,
   StyleSheet,
@@ -8,11 +8,9 @@ import React, {
   TouchableOpacity
 } from 'react-native';
 
-
-
 import Rating from './rating'
 
-export default class RatingBox extends React.Component {
+export default class RatingBox extends Component {
   constructor(props) {
     super(props);
     this.state = {

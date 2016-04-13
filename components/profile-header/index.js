@@ -1,3 +1,4 @@
+'use strict';
 import React, {
   StyleSheet,
   Image,
@@ -7,11 +8,9 @@ import React, {
   Dimensions
 } from 'react-native';
 
-//import {Divider} from '../'
-
 const {height, width} = Dimensions.get('window');
 
-const ProfileHeader = ({title, summary, profileImg, backgroundImg, }) => (
+const ProfileHeader = ({title, summary, profileImg, backgroundImg }) => (
   <View style={styles.container}>
     <Image
       source={{uri: backgroundImg}}
@@ -25,8 +24,6 @@ const ProfileHeader = ({title, summary, profileImg, backgroundImg, }) => (
       style={styles.profileImg}/>
   </View>
 );
-
-export default ProfileHeader;
 
 const styles = StyleSheet.create({
   container: {
@@ -76,3 +73,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10
   }
 })
+ProfileHeader.defaultProps = {
+
+}
+ProfileHeader.propTypes = {
+  title: React.PropTypes.string,
+  summary: React.PropTypes.string,
+  profileImg: React.PropTypes.string,
+  backgroundImg: React.PropTypes.string,
+}
+export default ProfileHeader;

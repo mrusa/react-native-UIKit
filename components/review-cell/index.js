@@ -1,4 +1,4 @@
-
+'use strict';
 import React, {
   Component,
   StyleSheet,
@@ -12,10 +12,10 @@ import {gutter, grey, lightGrey} from '../variables'
 
 import {RatingBox} from '../'
 
-const ReviewCell = ({title, description, src, onPress}) => (
-  <TouchableOpacity style={styles.row} onPress={onPress}>
-    <View style={styles.content}>
-      <Text style={styles.title}>{title}</Text>
+const ReviewCell = ({title, description, src, onPress, gutter}) => (
+  <TouchableOpacity style={[styles.row, {borderColor: lightGrey, marginLeft: gutter}]} onPress={onPress}>
+    <View style={[styles.content, {paddingBottom: gutter}]}>
+      <Text style={[styles.title, {marginTop: gutter}]}>{title}</Text>
       <Text style={styles.description}>{description}</Text>
       <RatingBox/>
     </View>
@@ -27,35 +27,31 @@ const styles = StyleSheet.create({
   row: {
     flex: 1,
     flexDirection: 'row',
-    //backgroundColor: '#fff',
-    marginLeft: gutter,
-    borderColor: lightGrey,
     borderBottomWidth: 1,
   },
   title: {
     flex:1,
-    //fontWeight: '600',
     fontSize: 17,
-    marginTop: gutter
   },
   description: {
     flex:1,
-  //  fontWeight: '600',
     fontSize: 13,
-    //marginTop: 3,
     color: grey
   },
   content: {
     height: 75,
-    paddingBottom: gutter,
     flex: 1,
     flexDirection: 'column',
-    //justifyContent: 'space-between',
-    //backgroundColor: 'red'
   },
-  thumb: {
-
-  }
 });
-
+ReviewCell.defaultProps = {
+  gutter: gutter,
+}
+ReviewCell.propTypes = {
+  title: React.PropTypes.string,
+  description: React.PropTypes.string,
+  src: React.PropTypes.string,
+  onPress: React.PropTypes.func,
+  gutter: React.PropTypes.number,
+}
 export default ReviewCell;

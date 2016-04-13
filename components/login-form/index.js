@@ -31,7 +31,9 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
 });
-LoginForm.defaultProps = {
-
+LoginForm.propTypes = {
+  backgroundColor: React.PropTypes.string,
+  radius: React.PropTypes.number,
+  color: React.PropTypes.string,
 }
 export default LoginForm;

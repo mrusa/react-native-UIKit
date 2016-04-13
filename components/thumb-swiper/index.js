@@ -1,49 +1,21 @@
-
-const THUMBS = [
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
-  'http://dummyimage.com/200x200/eee/fff',
- ];
-
-import React from 'react-native'
-
-var {
+'use strict';
+import React, {
   View,
   Image,
-  AppRegistry,
   StyleSheet,
   Dimensions,
   Text,
   TouchableOpacity,
   ScrollView,
-} = React;
+} from 'react-native';
 
-const {
-  width,
-  height
-} = Dimensions.get('window');
-
-//import GalleryItem from './gallery-item';
+const { width,  height } = Dimensions.get('window');
 
 const Thumb = ({key, uri, onPress}) => (
   <TouchableOpacity onPress={onPress}>
     <Image key={key} style={styles.img} source={{uri: uri}} />
   </TouchableOpacity>
 );
-//const createThumbRow = (uri, i) => <Thumb key={i} uri={uri}/>;
 
 const ThumbSwiper = ({images, onPress}) => (
   <ScrollView
@@ -63,15 +35,16 @@ const ThumbSwiper = ({images, onPress}) => (
   </ScrollView>
 );
 
+ThumbSwiper.propTypes = {
+  images: React.PropTypes.array,
+  onPress: React.PropTypes.func,
+}
+
 export default ThumbSwiper;
 
 const styles = StyleSheet.create({
   scrollView: {
     justifyContent: 'space-between',
-    //paddingLeft: 10
-  },
-  horizontalScrollView: {
-    //height: 120,
   },
   text: {
     fontSize: 20,
@@ -79,14 +52,6 @@ const styles = StyleSheet.create({
     left: 80,
     top: 20,
     height: 40,
-  },
-  thumb: {
-    // marginRight: 10,
-    //paddingHorizontal: 10,
-    //padding: 10,
-    //borderRadius: 3,
-    //width: width/3,
-    //height: width/3,
   },
   title: {
     fontSize:20,

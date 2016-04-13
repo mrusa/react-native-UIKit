@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   },
   header: {
     flex: 1,
-    //backgroundColor: 'red',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -78,7 +77,6 @@ const styles = StyleSheet.create({
   },
   bodyText: {
     color: grey,
-
   },
   dot: {
     width: 10,
@@ -88,5 +86,15 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start'
   }
 })
+Message.defaultProps = {
+  active: true
+}
+Message.propTypes = {
+  user: React.PropTypes.string,
+  title: React.PropTypes.string,
+  timestamp: React.PropTypes.number,
+  message: React.PropTypes.string,
+  active: React.PropTypes.bool,
+}
 
 export default Message;

@@ -1,5 +1,4 @@
 'use strict'
-
 import React, {
   AppRegistry,
   Component,
@@ -232,7 +231,6 @@ const App = () => (
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
     backgroundColor: '#D3D5DA',
     marginTop: 20,
   },
