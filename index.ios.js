@@ -106,7 +106,7 @@ const App = () => (
     {/*<ModalCustom/>*/}
     <Gallery
       images={galleryImages}
-      heightGallery={500}
+      heightGallery={400}
     />
     <Search
       placeHolder={'Search'}

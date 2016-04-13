@@ -1,11 +1,7 @@
 import React, {
-  Component,
-  defaultProps,
   StyleSheet,
-  Text,
   Image,
   TouchableOpacity,
-  TextInput,
   View,
   Dimensions
 } from 'react-native';
@@ -14,17 +10,23 @@ const {height, width} = Dimensions.get('window');
 
 import {gutter} from '../variables'
 
-const GalleryOffset = ({imagesArray, display}) => {
+const GalleryOffset = ({imagesArray, display, onPress}) => {
 
   const images = imagesArray;
   // row
   if(display === 'row'){
     return (
       <View style={styles.row}>
-        <Image source={{uri: images[0]}} style={styles.full}/>
+        <TouchableOpacity onPress={onPress}>
+          <Image source={{uri: images[0]}} style={styles.full}/>
+        </TouchableOpacity>
         <View style={styles.lowerSection}>
-          <Image source={{uri: images[1]}} style={styles.half}/>
-          <Image source={{uri: images[2]}} style={styles.half}/>
+          <TouchableOpacity onPress={onPress}>
+            <Image source={{uri: images[1]}} style={styles.half}/>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={onPress}>
+            <Image source={{uri: images[2]}} style={styles.half}/>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -33,20 +35,22 @@ const GalleryOffset = ({imagesArray, display}) => {
   else {
     return (
       <View style={styles.column}>
-        <Image source={{uri: images[0]}} style={styles.mainHalf}/>
+        <TouchableOpacity onPress={onPress}>
+          <Image source={{uri: images[0]}} style={styles.mainHalf}/>
+        </TouchableOpacity>
         <View style={styles.lowerSectionColumn}>
-          <Image source={{uri: images[1]}} style={styles.half}/>
-          <Image source={{uri: images[2]}} style={styles.half}/>
+          <TouchableOpacity onPress={onPress}>
+            <Image source={{uri: images[1]}} style={styles.half}/>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={onPress}>
+            <Image source={{uri: images[2]}} style={styles.half}/>
+          </TouchableOpacity>
         </View>
       </View>
     );
   }
-
 }
 
-//const spacing = 0.025;
-//const gutter = width/2*spacing;
-//const {gutter} = this.props;
 
 const styles = StyleSheet.create({
   row: {
@@ -88,7 +92,12 @@ const styles = StyleSheet.create({
 
 GalleryOffset.defaultProps = {
   display: 'column',
-  spacing: 0.025,
-  gutter: 10
+  gutter: gutter,
 }
+GalleryOffset.propTypes = {
+  display: React.PropTypes.oneOf(['row', 'column']),
+  gutter: React.PropTypes.number,
+  onPress: React.PropTypes.func,
+}
+
 export default GalleryOffset;

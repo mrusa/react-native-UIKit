@@ -1,33 +1,15 @@
-
-import React from 'react-native'
-
-var {
-  View,
-  Image,
-  AppRegistry,
+import React, {
   StyleSheet,
-  Dimensions,
-  Text,
-  TouchableHighlight,
+  Image,
   ScrollView,
-} = React;
+  View,
+  TouchableOpacity,
+  Dimensions
+} from 'react-native';
 
-const {
-  width,
-  height
-} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
-//import GalleryItem from './gallery-item';
-
-// TODO set height as props
-const GalleryItem = ({key, uri, heightGallery}) => (
-  <View style={styles.thumb} key={key}>
-    <Image style={[styles.img, {height: 300}]} source={{uri: uri}} />
-  </View>
-);
-const createThumbRow = (uri, i) => <GalleryItem key={i} uri={uri} />;
-
-const Gallery = ({images, heightGallery}) => (
+const Gallery = ({images, heightGallery, onPress}) => (
   <ScrollView
     horizontal={true}
     decelerationRate={'fast'}
@@ -39,50 +21,31 @@ const Gallery = ({images, heightGallery}) => (
     automaticallyAdjustContentInsets={false}
     onScroll={() => { console.log('onScroll!'); }}
     scrollEventThrottle={200}
-    style={styles.scrollView}
+    //style={styles.scrollView}
     heightGallery={heightGallery}>
-    {images.map(createThumbRow)}
+    {images.map((uri, i) => {
+      return (
+        <TouchableOpacity onPress={onPress} key={i}>
+          <Image style={[styles.img, {height: heightGallery}]} source={{uri: uri}} />
+        </TouchableOpacity>
+      );
+    })}
   </ScrollView>
 );
 
-export default Gallery;
-
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: '#fff',
-    //height: 300,
-    //paddingLeft: 10
-  },
-  horizontalScrollView: {
-    //height: 120,
-  },
-  text: {
-    fontSize: 20,
-    color: '#888888',
-    left: 80,
-    top: 20,
-    height: 40,
-  },
-  thumb: {
-    // marginRight: 10,
-    //paddingHorizontal: 10,
-    //padding: 10,
-    //borderRadius: 3,
-  },
-  title: {
-    fontSize:20,
-    marginVertical: 10,
-    fontWeight: 'bold'
-  },
-  buttonContents: {
-    flexDirection: 'row',
-    width: 64,
-    height: 64,
-  },
   img: {
     resizeMode: 'cover',
-    height: 200,
-    // width: width-40,
     width: width
   }
 })
+Gallery.defaultProps = {
+  images: [],
+  heightGallery: 300,
+}
+Gallery.propTypes = {
+  images: React.PropTypes.array,
+  heightGallery: React.PropTypes.number,
+  onPress:  React.PropTypes.func,
+}
+export default Gallery;

@@ -1,22 +1,27 @@
 import React, {
-  AppRegistry,
-  Component,
   StyleSheet,
   Text,
 } from 'react-native';
 
 import moment from 'moment'
 
-const DateItem = ({timestamp}) => (
-  <Text style={styles.date}>
+const DateItem = ({timestamp, color}) => (
+  <Text style={[styles.date, {color: color}]}>
     {moment(timestamp).fromNow()}
   </Text>
 );
 
-export default DateItem;
-
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   date: {
     marginLeft: 10,
   },
 });
+
+DateItem.defaultProps = {
+  color: '#222'
+}
+DateItem.propTypes = {
+  color: React.PropTypes.string,
+  timestamp: React.PropTypes.number,
+}
+export default DateItem;

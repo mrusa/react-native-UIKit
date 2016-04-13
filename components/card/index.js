@@ -8,6 +8,7 @@ import React, {
 } from 'react-native';
 
 import _ from 'lodash'
+import {gutter} from '../variables'
 
 const Card = ({src, title, link, radius, gutter, onPress}) => (
   <View style={[styles.cardShadow, {marginHorizontal: gutter, borderRadius: radius,}]}>

@@ -7,23 +7,28 @@ import React, {
 
 import {gutter, error} from '../variables'
 
-const FieldError = ({errorMsg, error}) => (
-  <View style={styles.container}>
-    {error ? <Text style={styles.error}>{errorMsg}</Text> : null}
+const FieldError = ({errorMsg, error, color, gutter}) => (
+  <View style={[styles.container, {marginBottom: gutter}]}>
+    {error ? <Text style={{color: color}}>{errorMsg}</Text> : null}
   </View>
 );
 
-export default FieldError;
-
 var styles = StyleSheet.create({
   container: {
-    marginBottom: gutter,
     justifyContent:'center',
     paddingLeft: 10,
-    //backgroundColor: '#fff'
   },
-  error: {
-    color: error,
-  },
-
 });
+
+FieldError.defaultProps = {
+  error: false,
+  color: error,
+  gutter: gutter
+}
+FieldError.propTypes = {
+  errorMsg: React.PropTypes.string,
+  error: React.PropTypes.bool,
+  color: React.PropTypes.string,
+  gutter: React.PropTypes.number,
+}
+export default FieldError;
