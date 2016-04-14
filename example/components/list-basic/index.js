@@ -5,10 +5,12 @@ import React, {
   View,
   Image,
   TouchableOpacity,
-  ListView
+  ListView,
+  Dimensions
 } from 'react-native';
 
 import {gutter} from '../variables'
+const {height, width} = Dimensions.get('window');
 
 const Row = ({rowData, backgroundColor, color, onPress, gutter, i, fontSize}) => (
   <TouchableOpacity style={{backgroundColor: backgroundColor}} key={i} onPress={onPress.bind(this, rowData.id)}>
@@ -23,6 +25,8 @@ let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
 const ListBasic = (props) => (
   <ListView
+    renderHeader={() => <View style={{width: width}}>{props.headerContent}</View>}
+    renderFooter={() => <View style={{width: width}}>{props.footerContent}</View>}
     dataSource={ds.cloneWithRows(props.items)}
     renderRow={(rowData) => <Row rowData={rowData} {...props}/>}
   />

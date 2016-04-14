@@ -160,7 +160,6 @@ ___
   onPress={() => console.log('card pressed')}
   src={'https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg'}
   title={'Card title - Some quick example text to build on the card title and make up the bulk of the card'}
-  gutter={10}
   link={'www.example.com'}
   radius={5}
   marginBottom={30}
@@ -170,6 +169,7 @@ ___
 | :------| :-----------| :-----------|
 | backgroundColor   | String | box background color |
 | color   | String | text color |
+| shadow   | Bool | display dropshadow (default true) |
 | src  | String | img src |
 | gutter  | Number | side padding |
 | radius   | Number | border radius size |
@@ -254,9 +254,11 @@ ___
 | marginBottom   | Number | marginBottom |
 
 ### Grid
+ListView Component
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.jpg)
 ```javascript
 <Grid
+  headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
   images={[
     'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
     'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
@@ -268,11 +270,14 @@ ___
     'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
     'http://i.imgur.com/YaQDc.jpg?1',
   ]}
-  />
+  footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+/>
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
 | images   | Array | images array |
+| headerContent   | Component | content for header (optional) |
+| footerContent   | Component | content for footer (optional)|
 
 ### GalleryOffset
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-offset-row.jpg)
@@ -358,18 +363,24 @@ ___
 ### ListBasic
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/list-basic.jpg)
 ```javascript
-<ListBasic onPress={(i) => console.log(id)} items={[
-  {id: 0, title:'Label'},
-  {id: 1, title:'Label'},
-  {id: 2, title:'Label'},
-  {id: 3, title:'Label'}
-]}/>
+<ListBasic
+  headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
+  items={[
+    {id: 0, title:'Label'},
+    {id: 1, title:'Label'},
+    {id: 2, title:'Label'},
+    {id: 3, title:'Label'}
+  ]}
+  footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+  onPress={(i) => console.log(id)}
+/>
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
 | items  | Array | list items |
 | onPress | Func | called onPress |
-
+| headerContent   | Component | content for header (optional) |
+| footerContent   | Component | content for footer (optional)|
 
 ### LoginFb
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/fb-login.jpg)

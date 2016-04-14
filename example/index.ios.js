@@ -34,11 +34,45 @@ const App = () => (
         // borderColor={'green'}
         // border={false}
       />
-    <ListBasic onPress={(i) => alert(id)} items={[
-          {id: 0, title:'This is row 1 here hello'},
-          {id: 1, title:'And I am row 2, hello there'},
-          {id: 2, title:'And I am row 3, hello there'}
-        ]}/>
+
+      <ListBasic
+        headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
+        items={[
+          {id: 0, title:'Label'},
+          {id: 1, title:'Label'},
+          {id: 2, title:'Label'},
+          {id: 3, title:'Label'}
+        ]}
+        footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+        onPress={(i) => console.log(id)}
+      />
+
+
+          {cardData.map((item, i) => (
+            <View key={i} style={{backgroundColor: '#fff', paddingBottom: 30}}>
+              <AvatarHeader src={item.avartar}
+                heading={item.user}
+                timestamp={item.timestamp}
+                circle={true}
+                backgroundColor={'#fff'}
+                height={40}
+                gutter={10}
+
+                />
+              <Card
+                key={i}
+                //shadow={false}
+                onPress={() => console.log('card pressed')}
+                src={item.src}
+                title={item.title}
+                //gutter={10}
+                link={item.link}
+                radius={5}
+                />
+            </View>
+          ))}
+
+
 
     {userPosts.map((item, i) => (
         <View key={i} style={{}}>
@@ -75,6 +109,12 @@ const App = () => (
         </View>
       ))}
 
+          <ListBasic onPress={(i) => alert(id)} items={[
+                {id: 0, title:'This is row 1 here hello'},
+                {id: 1, title:'And I am row 2, hello there'},
+                {id: 2, title:'And I am row 3, hello there'}
+              ]}/>
+
       <ProfileHeader
         title={users[0].title}
         summary={users[0].summary}
@@ -82,33 +122,22 @@ const App = () => (
         backgroundImg={users[0].backgroundImg}
       />
       <Grid
-        images={galleryImages}
-        />
+        headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
+        images={[
+          'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
+          'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
+          'http://i.imgur.com/YaQDc.jpg?1',
+          'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
+          'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
+          'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
+          'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
+          'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
+          'http://i.imgur.com/YaQDc.jpg?1',
+        ]}
+        footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+      />
 
 
-
-    {cardData.map((item, i) => (
-      <View key={i} style={{backgroundColor: '#fff', paddingBottom: 30}}>
-        <AvatarHeader src={item.avartar}
-          heading={item.user}
-          timestamp={item.timestamp}
-          circle={true}
-          backgroundColor={'#fff'}
-          height={40}
-          gutter={10}
-
-          />
-        <Card
-          key={i}
-          onPress={() => console.log('card pressed')}
-          src={item.src}
-          title={item.title}
-          gutter={10}
-          link={item.link}
-          radius={5}
-          />
-      </View>
-    ))}
 
 
       <GalleryOffset
