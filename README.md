@@ -15,6 +15,7 @@ import what you need
 #### Documentation
 
 ### AlertMessage
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/alertmessage.jpg)
 ```javascript
 <AlertMessage
   message={'This is the alert message here'}
@@ -29,6 +30,7 @@ import what you need
 | onPress   | Func | called on press of close button  |
 
 ### ArticleText
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/articletext.jpg)
 ```javascript
 <ArticleText
   username={'username'}
@@ -44,6 +46,7 @@ import what you need
 | onPress   | Func | called on press   |
 
 ### Avatar
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/avatar.jpg)
 ```javascript
 <Avatar
   src={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
@@ -60,6 +63,7 @@ import what you need
 | onPress   | Func | called on press   |
 
 ### AvatarHeader
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/avartar-header.jpg)
 ```javascript
 <AvatarHeader src={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
   heading={'Lynsey Smith'}
@@ -90,6 +94,7 @@ import what you need
 ```
 
 ### Card
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/card.jpg)
 ```javascript
 <Card
   onPress={() => console.log('card pressed')}
@@ -103,6 +108,7 @@ import what you need
 ```
 
 ### Carousel
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/carousel.jpg)
 ```javascript
 <Carousel
   images={[
@@ -118,6 +124,7 @@ import what you need
 ```
 
 ### Close
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/close.jpg)
 ```javascript
 <Close
   size={50}
@@ -127,6 +134,7 @@ import what you need
 ```
 
 ### DateItem
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/date-item.jpg)
 ```javascript
 <DateItem
   timestamp={1460227647478}
@@ -136,6 +144,7 @@ import what you need
 ```
 
 ### Divider
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/divider.jpg)
 ```javascript
 <Divider
   color={'#eee'}
@@ -153,6 +162,7 @@ import what you need
 ```
 
 ### GalleryOffset
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.png)
 ```javascript
 <GalleryOffset
   imagesArray={[
@@ -168,6 +178,7 @@ import what you need
 ```
 
 ### GalleryTiles
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.jpg)
 ```javascript
 <GalleryTiles
   images={[
@@ -223,6 +234,7 @@ import what you need
 ```
 
 ### ListBasic
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/list-basic.jpg)
 ```javascript
 <ListBasic onPress={(i) => alert(id)} items={[
   {id: 0, title:'Label'},
@@ -234,6 +246,7 @@ import what you need
 
 
 ### LoginFb
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/fb-login.jpg)
 ```javascript
 <LoginFb
   onPress={() => console.log('login with fb')}
@@ -241,6 +254,7 @@ import what you need
 ```
 
 ### LoginForm
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/login-form.jpg)
 ```javascript
 <LoginForm
   loginFb={() => alert('login with facebook')}
@@ -250,7 +264,9 @@ import what you need
 />
 ```
 
+
 ### MapSection
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/login-form.jpg)
 ```javascript
 <MapSection
   height={300}
@@ -271,6 +287,7 @@ import what you need
 ```
 
 ### Message
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/messages.jpg)
 ```javascript
 <Message
   active={true}
@@ -282,6 +299,7 @@ import what you need
 ```
 
 ### ProfileHeader
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/profile-header.jpg)
 ```javascript
 <ProfileHeader
   title={'Elle Roberts'}
