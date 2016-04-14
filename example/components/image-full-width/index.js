@@ -5,18 +5,20 @@ import React, {
   TouchableOpacity,
 } from 'react-native';
 
-const ImageFull = ({src, height, onPress}) => (
+const ImageFullWidth = ({src, height, onPress, children}) => (
   <TouchableOpacity onPress={onPress}>
-    <Image source={{uri: src}} style={{resizeMode: 'cover', height: height}} />
+    <Image source={{uri: src}} style={{resizeMode: 'cover', height: height}}>
+      {children}
+    </Image>
   </TouchableOpacity>
 );
 
-ImageFull.defaultProps = {
+ImageFullWidth.defaultProps = {
   height: 300
 }
-ImageFull.propTypes = {
+ImageFullWidth.propTypes = {
   src: React.PropTypes.string,
   height: React.PropTypes.number,
   onPress: React.PropTypes.func,
 }
-export default ImageFull;
+export default ImageFullWidth;

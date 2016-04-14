@@ -8,10 +8,10 @@ import React, {
 import {Close} from '../'
 
 
-const AlertMessage = ({backgroundColor, color, message}) => (
+const AlertMessage = ({backgroundColor, color, message, onPress}) => (
   <View style={[styles.row, {backgroundColor:backgroundColor}]}>
     <Text style={[styles.text, {color: color}]}>{message}</Text>
-    <Close color={color}/>
+    <Close color={color} onPress={onPress}/>
   </View>
 );
 

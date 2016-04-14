@@ -8,7 +8,7 @@ export { default as AvatarHeader } from './avatar-header'
 export { default as Close } from './close'
 export { default as AlertMessage } from './alert-message'
 export { default as LikeBtn } from './like-btn'
-export { default as Gallery } from './gallery'
+export { default as Carousel } from './carousel'
 export { default as InputField } from './input-field'
 export { default as Time } from './time'
 export { default as DateItem } from './date-item'
@@ -32,7 +32,7 @@ export { default as Search } from './search'
 
 export { default as GalleryOffset} from './gallery-offset'
 
-export { default as ImageFull} from './image-full'
+export { default as ImageFullWidth} from './image-full-width'
 
 export { default as ProfileHeader} from './profile-header'
 export { default as ArticleText} from './article-text'

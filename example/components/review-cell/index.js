@@ -8,6 +8,8 @@ import React, {
   TouchableOpacity
 } from 'react-native';
 
+import _ from 'lodash'
+
 import {gutter, grey, lightGrey} from '../variables'
 
 import {RatingBox} from '../'
@@ -16,7 +18,7 @@ const ReviewCell = ({title, description, src, onPress, gutter}) => (
   <TouchableOpacity style={[styles.row, {borderColor: lightGrey, marginLeft: gutter}]} onPress={onPress}>
     <View style={[styles.content, {paddingBottom: gutter}]}>
       <Text style={[styles.title, {marginTop: gutter}]}>{title}</Text>
-      <Text style={styles.description}>{description}</Text>
+      <Text style={styles.description}>{_.truncate(description, {'length': 44, 'separator': /,? +/})}</Text>
       <RatingBox/>
     </View>
     <Image source={{uri: src}} style={[styles.thumb,{height: 75, width: 70}]}/>

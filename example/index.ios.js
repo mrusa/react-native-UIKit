@@ -17,22 +17,29 @@ import {defaultColor, primary, lightGrey, secondary, info,} from './components/v
 
 import {
   Button, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
-  Gallery, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFull, ProfileHeader, ArticleText, ListBasic
+  Carousel, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFullWidth, ProfileHeader, ArticleText, ListBasic
 } from './components'
 
 
 
 const App = () => (
     <View style={styles.container}>
-      <ImageFull
-        src={'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'}
-        height={300}
+      <View>
+      <ReviewCell
+        title={'Gaucho'}
+        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'}
+        src={'https://lh5.googleusercontent.com/proxy/lvLgnhcoHke5BEhTG-bVydssje9jV_GytcBidVZh4ADXEuiybVwXN4mlIbgxxOKn2pF1uharMho8lAqGSXcMGKJMigr42UH_qZ1THp4bZplV7uyThhmwEtq38oAhKW7V5Y_6j46jAEkxkrewm9wrd_T4K2JBUw8=w271-h180'}
         onPress={() => console.log('pressed')}
-      >
-      <Text>Helllo</Text>
-    </ImageFull>
-
+      />
+      <ReviewCell
+        title={'Gaucho'}
+        description={'Argentine food and wine.'}
+        src={'https://lh5.googleusercontent.com/proxy/lvLgnhcoHke5BEhTG-bVydssje9jV_GytcBidVZh4ADXEuiybVwXN4mlIbgxxOKn2pF1uharMho8lAqGSXcMGKJMigr42UH_qZ1THp4bZplV7uyThhmwEtq38oAhKW7V5Y_6j46jAEkxkrewm9wrd_T4K2JBUw8=w271-h180'}
+        onPress={() => console.log('pressed')}
+        //gutter={20}
+      />
+  </View>
     </View>
 );
 

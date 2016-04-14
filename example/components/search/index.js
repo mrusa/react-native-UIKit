@@ -22,7 +22,7 @@ export default class Search extends Component {
     }
   }
   render(){
-    const {placeHolder, backgroundColor, innerBackground, borderColor, border, radius} = this.props;
+    const {placeHolder, backgroundColor, innerBackground, borderColor, border, radius, iconColor, onSubmitEditing} = this.props;
     return(
       <View style={[styles.holder, {backgroundColor: backgroundColor}]}>
         <TextInput
@@ -31,8 +31,9 @@ export default class Search extends Component {
            value={this.state.text}
            placeholder={placeHolder}
            placeholderTextColor={'#9197A3'}
+           onSubmitEditing={onSubmitEditing}
          />
-       <Image style={[{width: 20, height: 20, resizeMode: Image.resizeMode.contain}, styles.icon]} source={{uri: searchIcon}}/>
+       <Image style={[{width: 20, height: 20, resizeMode: Image.resizeMode.contain, tintColor: iconColor}, styles.icon]} source={{uri: searchIcon}}/>
       </View>
     )
   }
@@ -45,6 +46,7 @@ Search.defaultProps = {
   radius: 5,
   borderColor: '#D8D8D8',
   border: true,
+  iconColor: '#D8D8D8'
 }
 Search.propTypes = {
   placeHolder: React.PropTypes.string,
@@ -53,18 +55,17 @@ Search.propTypes = {
   radius: React.PropTypes.number,
   borderColor: React.PropTypes.string,
   border: React.PropTypes.bool,
+  iconColor:  React.PropTypes.string,
 }
 
 const styles = StyleSheet.create({
   holder: {
-    //flex:1,
     padding: 10,
   },
   icon: {
     position: 'absolute',
     top: 20,
     right: 20,
-    tintColor: '#D8D8D8',
   },
   input: {
     height: 40,

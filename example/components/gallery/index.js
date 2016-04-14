@@ -9,7 +9,7 @@ import React, {
 
 const { width, height } = Dimensions.get('window');
 
-const Gallery = ({images, heightGallery, onPress}) => (
+const Carousel = ({images, heightGallery, onPress}) => (
   <ScrollView
     horizontal={true}
     decelerationRate={'fast'}
@@ -39,13 +39,13 @@ const styles = StyleSheet.create({
     width: width
   }
 })
-Gallery.defaultProps = {
+Carousel.defaultProps = {
   images: [],
   heightGallery: 300,
 }
-Gallery.propTypes = {
+Carousel.propTypes = {
   images: React.PropTypes.array,
   heightGallery: React.PropTypes.number,
   onPress:  React.PropTypes.func,
 }
-export default Gallery;
+export default Carousel;
