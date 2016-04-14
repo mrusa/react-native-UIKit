@@ -13,7 +13,10 @@ import what you need
 `import { Button, Card } from 'react-native-uikit';`
 
 
-#### Example
+
+
+### Example
+___
 ##### Components can be combined to create larger entities
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/full-post.jpg)
 ```javascript
@@ -51,7 +54,10 @@ import what you need
 ```
 
 
-#### Documentation
+
+## Documentation
+___
+
 
 ### AlertMessage
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/alertmessage.jpg)
