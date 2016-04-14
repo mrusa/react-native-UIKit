@@ -23,6 +23,12 @@ import what you need
   onPress={() => console.log('pressed')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| backgroundColor   | String | box background color |
+| color   | String | text color |
+| message   | String | message text |
+| onPress   | Func | called on press of close button  |
 
 ### ArticleText
 ```javascript
@@ -33,6 +39,12 @@ import what you need
   onPress={() => console.log('pressed')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| username   | String | username  |
+| text   | String | body of text for article |
+| highLightColor   | String | text color for username |
+| onPress   | Func | called on press   |
 
 ### Avatar
 ```javascript
@@ -43,6 +55,12 @@ import what you need
   onPress={() => console.log('pressed')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| src   | String | src for avartar img  |
+| size   | Number | height & width of img |
+| circle   | Bool | is circular |
+| onPress   | Func | called on press   |
 
 ### AvatarHeader
 ```javascript
@@ -55,6 +73,13 @@ import what you need
   gutter={10}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| heading   | String | title / username  |
+| timestamp  | Number | Unix Timestamp (milliseconds)  |
+| backgroundColor   | String | section background color |
+| gutter  | Number | spacing around  |
+| onPress   | Func | called on press   |
 
 ### Button
 ```javascript
