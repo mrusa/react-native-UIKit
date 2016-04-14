@@ -12,8 +12,9 @@ import what you need
 
 `import { Button, Card } from 'react-native-uikit';`
 
+#### Components
 
-
+**AlertMessage,  ArticleText, Avatar, AvatarHeader, Button, Card, Carousel, Close, DateItem, Divider, FieldError, GalleryTiles, GalleryOffset, Heading, ImageFullWidth, InputField, LikeBtn, ListBasic, LoginFb, LoginForm, MapSection, Message, ProfileHeader, RatingBox, ReviewCell, Search, ThumbSwiper, Time**
 
 ### Example
 ___
