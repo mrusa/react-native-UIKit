@@ -3,7 +3,7 @@
 
 A collection of stateless (or minimally stateful) stylized and configurable UI components for rapid prototyping.
 
-work in progress.. (alpha)
+work in progress..
 
 #### Getting Started
 `npm i react-native-uikit -S`
@@ -92,6 +92,12 @@ import what you need
   Submit
 </Button>
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| backgroundColor   | String | box background color |
+| color   | String | text color |
+| radius   | Number | border radius size |
+| onPress   | Func | called on press |
 
 ### Card
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/card.jpg)
@@ -106,6 +112,15 @@ import what you need
   marginBottom={30}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| backgroundColor   | String | box background color |
+| color   | String | text color |
+| src  | String | img src |
+| gutter  | Number | side padding |
+| radius   | Number | border radius size |
+| onPress   | Func | called on press  |
+
 
 ### Carousel
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/carousel.jpg)
@@ -122,6 +137,10 @@ import what you need
   height={300}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| images   | Array | array of images |
+| height   | Number | height of carousel |
 
 ### Close
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/close.jpg)
@@ -132,6 +151,11 @@ import what you need
   onPress={() => console.log('closed')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| size   | Number | width / height |
+| color   | String | color of button |
+| onPress   | Func | called on press  |
 
 ### DateItem
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/date-item.jpg)
@@ -142,6 +166,11 @@ import what you need
   marginLeft={10}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| timestamp  | Number | Unix Timestamp (milliseconds)  |
+| color   | String | color of text |
+| marginLeft  | Number | margin left |
 
 ### Divider
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/divider.jpg)
@@ -150,6 +179,9 @@ import what you need
   color={'#eee'}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| color   | String | color of divider |
 
 ### FieldError
 ```javascript
@@ -160,6 +192,13 @@ import what you need
   marginBottom={40}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| errorMsg   | String | error message |
+| error   | Bool | display message or not |
+| color   | String | color of text |
+| marginBottom   | Number | marginBottom |
+
 ### GalleryTiles
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.jpg)
 ```javascript
@@ -177,6 +216,9 @@ import what you need
   ]}
   />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| images   | Array | images array |
 
 ### GalleryOffset
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-offset-row.jpg)
@@ -193,7 +235,9 @@ import what you need
   display={'column'}
 />
 ```
-
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| images   | Array | images array |
 
 
 ### Heading
@@ -203,6 +247,10 @@ import what you need
   weight={'bold'}
 >HELLO THERE</Heading>
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| size  | Number | text size |
+| weight  | String | font Weight |
 
 ### ImageFullWidth
 ```javascript
@@ -212,6 +260,10 @@ import what you need
   onPress={() => console.log('pressed')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| src  | String | img src |
+| height  | Number | img height |
 
 ### InputField
 ```javascript
@@ -223,6 +275,13 @@ import what you need
   radius={5}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| placeHolder  | String | input placeholder |
+| gutter  | Number | padding |
+| color  | String | text color |
+| backgroundColor | String | background color |
+| radius  | Number | border radius |
 
 ### LikeBtn
 ```javascript
@@ -233,17 +292,29 @@ import what you need
   onPress={() => console.log('liked')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| active  | Bool | is active |
+| likes  | Number | number of likes |
+| color  | String | text color |
+| onPress | Func | called onPress |
+
+
 
 ### ListBasic
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/list-basic.jpg)
 ```javascript
-<ListBasic onPress={(i) => alert(id)} items={[
+<ListBasic onPress={(i) => console.log(id)} items={[
   {id: 0, title:'Label'},
   {id: 1, title:'Label'},
   {id: 2, title:'Label'},
   {id: 3, title:'Label'}
 ]}/>
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| items  | Array | list items |
+| onPress | Func | called onPress |
 
 
 ### LoginFb
@@ -253,18 +324,26 @@ import what you need
   onPress={() => console.log('login with fb')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| onPress | Func | called onPress |
 
 ### LoginForm
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/login-form.jpg)
 ```javascript
 <LoginForm
-  loginFb={() => alert('login with facebook')}
-  onSubmit={() => alert('email, password')}
+  loginFb={() => console.log('login with facebook')}
+  onSubmit={() => console.log('email, password')}
   error={false}
   errorMsg={'username or password incorrect'}
 />
 ```
-
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| loginFb | Func | called onPress fb login |
+| onSubmit | Func | called onPress login |
+| error | Bool | display error message |
+| errorMsg | String | error message |
 
 ### MapSection
 ```javascript
@@ -285,6 +364,13 @@ import what you need
   }
   />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| height | Number | map height |
+| fullHeight | Bool | display full height |
+| region | Obj | region on map |
+| annotations | Array | markers on map |
+
 
 ### Message
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/messages.jpg)
@@ -297,6 +383,13 @@ import what you need
   timestamp={1460227614421}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| active | Bool | is message read |
+| user | String | sender name |
+| title | String | message title |
+| annotations | Array | markers on map |
+| timestamp  | Number | Unix Timestamp (milliseconds)  |
 
 ### ProfileHeader
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/profile-header.jpg)
@@ -308,6 +401,12 @@ import what you need
   backgroundImg={'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg'}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| title | String | username |
+| summary | String | profile description |
+| profileImg | String | profile thumb src |
+| backgroundImg  | String | background img src  |
 
 ### RatingBox
 ```javascript
@@ -324,7 +423,12 @@ import what you need
   onPress={() => console.log('pressed')}
 />
 ```
-
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| title | String | item title |
+| description | String | item description |
+| src | String | item thumb src |
+| onPress | Func | called on press |
 
 ### Search
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/search.jpg)
@@ -340,7 +444,12 @@ import what you need
   onSubmitEditing={() => console.log('submited')}
 />
 ```
-
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| placeHolder | String | placeholder text |
+| placeHolder | String | placeholder text |
+| placeHolder | String | placeholder text |
+| placeHolder | String | placeholder text |
 
 ### ThumbSwiper
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/thumb-swiper.jpg)
@@ -357,6 +466,9 @@ import what you need
   onPress={() => console.log('pressed')}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| images | Array| images |
 
 ### Time
 ```javascript
@@ -365,3 +477,7 @@ import what you need
   color={'#222'}
 />
 ```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| color | String | text color |
+| timestamp  | Number | Unix Timestamp (milliseconds)  |
