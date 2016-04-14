@@ -5,23 +5,25 @@ import React, {
 
 import moment from 'moment'
 
-const DateItem = ({timestamp, color}) => (
-  <Text style={[styles.date, {color: color}]}>
+const DateItem = ({timestamp, color, marginLeft}) => (
+  <Text style={[styles.date, {color: color, marginLeft: marginLeft}]}>
     {moment(timestamp).fromNow()}
   </Text>
 );
 
 const styles = StyleSheet.create({
   date: {
-    marginLeft: 10,
+
   },
 });
 
 DateItem.defaultProps = {
-  color: '#222'
+  color: '#222',
+  marginLeft: 0,
 }
 DateItem.propTypes = {
   color: React.PropTypes.string,
-  timestamp: React.PropTypes.number,
+  timestamp: React.PropTypes.number.isRequired,
+  marginLeft: React.PropTypes.number
 }
 export default DateItem;

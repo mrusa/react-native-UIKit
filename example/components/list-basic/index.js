@@ -10,10 +10,10 @@ import React, {
 
 import {gutter} from '../variables'
 
-const Row = ({rowData, backgroundColor, color, onPress, gutter, i}) => (
+const Row = ({rowData, backgroundColor, color, onPress, gutter, i, fontSize}) => (
   <TouchableOpacity style={{backgroundColor: backgroundColor}} key={i} onPress={onPress.bind(this, rowData.id)}>
     <View style={[styles.row, {marginLeft:gutter, paddingVertical: gutter}]}>
-      <Text style={[styles.text, {color: color}]}>{rowData.title}</Text>
+      <Text style={[styles.text, {color: color, fontSize: fontSize}]}>{rowData.title}</Text>
       <Image source={require('./assets/more.png')} style={[styles.more,{height: 12, width: 7, marginRight: gutter}]}/>
     </View>
   </TouchableOpacity>
@@ -36,14 +36,17 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   text: {
-    fontWeight: '500',
+    //fontWeight: '500',
   }
 })
 ListBasic.defaultProps = {
-  gutter: gutter,
-  backgroundColor: '#fff'
+  gutter: gutter+3,
+  backgroundColor: '#fff',
+  fontSize: 17,
 }
 ListBasic.propTypes = {
-
+  gutter: React.PropTypes.number,
+  backgroundColor: React.PropTypes.string,
+  fontSize: React.PropTypes.number,
 }
 export default ListBasic;

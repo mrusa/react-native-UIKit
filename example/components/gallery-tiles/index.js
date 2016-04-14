@@ -40,6 +40,6 @@ GalleryTiles.defaultProps = {
   images: []
 }
 GalleryTiles.propTypes = {
-  images: React.PropTypes.array,
+  images: React.PropTypes.array.isRequired,
 }
 export default GalleryTiles;

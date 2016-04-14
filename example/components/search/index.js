@@ -57,6 +57,7 @@ Search.propTypes = {
 
 const styles = StyleSheet.create({
   holder: {
+    //flex:1,
     padding: 10,
   },
   icon: {

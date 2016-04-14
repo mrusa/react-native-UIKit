@@ -5,9 +5,11 @@ import React, {
   TouchableOpacity,
 } from 'react-native';
 
-const ImageFull = ({src, height, onPress}) => (
+const ImageFull = ({src, height, onPress, children}) => (
   <TouchableOpacity onPress={onPress}>
-    <Image source={{uri: src}} style={{resizeMode: 'cover', height: height}} />
+    <Image source={{uri: src}} style={{resizeMode: 'cover', height: height}}>
+      {children}
+    </Image>
   </TouchableOpacity>
 );
 

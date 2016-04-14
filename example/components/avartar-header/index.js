@@ -40,9 +40,9 @@ AvartarHeader.defaultProps = {
 }
 
 AvartarHeader.propTypes = {
-  src: React.PropTypes.string,
-  timestamp: React.PropTypes.number,
-  heading: React.PropTypes.string,
+  src: React.PropTypes.string.isRequired,
+  timestamp: React.PropTypes.number.isRequired,
+  heading: React.PropTypes.string.isRequired,
   circle: React.PropTypes.bool,
   backgroundColor: React.PropTypes.string,
   height: React.PropTypes.number,

@@ -32,7 +32,7 @@ Avatar.defaultProps = {
   circle: false
 }
 Avatar.propTypes = {
-  src: React.PropTypes.string,
+  src: React.PropTypes.string.isRequired,
   size: React.PropTypes.number,
   circle: React.PropTypes.bool,
   onPress: React.PropTypes.func,

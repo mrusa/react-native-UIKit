@@ -16,12 +16,18 @@ export default class InputField extends Component {
       text: ''
     }
   }
+  _onChange(text){
+    this.setState({
+      text: text
+    })
+    this.props.onChange(this.state.text)
+  }
   render(){
-    const {placeHolder, gutter, color, backgroundColor, radius } = this.props;
+    const {placeHolder, gutter, color, backgroundColor, radius, onChange } = this.props;
     return(
       <TextInput
          style={[styles.input, {marginBottom: gutter, backgroundColor: backgroundColor, borderRadius: radius}]}
-         onChangeText={(text) => this.setState({text})}
+         onChangeText={(text) => this._onChange(text)}
          value={this.state.text}
          placeholder={placeHolder}
          placeholderTextColor={color}

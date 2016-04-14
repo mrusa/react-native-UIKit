@@ -8,9 +8,9 @@ import React, {
 import {Close} from '../'
 
 
-const AlertMessage = ({backgroundColor, color}) => (
+const AlertMessage = ({backgroundColor, color, message}) => (
   <View style={[styles.row, {backgroundColor:backgroundColor}]}>
-    <Text style={[styles.text, {color: color}]}>I am the message text here</Text>
+    <Text style={[styles.text, {color: color}]}>{message}</Text>
     <Close color={color}/>
   </View>
 );
@@ -20,12 +20,13 @@ const {color, backgroundColor} = alertMessage;
 
 AlertMessage.defaultProps = {
   color: color,
-  backgroundColor: backgroundColor
+  backgroundColor: backgroundColor,
 }
 
 AlertMessage.propTypes = {
   color: React.PropTypes.string,
   backgroundColor: React.PropTypes.string,
+  message: React.PropTypes.string.isRequired,
 }
 
 var styles = StyleSheet.create({
