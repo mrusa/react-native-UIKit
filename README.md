@@ -79,6 +79,7 @@ import what you need
 | onPress   | Func | called on press   |
 
 ### Button
+![Minion](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/button.png)
 ```javascript
 <Button
   color={'#fff'}
