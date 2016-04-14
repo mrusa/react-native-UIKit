@@ -20,37 +20,45 @@ import what you need
 ___
 ##### Components can be combined to create larger entities
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/full-post.jpg)
+
+`import {AvatarHeader, ImageFullWidth, LikeBtn, ArticleText, Divider } from 'react-native-uikit';`
+
+
 ```javascript
-<View>
-  <AvatarHeader
-    src={'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg'}
-    heading={'John Doe'}
-    timestamp={1460227647478}
-    circle={true}
-    backgroundColor={'#fff'}
-    height={40}
-    gutter={10}
-  />
-  <ImageFullWidth
-    src={'http://i1.2photo.ru/u/w/539022.jpg'}
-    height={300}
-    onPress={() => console.log('pressed')}
-  />
-  <View style={{paddingTop: 10, paddingHorizontal: 10, backgroundColor: '#fff'}}>
-    <LikeBtn
-      active={true}
-      //color={primary}
-      likes={232}
-      onPress={() => console.log('liked')}
+<View style={{flex:1, paddingTop: 20}}>
+
+  <View>
+    <AvatarHeader
+      src={'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg'}
+      heading={'John Doe'}
+      timestamp={1460227647478}
+      circle={true}
+      backgroundColor={'#fff'}
+      height={40}
+      gutter={10}
     />
-    <ArticleText
-      username={'John Doe'}
-      text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
-      //highLightColor={primary}
-      onPress={() => console.log('link to profile')}
+    <ImageFullWidth
+      src={'http://i1.2photo.ru/u/w/539022.jpg'}
+      height={300}
+      onPress={() => console.log('pressed')}
     />
-    <Divider color={'#eee'}/>
+    <View style={{paddingTop: 10, paddingHorizontal: 10, backgroundColor: '#fff'}}>
+      <LikeBtn
+        active={true}
+        //color={primary}
+        likes={232}
+        onPress={() => console.log('liked')}
+      />
+      <ArticleText
+        username={'John Doe'}
+        text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
+        //highLightColor={primary}
+        onPress={() => console.log('link to profile')}
+      />
+      <Divider color={'#eee'}/>
+    </View>
   </View>
+
 </View>
 ```
 
