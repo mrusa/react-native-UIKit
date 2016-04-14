@@ -179,9 +179,6 @@ import what you need
     'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
     'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
     'http://i.imgur.com/YaQDc.jpg?1',
-    'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
-    'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',    
   ]}
   />
 ```
@@ -219,7 +216,7 @@ import what you need
 <LikeBtn
   active={true}
   likes={322}
-  color={'#fa0008'}
+  //color={'#fa0008'}
   onPress={() => console.log('liked')}
 />
 ```
@@ -227,9 +224,10 @@ import what you need
 ### ListBasic
 ```javascript
 <ListBasic onPress={(i) => alert(id)} items={[
-  {id: 0, title:'This is row 1 here hello'},
-  {id: 1, title:'And I am row 2, hello there'},
-  {id: 2, title:'And I am row 3, hello there'}
+  {id: 0, title:'Label'},
+  {id: 1, title:'Label'},
+  {id: 2, title:'Label'},
+  {id: 3, title:'Label'}
 ]}/>
 ```
 
@@ -275,9 +273,9 @@ import what you need
 ```javascript
 <Message
   active={true}
-  user={'joe Blogs'}
-  title={'message title'}
-  message={'main body of the message here'}
+  user={'Jon Snow'}
+  title={'Winter is Coming'}
+  message={'Hey Rob, have you seen the weather report on tv ?'}
   timestamp={1460227614421}
 />
 ```
@@ -285,7 +283,7 @@ import what you need
 ### ProfileHeader
 ```javascript
 <ProfileHeader
-  title={'John Smith'}
+  title={'Elle Roberts'}
   summary={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip'}
   profileImg={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
   backgroundImg={'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg'}
@@ -335,14 +333,6 @@ import what you need
     'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
   ]}
   onPress={() => console.log('pressed')}
-/>
-```
-
-### Time
-```javascript
-<Time
-  timestamp={1460227647478}
-  color={'#222'}
 />
 ```
 
