@@ -25,20 +25,19 @@ import {
 
 const App = () => (
     <View style={styles.container}>
-      <View>
-      <ReviewCell
-        title={'Gaucho'}
-        description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'}
-        src={'https://lh5.googleusercontent.com/proxy/lvLgnhcoHke5BEhTG-bVydssje9jV_GytcBidVZh4ADXEuiybVwXN4mlIbgxxOKn2pF1uharMho8lAqGSXcMGKJMigr42UH_qZ1THp4bZplV7uyThhmwEtq38oAhKW7V5Y_6j46jAEkxkrewm9wrd_T4K2JBUw8=w271-h180'}
-        onPress={() => console.log('pressed')}
-      />
-      <ReviewCell
-        title={'Gaucho'}
-        description={'Argentine food and wine.'}
-        src={'https://lh5.googleusercontent.com/proxy/lvLgnhcoHke5BEhTG-bVydssje9jV_GytcBidVZh4ADXEuiybVwXN4mlIbgxxOKn2pF1uharMho8lAqGSXcMGKJMigr42UH_qZ1THp4bZplV7uyThhmwEtq38oAhKW7V5Y_6j46jAEkxkrewm9wrd_T4K2JBUw8=w271-h180'}
-        onPress={() => console.log('pressed')}
-        //gutter={20}
-      />
+      <View style={{padding: 0}}>
+        <Carousel
+          images={[
+            'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
+            'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
+            'http://i.imgur.com/YaQDc.jpg?1',
+            'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
+            'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
+            'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
+          ]}
+          height={300}
+        />
+
   </View>
     </View>
 );

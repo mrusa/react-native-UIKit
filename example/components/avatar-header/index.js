@@ -17,7 +17,7 @@ const AvatarHeader = ({src, timestamp, heading, circle, backgroundColor, height,
     />
   <View style={[styles.titleContainer, {height: height}]}>
       <Heading size={15} weight={'600'}>{heading}</Heading>
-      <DateItem timestamp={timestamp}/>
+      <View style={{marginLeft: 10}}><DateItem timestamp={timestamp}/></View>
     </View>
   </View>
 );

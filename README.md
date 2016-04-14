@@ -3,7 +3,7 @@
 
 A collection of stateless (or minimally stateful) stylized and configurable UI components for rapid prototyping.
 
-work in progress..
+work in progress.. (alpha)
 
 #### Getting Started
 `npm i react-native-uikit -S`
@@ -17,8 +17,6 @@ import what you need
 ### AlertMessage
 ```javascript
 <AlertMessage
-  backgroundColor={'#222'}
-  color={'#fff'}
   message={'This is the alert message here'}
   onPress={() => console.log('pressed')}
 />
@@ -34,8 +32,7 @@ import what you need
 ```javascript
 <ArticleText
   username={'username'}
-  text={'body of text for article'}
-  highLightColor={'red'}
+  text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
   onPress={() => console.log('pressed')}
 />
 ```
@@ -65,7 +62,7 @@ import what you need
 ### AvatarHeader
 ```javascript
 <AvatarHeader src={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
-  heading={'John Smith'}
+  heading={'Lynsey Smith'}
   timestamp={1460227647478}
   circle={true}
   backgroundColor={'#fff'}
@@ -95,8 +92,8 @@ import what you need
 ```javascript
 <Card
   onPress={() => console.log('card pressed')}
-  src={'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'}
-  title={'Card Title'}
+  src={'https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg'}
+  title={'Card title - Some quick example text to build on the card title and make up the bulk of the card'}
   gutter={10}
   link={'www.example.com'}
   radius={5}
@@ -108,15 +105,14 @@ import what you need
 ```javascript
 <Carousel
   images={[
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
+    'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
+    'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
+    'http://i.imgur.com/YaQDc.jpg?1',
+    'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
+    'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
     'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
   ]}
-  height={400}
+  height={300}
 />
 ```
 
