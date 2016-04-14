@@ -19,7 +19,7 @@ const Thumb = ({data}, i) => (
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
-const GalleryTiles = ({images}) => (
+const Grid = ({images}) => (
   <ListView
     contentContainerStyle={styles.container}
     dataSource={ds.cloneWithRows(images)}
@@ -36,10 +36,10 @@ const styles = StyleSheet.create({
   }
 })
 
-GalleryTiles.defaultProps = {
+Grid.defaultProps = {
   images: []
 }
-GalleryTiles.propTypes = {
+Grid.propTypes = {
   images: React.PropTypes.array.isRequired,
 }
-export default GalleryTiles;
+export default Grid;

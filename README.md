@@ -14,7 +14,7 @@ import what you need
 
 #### Components
 
-**AlertMessage,  ArticleText, Avatar, AvatarHeader, Button, Card, Carousel, Close, DateItem, Divider, FieldError, GalleryTiles, GalleryOffset, Heading, ImageFullWidth, InputField, LikeBtn, ListBasic, LoginFb, LoginForm, MapSection, Message, ProfileHeader, RatingBox, ReviewCell, Search, ThumbSwiper, Time**
+**AlertMessage,  ArticleText, Avatar, AvatarHeader, Button, Card, Carousel, Close, DateItem, Divider, FieldError, Grid, GalleryOffset, Heading, ImageFullWidth, InputField, LikeBtn, ListBasic, LoginFb, LoginForm, MapSection, Message, ProfileHeader, RatingBox, ReviewCell, Search, ThumbSwiper, Time**
 
 ### Example
 ___
@@ -253,10 +253,10 @@ ___
 | color   | String | color of text |
 | marginBottom   | Number | marginBottom |
 
-### GalleryTiles
+### Grid
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.jpg)
 ```javascript
-<GalleryTiles
+<Grid
   images={[
     'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
     'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',

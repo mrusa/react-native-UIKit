@@ -17,7 +17,7 @@ import {defaultColor, primary, lightGrey, secondary, info,} from './components/v
 
 import {
   Button, RatingBox, LoginFb, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
-  Carousel, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, GalleryTiles, LoginForm, Message,
+  Carousel, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, Grid, LoginForm, Message,
   ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFullWidth, ProfileHeader, ArticleText, ListBasic
 } from './components'
 
@@ -81,7 +81,7 @@ const App = () => (
         profileImg={users[0].profileImg}
         backgroundImg={users[0].backgroundImg}
       />
-      <GalleryTiles
+      <Grid
         images={galleryImages}
         />
 
