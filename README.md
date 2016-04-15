@@ -99,6 +99,43 @@ ___
 | highLightColor   | String | text color for username |
 | onPress   | Func | called on press   |
 
+### ArticleList
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/article-list.jpg)
+```javascript
+<ArticleList
+  headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
+  items={[
+    {id:0, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+    {id:1, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+    {id:2, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://i.imgur.com/YaQDc.jpg?1'},
+    {id:3, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+    {id:4, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
+    {id:5, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
+  ]}
+  footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+  onPress={(id) => console.log(id)}
+  //cellHeight={100}
+  //categoryWeight={'bold'}
+  //categoryColor={'red'}
+  //categorySize={16}
+  //titleSize={16}
+  //titleColor={'red'}
+  //dateColor={'#666'}
+/>
+```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| items   | Array | data |
+| cellHeight   | Number | height of cell  |
+| categoryWeight  | String | font weight of category |
+| categorySize   | Number | font size of category |
+| titleSize   | Number | font size of title   |
+| titleColor   | String | color of title   |
+| dateColor  | String | color of date   |
+| headerContent   | Component | content for header (optional) |
+| footerContent   | Component | content for footer (optional)|
+| onPress   | Func | called on press return cell id |
+
 ### Avatar
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/avatar.jpg)
 ```javascript
@@ -152,6 +189,28 @@ ___
 | color   | String | text color |
 | radius   | Number | border radius size |
 | onPress   | Func | called on press |
+| children   | String | button text |
+
+### ButtonOutline
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/button-outline.jpg)
+```javascript
+<ButtonOutline
+  color={'#222'}
+  borderWidth={4}
+  fontWeight={'bold'}
+  fontSize={19}
+  radius={1}>
+  Submit
+</ButtonOutline>
+```
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| color   | String | text and border color |
+| radius   | Number | border radius size |
+| fontWeight  | String | font weight |
+| fontSize   | Number | font size|
+| onPress   | Func | called on press |
+| children   | String | button text |
 
 ### Card
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/card.jpg)

@@ -8,8 +8,9 @@ import React, {
   MapView,
 } from 'react-native';
 
-const MapSection = ({region, annotations, height, fullHeight}) => (
+const MapSection = ({region, annotations, height, fullHeight, ...props}) => (
   <MapView
+    {...props}
     style={[styles.map, {height: height, flex: fullHeight ? 1 : null}]}
     region={region}
     annotations= {annotations}

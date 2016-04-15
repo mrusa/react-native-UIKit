@@ -1,4 +1,5 @@
 export { default as Button } from './button'
+export { default as ButtonOutline } from './button-outline'
 export { default as Heading } from './heading'
 export { default as Divider } from './divider'
 export { default as Card } from './card'
@@ -19,6 +20,7 @@ export { default as ModalCustom } from './modal-custom'
 
 export { default as Message } from './message'
 export { default as MessageList } from './message-list'
+export { default as ArticleList } from './article-list'
 
 export { default as LoginForm } from './login-form'
 export { default as LoginFb } from './login-fb'

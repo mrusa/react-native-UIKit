@@ -16,18 +16,18 @@ import {galleryImages, restaurantData, userPosts, messages, cardData, users} fro
 import {defaultColor, primary, lightGrey, secondary, info,} from './components/variables'
 
 import {
-  MessageList, Button, RatingBox, LoginFb, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
+  MessageList, Button, ButtonOutline, RatingBox, LoginFb, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
   Carousel, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, Grid, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageCustom, ProfileHeader, ArticleText, ListBasic
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageCustom, ProfileHeader, ArticleText, ListBasic, ArticleList
 } from './components'
-
 
 
 export default class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      search: ''
+      search: '',
+      parrallax: 0
     }
     this._search = this._search.bind(this)
   }
@@ -38,7 +38,54 @@ export default class App extends Component {
   }
   render(){
     return(
-      <ScrollView style={styles.container}>
+      <ScrollView style={[styles.container]}>
+
+        <ArticleList
+          headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
+          items={[
+            {id:0, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+            {id:1, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+            {id:2, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://i.imgur.com/YaQDc.jpg?1'},
+            {id:3, category:'Misc', title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+          ]}
+          footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+          onPress={(id) => console.log(id)}
+          //cellHeight={100}
+          //categoryWeight={'bold'}
+          //categoryColor={'red'}
+          //categorySize={16}
+          //titleSize={16}
+          //titleColor={'red'}
+          //dateColor={'#666'}
+          />
+
+        <ButtonOutline
+          color={'#222'}
+          borderWidth={4}
+          fontWeight={'bold'}
+          fontSize={19}
+          radius={1}>
+          Submit
+        </ButtonOutline>
+
+{/*
+        <MapSection
+          scrollPosition={this.state.parrallax}
+          //mapType={'satellite'}
+          height={300}
+          region={{
+            latitude: 40.712784,
+            longitude: -74.005941,
+            latitudeDelta: 10,
+            longitudeDelta: 10,}
+          }
+          annotations={[{
+            latitude: 40.712784,
+            longitude: -74.005941,
+            title: 'New York',
+            subtitle: 'This is cool!'}]
+          }
+          /> */}
 
         <ThumbSwiper
           images={[
@@ -248,10 +295,6 @@ export default class App extends Component {
   */}
         <View style={styles.block}>
 
-          <ThumbSwiper
-            images={galleryImages}
-            onPress={(i) => console.log(i)}
-          />
 
           <AvatarHeader
             src={'https://facebook.github.io/react/img/logo_og.png'}
@@ -291,21 +334,7 @@ export default class App extends Component {
 
         </View>
 
-        <MapSection
-          height={300}
-          region={{
-            latitude: 40.712784,
-            longitude: -74.005941,
-            latitudeDelta: 10,
-            longitudeDelta: 10,}
-          }
-          annotations={[{
-            latitude: 40.712784,
-            longitude: -74.005941,
-            title: 'New York',
-            subtitle: 'This is cool!'}]
-          }
-          />
+
 
         <View style={styles.block}>
           <Time timestamp={1460227647478}/>
