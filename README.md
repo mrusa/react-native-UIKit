@@ -1,9 +1,9 @@
 # react-native-UIKit
 
 
-A collection of stateless (or minimally stateful) stylized and configurable UI components for rapid prototyping.
+A collection of stateless (or minimally stateful) stylized and configurable UI components for rapid prototyping in react native.
 
-work in progress..
+ongoing development..
 
 #### Getting Started
 `npm i react-native-uikit -S`
@@ -14,7 +14,7 @@ import what you need
 
 #### Components
 
-**AlertMessage,  ArticleText, Avatar, AvatarHeader, Button, Card, Carousel, Close, DateItem, Divider, FieldError, Grid, GalleryOffset, Heading, ImageFullWidth, InputField, LikeBtn, ListBasic, LoginFb, LoginForm, MapSection, Message, ProfileHeader, RatingBox, ReviewCell, Search, ThumbSwiper, Time**
+**AlertMessage,  ArticleText, Avatar, AvatarHeader, Button, Card, Carousel, Close, DateItem, Divider, FieldError, Grid, GalleryOffset, Heading, ImageFullWidth, InputField, LikeBtn, ListBasic, LoginFb, LoginForm, MapSection, Message, MessageList, ProfileHeader, RatingBox, ReviewCell, Search, ThumbSwiper, Time**
 
 ### Example
 ___
@@ -65,7 +65,7 @@ ___
 
 
 ## Documentation
-___
+
 
 
 ### AlertMessage
@@ -254,23 +254,23 @@ ___
 | marginBottom   | Number | marginBottom |
 
 ### Grid
-ListView Component
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.jpg)
 ```javascript
 <Grid
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
   images={[
-    'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
-    'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
-    'http://i.imgur.com/YaQDc.jpg?1',
-    'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
-    'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
-    'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
-    'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
-    'http://i.imgur.com/YaQDc.jpg?1',
+    {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+    {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+    {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
+    {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+    {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
+    {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
+    {id:6, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+    {id:7, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+    {id:8, src:'http://i.imgur.com/YaQDc.jpg?1'},
   ]}
   footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+  onPress={(id) => console.log(id)}
 />
 ```
 | Prop | Type | Description |
@@ -438,7 +438,6 @@ ListView Component
 
 
 ### Message
-![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/messages.jpg)
 ```javascript
 <Message
   active={true}
@@ -453,25 +452,44 @@ ListView Component
 | active | Bool | is message read |
 | user | String | sender name |
 | title | String | message title |
-| annotations | Array | markers on map |
+| message | String | message body |
 | timestamp  | Number | Unix Timestamp (milliseconds)  |
+
+### MessageList
+![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/messages.jpg)
+<MessageList
+  //backgroundColor={'red'}
+  headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
+  items={[
+    {id:0, active:false, user: 'Jon Snow', title: 'Winter is Coming', message: 'Hey Rob, have you seen the weather report on tv ?', timestamp: 1460223614421},
+    {id:1, active:true, user: 'Ric Lowe', title: 'Guess what I found?', message: 'Hey Rob, checkout this story ?', timestamp: 1460221614421},
+    {id:2, active:true ,user: 'Jon Snow', title: 'title 3', message: 'Hey Rob, have you seen the weather report on tv ?', timestamp: 1460227614421},
+  ]}
+  footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
+  onPress={(id) => console.log(id)}
+/>
+| Prop | Type | Description |
+| :------| :-----------| :-----------|
+| items  | Array | messages data  |
+| backgroundColor  | String | background color |
+| headerContent   | Component | content for header (optional) |
+| footerContent   | Component | content for footer (optional)|
+| onPress   | Func | called by press returns message id |
 
 ### ProfileHeader
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/profile-header.jpg)
 ```javascript
 <ProfileHeader
-  title={'Elle Roberts'}
-  summary={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip'}
   profileImg={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
   backgroundImg={'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg'}
 />
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
-| title | String | username |
-| summary | String | profile description |
 | profileImg | String | profile thumb src |
 | backgroundImg  | String | background img src  |
+| circle  | Bool | profile img circular  |
+| blurRadius | Number | background img blur radius (default 0)  |
 
 ### RatingBox
 ```javascript
@@ -506,15 +524,19 @@ ListView Component
   //border={false}
   radius={5}
   //iconColor={'red'}
-  onSubmitEditing={() => console.log('submited')}
+  onChangeText={(text) => console.log(text)}
 />
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
 | placeHolder | String | placeholder text |
-| placeHolder | String | placeholder text |
-| placeHolder | String | placeholder text |
-| placeHolder | String | placeholder text |
+| backgroundColor | String | background color |
+| innerBackground | String | search box background color |
+| border | Bool | display border or not |
+| radius | Number | border radius |
+| borderColor | String | search border color |
+| iconColor | String | search icon color |
+| onChangeText | Func | called with search text on text change |
 
 ### ThumbSwiper
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/thumb-swiper.jpg)

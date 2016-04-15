@@ -10,23 +10,21 @@ import React, {
 
 const {height, width} = Dimensions.get('window');
 
-const Thumb = ({data}, i) => (
-  <Image
-    style={{width: width/3.05, height: width/3.05, marginBottom: width/3*0.025  }}
-    source={{uri: data}}
-  />
-);
-
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
-const Grid = ({images, headerContent, footerContent}) => (
+const Grid = ({images, headerContent, footerContent, onPress}) => (
   <ListView
     renderHeader={() => <View style={{width: width}}>{headerContent}</View>}
     renderFooter={() => <View style={{width: width}}>{footerContent}</View>}
     contentContainerStyle={styles.container}
     dataSource={ds.cloneWithRows(images)}
-    renderRow={(rowData) => <Thumb data={rowData}/>}
-    pageSize={1}
+    renderRow={(rowData, i) => <TouchableOpacity key={i} onPress={(id) => onPress(rowData.id)}>
+      <Image
+        style={{width: width/3.05, height: width/3.05, marginBottom: width/3*0.025  }}
+        source={{uri: rowData.src}}
+      />
+    </TouchableOpacity>}
+    pageSize={10}
   />
 );
 

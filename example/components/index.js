@@ -18,6 +18,8 @@ export { default as ThumbSwiper } from './thumb-swiper'
 export { default as ModalCustom } from './modal-custom'
 
 export { default as Message } from './message'
+export { default as MessageList } from './message-list'
+
 export { default as LoginForm } from './login-form'
 export { default as LoginFb } from './login-fb'
 export { default as FieldError } from './field-error'
