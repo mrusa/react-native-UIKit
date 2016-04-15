@@ -457,6 +457,7 @@ ___
 
 ### MessageList
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/messages.jpg)
+```javascript
 <MessageList
   //backgroundColor={'red'}
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
@@ -468,6 +469,7 @@ ___
   footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
   onPress={(id) => console.log(id)}
 />
+```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
 | items  | Array | messages data  |
