@@ -18,7 +18,7 @@ import {defaultColor, primary, lightGrey, secondary, info,} from './components/v
 import {
   MessageList, Button, RatingBox, LoginFb, Heading, Divider, Avatar, Card, AvatarHeader, Close, AlertMessage, LikeBtn,
   Carousel, InputField, Time, DateItem, Calendar, ThumbSwiper, ModalCustom, Grid, LoginForm, Message,
-  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageFullWidth, ProfileHeader, ArticleText, ListBasic
+  ReviewCell, MapSection, Search, GalleryOffset, FadeInUp, ImageCustom, ProfileHeader, ArticleText, ListBasic
 } from './components'
 
 
@@ -39,6 +39,37 @@ export default class App extends Component {
   render(){
     return(
       <ScrollView style={styles.container}>
+
+        <ThumbSwiper
+          images={[
+            {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+            {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+            {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
+            {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+            {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
+            {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
+          ]}
+          onPress={(id) => console.log(id)}
+        />
+
+        <LoginForm
+          loginFb={() => console.log('login with facebook')}
+          onSubmit={(email, password) => console.log(email, password)}
+          error={false}
+          errorMsg={'username or password incorrect'}
+        />
+
+        <Carousel
+          images={[
+            {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+            {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+            {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
+            {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+            {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
+            {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
+          ]}
+          height={300}
+        />
 
         <Grid
           headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
@@ -84,14 +115,6 @@ export default class App extends Component {
         />
 
 
-        <ProfileHeader
-          circle={true}
-          blurRadius={10}
-          title={'Elle Roberts'}
-          summary={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip'}
-          profileImg={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
-          backgroundImg={'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg'}
-        />
 
 
         <Search
@@ -103,8 +126,6 @@ export default class App extends Component {
           // border={false}
           onChangeText={(text) => this._search(text)}
         />
-
-
 
 
             {cardData.map((item, i) => (
@@ -121,7 +142,7 @@ export default class App extends Component {
                 <Card
                   key={i}
                   //shadow={false}
-                  onPress={() => console.log('card pressed')}
+                  onPress={() => console.log(`${i} was pressed`)}
                   src={item.src}
                   title={item.title}
                   //gutter={10}
@@ -143,7 +164,7 @@ export default class App extends Component {
               height={40}
               gutter={10}
             />
-          <ImageFullWidth
+          <ImageCustom
               src={item.src}
               height={300}
               onPress={() => console.log('pressed')}
@@ -168,11 +189,6 @@ export default class App extends Component {
           </View>
         ))}
 
-            <ListBasic onPress={(i) => alert(id)} items={[
-                  {id: 0, title:'This is row 1 here hello'},
-                  {id: 1, title:'And I am row 2, hello there'},
-                  {id: 2, title:'And I am row 3, hello there'}
-                ]}/>
 
         <ProfileHeader
           title={users[0].title}
@@ -189,11 +205,6 @@ export default class App extends Component {
           display={'row'}/>
 
 
-      {/*<ModalCustom/>*/}
-      <Carousel
-        images={galleryImages}
-        heightGallery={400}
-      />
       <Search
         placeHolder={'Search'}
         backgroundColor={lightGrey}
@@ -299,7 +310,7 @@ export default class App extends Component {
         <View style={styles.block}>
           <Time timestamp={1460227647478}/>
           <DateItem timestamp={1460227647478}/>
-          <InputField />
+          <InputField onChange={(text) => console.log(text)}/>
           <LikeBtn active={true} color={primary} likes={232} onPress={() => console.log('liked')}/>
           <Button
             color={'#fff'}

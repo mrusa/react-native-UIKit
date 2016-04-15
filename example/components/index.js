@@ -34,7 +34,7 @@ export { default as Search } from './search'
 
 export { default as GalleryOffset} from './gallery-offset'
 
-export { default as ImageFullWidth} from './image-full-width'
+export { default as ImageCustom} from './image-custom'
 
 export { default as ProfileHeader} from './profile-header'
 export { default as ArticleText} from './article-text'

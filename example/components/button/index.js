@@ -8,8 +8,11 @@ import React, {
 
 import {primary, gutter} from '../variables'
 
-const Button = ({children, radius, type, invert, backgroundColor, color, gutter}) => (
-  <TouchableOpacity style={[styles.btn, {borderRadius: radius, backgroundColor: backgroundColor, padding: gutter ,marginBottom: gutter}]}>
+const Button = ({children, radius, type, invert, backgroundColor, color, gutter, onPress}) => (
+  <TouchableOpacity
+    style={[styles.btn, {borderRadius: radius, backgroundColor: backgroundColor, padding: gutter ,marginBottom: gutter}]}
+    onPress={onPress}
+  >
     <Text style={[styles.text,{color: color}]}>
       {children}
     </Text>

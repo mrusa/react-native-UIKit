@@ -8,7 +8,7 @@ ongoing development..
 #### Getting Started
 `npm i react-native-uikit -S`
 
-import what you need
+import what you need as you go
 
 `import { Button, Card } from 'react-native-uikit';`
 
@@ -181,12 +181,12 @@ ___
 ```javascript
 <Carousel
   images={[
-    'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
-    'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
-    'http://i.imgur.com/YaQDc.jpg?1',
-    'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
-    'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
+    {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+    {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+    {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
+    {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+    {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
+    {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
   ]}
   height={300}
 />
@@ -195,6 +195,7 @@ ___
 | :------| :-----------| :-----------|
 | images   | Array | array of images |
 | height   | Number | height of carousel |
+| gutter   | Number | padding to sides |
 
 ### Close
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/close.jpg)
@@ -311,18 +312,23 @@ ___
 | size  | Number | text size |
 | weight  | String | font Weight |
 
-### ImageFullWidth
+### ImageCustom
 ```javascript
-<ImageFullWidth
+<ImageCustom
   src={'https://octodex.github.com/images/minion.png'}
-  height={100}
-  onPress={() => console.log('pressed')}
+  height={300}
 />
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
 | src  | String | img src |
 | height  | Number | img height |
+| fullHeight  | Bool | fullscreen height |
+| children  | Component | allows nesting children components |
+| blurRadius | Number | background img blur radius (default 0)  |
+| overlayColor | String | background overlay color  |
+| overlayOpacity | Number | background overlay opacity  |
+
 
 ### InputField
 ```javascript
@@ -341,6 +347,8 @@ ___
 | color  | String | text color |
 | backgroundColor | String | background color |
 | radius  | Number | border radius |
+| autoCapitalize  | String | default 'none' ('none', 'sentences', 'words', 'characters') |
+| autoCorrect | Bool | default false |
 
 ### LikeBtn
 ```javascript
@@ -398,7 +406,7 @@ ___
 ```javascript
 <LoginForm
   loginFb={() => console.log('login with facebook')}
-  onSubmit={() => console.log('email, password')}
+  onSubmit={(email, password) => console.log(email, password)}
   error={false}
   errorMsg={'username or password incorrect'}
 />
@@ -409,6 +417,10 @@ ___
 | onSubmit | Func | called onPress login |
 | error | Bool | display error message |
 | errorMsg | String | error message |
+| btnBackgroundColor | String | submit btn background color |
+| btnColor | String | submit btn text color |
+| inputRadius | String | radius of inputs |
+| btnRadius | String | radius of submit button |
 
 ### MapSection
 ```javascript
@@ -545,15 +557,16 @@ ___
 ```javascript
 <ThumbSwiper
   images={[
-    'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
-    'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
-    'http://i.imgur.com/YaQDc.jpg?1',
-    'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
-    'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
+    {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
+    {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
+    {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
+    {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+    {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
+    {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
   ]}
-  onPress={() => console.log('pressed')}
+  onPress={(id) => console.log(id)}
 />
+
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|

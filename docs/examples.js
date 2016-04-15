@@ -357,3 +357,40 @@
     'http://i.imgur.com/YaQDc.jpg?1',
   ]}
   />
+
+
+// login form
+<View style={styles.container}>
+
+  <ImageFullWidth
+    src={''}
+    height={100}
+    fullHeight={true}
+    onPress={() => console.log('pressed')}
+    blurRadius={30}
+    >
+
+    <View style={{flex:1, paddingHorizontal: 60, justifyContent: 'center', flexDirection: 'column'}}>
+      <Image source={{uri: 'https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/logo.png'}}
+        style={{ height: 50}}
+        resizeMode={Image.resizeMode.contain}
+        />
+
+      <LoginForm
+        loginFb={() => console.log('login with facebook')}
+        onSubmit={(email, password) => console.log(email, password)}
+        error={false}
+        errorMsg={'username or password incorrect'}
+        btnBackgroundColor={'#F75357'}
+        //btnColor={'green'}
+        inputRadius={0}
+        btnRadius={0}
+        />
+      <TouchableOpacity><Text style={{textAlign: 'center'}}>Skip this step</Text></TouchableOpacity>
+    </View>
+  </ImageFullWidth>
+
+</View>
+
+
+// ==================

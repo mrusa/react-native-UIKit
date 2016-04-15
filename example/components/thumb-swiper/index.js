@@ -11,12 +11,6 @@ import React, {
 
 const { width,  height } = Dimensions.get('window');
 
-const Thumb = ({key, uri, onPress}) => (
-  <TouchableOpacity onPress={onPress}>
-    <Image key={key} style={styles.img} source={{uri: uri}} />
-  </TouchableOpacity>
-);
-
 let _scrollView: ScrollView;
 
 const ThumbSwiper = ({images, onPress}) => (
@@ -30,10 +24,12 @@ const ThumbSwiper = ({images, onPress}) => (
     removeClippedSubviews={true} // NOTE experimental feature
     ref={(scrollView) => { _scrollView = scrollView; }}
     automaticallyAdjustContentInsets={false}
-    onScroll={() => { console.log('onScroll!'); }}
+    //onScroll={() => { console.log('onScroll!'); }}
     scrollEventThrottle={200}
     contentContainerStyle={styles.scrollView}>
-    {images.map((uri, i) => <Thumb key={i} onPress={onPress} uri={uri}/>)}
+    {images.map((item, i) => <TouchableOpacity key={i} onPress={(id) => onPress(item.id)}>
+      <Image style={styles.img} source={{uri: item.src}} />
+    </TouchableOpacity>)}
   </ScrollView>
 );
 
