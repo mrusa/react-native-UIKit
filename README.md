@@ -37,7 +37,7 @@ ___
       height={40}
       gutter={10}
     />
-    <ImageFullWidth
+  <ImageCustom
       src={'http://i1.2photo.ru/u/w/539022.jpg'}
       height={300}
       onPress={() => console.log('pressed')}
