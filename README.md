@@ -21,7 +21,7 @@ ___
 ##### Components can be combined to create larger entities
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/full-post.jpg)
 
-`import {AvatarHeader, ImageFullWidth, LikeBtn, ArticleText, Divider } from 'react-native-uikit';`
+`import {AvatarHeader, ImageCustom, LikeBtn, ArticleText, Divider } from 'react-native-uikit';`
 
 
 ```javascript
