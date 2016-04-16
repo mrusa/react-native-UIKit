@@ -8,7 +8,7 @@ ongoing development..
 #### Getting Started
 `npm i react-native-uikit -S`
 
-import what you need as you go
+import what you need
 
 `import { Button, Card } from 'react-native-uikit';`
 
@@ -328,16 +328,19 @@ ___
     {id:6, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
     {id:7, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
     {id:8, src:'http://i.imgur.com/YaQDc.jpg?1'},
+    {id:9, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
   ]}
   footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
   onPress={(id) => console.log(id)}
+  itemsPerRow={3}
+  spacing={2}
 />
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
 | images   | Array | images array |
-| headerContent   | Component | content for header (optional) |
-| footerContent   | Component | content for footer (optional)|
+| itemsPerRow   | Number | number of items per row |
+| spacing   | Number | spacing between cells |
 
 ### GalleryOffset
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-offset-row.jpg)
@@ -374,9 +377,16 @@ ___
 ### ImageCustom
 ```javascript
 <ImageCustom
-  src={'https://octodex.github.com/images/minion.png'}
+  src={'https://s-media-cache-ak0.pinimg.com/736x/9c/11/d8/9c11d813826489f82b3f4c02a06ea815.jpg'}
   height={300}
-/>
+  overlayColor={'#222'}
+  overlayOpacity={0.8}
+  fullHeight={true}
+>
+<View style={{flex:1, justifyContent:'center'}}>
+  <Text style={{color:'#fff', backgroundColor:'transparent',fontSize:90, fontWeight: '100', textAlign:'center'}}>YES HELLO</Text>
+</View>
+</ImageCustom>
 ```
 | Prop | Type | Description |
 | :------| :-----------| :-----------|
