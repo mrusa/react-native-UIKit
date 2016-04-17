@@ -70,6 +70,8 @@ ___
 
 ### AlertMessage
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/alertmessage.jpg)
+`import { AlertMessage } from 'react-native-uikit'`
+
 ```javascript
 <AlertMessage
   message={'This is the alert message here'}
@@ -85,6 +87,8 @@ ___
 
 ### ArticleText
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/articletext.jpg)
+`import { ArticleText } from 'react-native-uikit'`
+
 ```javascript
 <ArticleText
   username={'username'}
@@ -101,6 +105,8 @@ ___
 
 ### ArticleList
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/article-list.jpg)
+`import { ArticleList } from 'react-native-uikit'`
+
 ```javascript
 <ArticleList
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
@@ -138,6 +144,8 @@ ___
 
 ### Avatar
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/avatar.jpg)
+`import { Avatar} from 'react-native-uikit'`
+
 ```javascript
 <Avatar
   src={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
@@ -155,6 +163,8 @@ ___
 
 ### AvatarHeader
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/avartar-header.jpg)
+`import { AvatarHeader } from 'react-native-uikit'`
+
 ```javascript
 <AvatarHeader src={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
   heading={'Lynsey Smith'}
@@ -175,6 +185,8 @@ ___
 
 ### Button
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/button.jpg)
+`import { Button } from 'react-native-uikit'`
+
 ```javascript
 <Button
   color={'#fff'}
@@ -193,6 +205,8 @@ ___
 
 ### ButtonOutline
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/button-outline.jpg)
+`import { ButtonOutline } from 'react-native-uikit'`
+
 ```javascript
 <ButtonOutline
   color={'#222'}
@@ -214,6 +228,8 @@ ___
 
 ### Card
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/card.jpg)
+`import { Card } from 'react-native-uikit'`
+
 ```javascript
 <Card
   onPress={() => console.log('card pressed')}
@@ -237,6 +253,8 @@ ___
 
 ### Carousel
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/carousel.jpg)
+`import { Carousel } from 'react-native-uikit'`
+
 ```javascript
 <Carousel
   images={[
@@ -258,6 +276,8 @@ ___
 
 ### Close
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/close.jpg)
+`import { Close } from 'react-native-uikit'`
+
 ```javascript
 <Close
   size={50}
@@ -273,6 +293,8 @@ ___
 
 ### DateItem
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/date-item.jpg)
+`import { DateItem } from 'react-native-uikit'`
+
 ```javascript
 <DateItem
   timestamp={1460227647478}
@@ -288,6 +310,8 @@ ___
 
 ### Divider
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/divider.jpg)
+`import { Divider } from 'react-native-uikit'`
+
 ```javascript
 <Divider
   color={'#eee'}
@@ -298,6 +322,8 @@ ___
 | color   | String | color of divider |
 
 ### FieldError
+`import { FieldError } from 'react-native-uikit'`
+
 ```javascript
 <FieldError
   errorMsg={'error something has gone wrong!'}
@@ -315,6 +341,8 @@ ___
 
 ### Grid
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.jpg)
+`import { Grid } from 'react-native-uikit'`
+
 ```javascript
 <Grid
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
@@ -344,6 +372,8 @@ ___
 
 ### GalleryOffset
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-offset-row.jpg)
+`import { GalleryOffset } from 'react-native-uikit'`
+
 ```javascript
 <GalleryOffset
   imagesArray={[
@@ -363,6 +393,8 @@ ___
 
 
 ### Heading
+`import { Heading } from 'react-native-uikit'`
+
 ```javascript
 <Heading
   size={50}
@@ -375,6 +407,8 @@ ___
 | weight  | String | font Weight |
 
 ### ImageCustom
+`import { ImageCustom } from 'react-native-uikit'`
+
 ```javascript
 <ImageCustom
   src={'https://s-media-cache-ak0.pinimg.com/736x/9c/11/d8/9c11d813826489f82b3f4c02a06ea815.jpg'}
@@ -400,6 +434,8 @@ ___
 
 
 ### InputField
+`import { InputField } from 'react-native-uikit'`
+
 ```javascript
 <InputField
   placeHolder={'i am the placeholder txt'}
@@ -420,6 +456,8 @@ ___
 | autoCorrect | Bool | default false |
 
 ### LikeBtn
+`import { LikeBtn } from 'react-native-uikit'`
+
 ```javascript
 <LikeBtn
   active={true}
@@ -439,6 +477,8 @@ ___
 
 ### ListBasic
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/list-basic.jpg)
+`import { ListBasic } from 'react-native-uikit'`
+
 ```javascript
 <ListBasic
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
@@ -461,6 +501,8 @@ ___
 
 ### LoginFb
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/fb-login.jpg)
+`import { LoginFb } from 'react-native-uikit'`
+
 ```javascript
 <LoginFb
   onPress={() => console.log('login with fb')}
@@ -472,6 +514,8 @@ ___
 
 ### LoginForm
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/login-form.jpg)
+`import { LoginForm } from 'react-native-uikit'`
+
 ```javascript
 <LoginForm
   loginFb={() => console.log('login with facebook')}
@@ -492,6 +536,8 @@ ___
 | btnRadius | String | radius of submit button |
 
 ### MapSection
+`import { MapSection } from 'react-native-uikit'`
+
 ```javascript
 <MapSection
   height={300}
@@ -519,6 +565,8 @@ ___
 
 
 ### Message
+`import { Message } from 'react-native-uikit'`
+
 ```javascript
 <Message
   active={true}
@@ -538,6 +586,8 @@ ___
 
 ### MessageList
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/messages.jpg)
+`import { MessageList } from 'react-native-uikit'`
+
 ```javascript
 <MessageList
   //backgroundColor={'red'}
@@ -561,6 +611,8 @@ ___
 
 ### ProfileHeader
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/profile-header.jpg)
+`import { ProfileHeader } from 'react-native-uikit'`
+
 ```javascript
 <ProfileHeader
   profileImg={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
@@ -575,12 +627,16 @@ ___
 | blurRadius | Number | background img blur radius (default 0)  |
 
 ### RatingBox
+`import { RatingBox } from 'react-native-uikit'`
+
 ```javascript
 <RatingBox />
 ```
 
 ### ReviewCell
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/review.jpg)
+`import { ReviewCell } from 'react-native-uikit'`
+
 ```javascript
 <ReviewCell
   title={'Gaucho'}
@@ -598,6 +654,8 @@ ___
 
 ### Search
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/search.jpg)
+`import { Search } from 'react-native-uikit'`
+
 ```javascript
 <Search
   placeHolder={'Search for cool stuff..'}
@@ -623,6 +681,8 @@ ___
 
 ### ThumbSwiper
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/thumb-swiper.jpg)
+`import { ThumbSwiper } from 'react-native-uikit'`
+
 ```javascript
 <ThumbSwiper
   images={[
@@ -642,6 +702,8 @@ ___
 | images | Array| images |
 
 ### Time
+`import { Time } from 'react-native-uikit'`
+
 ```javascript
 <Time
   timestamp={1460227647478}
