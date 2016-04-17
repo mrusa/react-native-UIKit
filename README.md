@@ -70,6 +70,7 @@ ___
 
 ### AlertMessage
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/alertmessage.jpg)
+
 `import { AlertMessage } from 'react-native-uikit'`
 
 ```javascript
