@@ -3,7 +3,8 @@ import React, {
   StyleSheet,
   Text,
   View,
-  ListView
+  ListView,
+  StatusBar
 } from 'react-native';
 
 import _ from 'lodash';
@@ -12,34 +13,38 @@ import PostImage from '../components/post-image'
 import PostCard from '../components/post-card'
 import PostText from '../components/post-text'
 
+var feedData = require('../../db/feed.json')
+
 export default class NewsFeed extends Component {
   constructor(props){
     super(props);
-    let dataSource = new ListView.DataSource({
+    this.dataSource = new ListView.DataSource({
       getRowData: (dataBlob, sid, rid) => dataBlob[sid][rid],
       //getSectionHeaderData: (dataBlob, sid) => dataBlob[sid],
       rowHasChanged: (row1, row2) => row1 !== row2,
       //sectionHeaderHasChanged: (s1, s2) => s1 !== s2,
     });
     this.state = {
-      dataSource: dataSource.cloneWithRows(_.range(6)),
+      dataSource: this.dataSource.cloneWithRows(feedData),
     }
   }
+  componentDidMount(){
+    StatusBar.setBarStyle('light-content');
+  }
   _renderPostItem(data){
-    //const {} = data;
-    if(true){
+    if(data.content.type === 'image'){
       return (
-        <PostImage/>
+        <PostImage {...data}/>
       );
     }
-    else if(false){
+    else if(data.content.type === 'card'){
       return (
-        <PostCard heading={'Lynsey Smith'}/>
+        <PostCard {...data}/>
       );
     }
     else {
       return (
-        <PostText/>
+        <PostText {...data}/>
       )
     }
   }
@@ -48,7 +53,7 @@ export default class NewsFeed extends Component {
       <View style={styles.container}>
          <ListView
             dataSource={this.state.dataSource}
-            renderRow={(rowData) => this._renderPostItem(rowData)}
+             renderRow={(rowData) => this._renderPostItem(rowData)}
           />
       </View>
     );

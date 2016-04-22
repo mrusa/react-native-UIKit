@@ -1,0 +1,98 @@
+[
+  {
+    "avatar": {
+      "_id": 1,
+      "username": "username one",
+      "src":"https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg",
+      "heading":"Lorem ipsum dolor sit amet",
+      "timestamp":1460227647478,
+    },
+    "content": {
+      "type":"image",
+      "src":"http://i1.2photo.ru/u/w/539022.jpg",
+      "title":"Title of the content goese here ",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "likes": 245
+    }
+  },
+  {
+    "avatar": {
+      "_id": 2,
+      "username": "username one",
+      "src":"https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg",
+      "heading":"Second title here",
+      "timestamp":1460227647478,
+      "likes": 5
+    },
+    "content": {
+      "type":"card",
+      "src":"https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg",
+      "title":"Duis aute irure dolor in reprehenderit in voluptate",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  {
+    "avatar": {
+      "_id": 3,
+      "username": "username three",
+      "src":"https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg",
+      "heading":"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia",
+      "timestamp":1460227647478,
+      "likes": 5
+    },
+    "content": {
+      "type":"text",
+      "src":"https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg",
+      "title":"Consectetur adipiscing elit, sed do eiusmod tempor",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  {
+    "avatar": {
+      "_id": 1,
+      "username": "username one",
+      "src":"https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg",
+      "heading":"First title here",
+      "timestamp":1460227647478,
+    },
+    "content": {
+      "type":"image",
+      "src":"http://i1.2photo.ru/u/w/539022.jpg",
+      "title":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "likes": 245
+    }
+  },
+  {
+    "avatar": {
+      "_id": 2,
+      "username": "username one",
+      "src":"https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg",
+      "heading":"Ut enim ad minim veniam, quis nostrud exercitation",
+      "timestamp":1460227647478,
+      "likes": 5
+    },
+    "content": {
+      "type":"card",
+      "src":"https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg",
+      "title":"Ut enim ad minim veniam, quis nostrud exercitation",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  },
+  {
+    "avatar": {
+      "_id": 3,
+      "username": "username three",
+      "src":"https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg",
+      "heading":"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "timestamp":1460227647478,
+      "likes": 5
+    },
+    "content": {
+      "type":"text",
+      "src":"https://s-media-cache-ak0.pinimg.com/736x/5f/70/41/5f704159cdf6512cf21000ec4827fc03.jpg",
+      "title":"Lorem ipsum dolor sit amet, consectetur adipiscing",
+      "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+]

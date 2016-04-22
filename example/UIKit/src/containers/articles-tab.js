@@ -2,7 +2,8 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBarIOS
 } from 'react-native';
 
 import {Search, ArticleList, Carousel } from 'react-native-uikit'
@@ -13,6 +14,9 @@ export default class ArticlesTab extends Component {
     this.state = {
       data: []
     }
+  }
+  componentDidMount() {
+    StatusBarIOS.setStyle('light-content');
   }
   _renderCarousel(){
     return(

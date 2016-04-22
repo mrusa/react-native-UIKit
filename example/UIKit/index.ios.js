@@ -16,7 +16,7 @@ class LoginScreen extends Component {
   constructor(props){
     super(props);
     this.state = {
-      loggedin: false
+      loggedin: true
     }
     this._login = this._login.bind(this)
   }

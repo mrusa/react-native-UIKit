@@ -3,7 +3,8 @@ import React, {
   StyleSheet,
   Text,
   View,
-  ListView
+  ListView,
+  StatusBar
 } from 'react-native';
 
 import _ from 'lodash';
@@ -14,6 +15,9 @@ export default class Profile extends Component {
   constructor(props){
     super(props);
 
+  }
+  componentDidMount(){
+    StatusBar.setBarStyle('light-content');
   }
   _header(){
     return (

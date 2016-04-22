@@ -7,19 +7,19 @@ import React, {
 
 import {AvatarHeader, ImageCustom, LikeBtn, ArticleText, Divider } from 'react-native-uikit';
 
-const PostImage = (props) => (
+const PostImage = ({avatar, content}) => (
   <View>
     <AvatarHeader
-      src={'https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg'}
-      heading={'John Doe'}
-      timestamp={1460227647478}
+      src={avatar.src}
+      heading={avatar.username}
+      timestamp={avatar.timestamp}
       circle={true}
       backgroundColor={'#fff'}
       height={40}
       gutter={10}
     />
   <ImageCustom
-      src={'http://i1.2photo.ru/u/w/539022.jpg'}
+      src={content.src}
       height={300}
       onPress={() => console.log('pressed')}
     />
@@ -27,12 +27,12 @@ const PostImage = (props) => (
       <LikeBtn
         active={true}
         //color={primary}
-        likes={232}
+        likes={content.likes}
         onPress={() => console.log('liked')}
       />
       <ArticleText
-        username={'John Doe'}
-        text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
+        username={avatar.username}
+        text={content.text}
         //highLightColor={primary}
         onPress={() => console.log('link to profile')}
       />
