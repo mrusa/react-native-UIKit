@@ -30,5 +30,6 @@ example/local.properties
 
 # node.js
 #
-example/node_modules/
+example/old/node_modules/
+example/UIKit/node_modules/
 example/npm-debug.log
