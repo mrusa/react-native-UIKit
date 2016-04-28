@@ -53,7 +53,7 @@ export default class NewsFeed extends Component {
       <View style={styles.container}>
          <ListView
             dataSource={this.state.dataSource}
-             renderRow={(rowData) => this._renderPostItem(rowData)}
+            renderRow={(rowData) => this._renderPostItem(rowData)}
           />
       </View>
     );

@@ -1,3 +1,6 @@
 Search -
 - make onPress props required
-- 
+- make lowercase no correct
+
+Message
+- limit length of body text

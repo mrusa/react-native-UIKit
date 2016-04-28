@@ -24,7 +24,8 @@ export default class MessagesTab extends Component {
     });
     this.state = {
       dataSource: dataSource.cloneWithRows(messages),
-      messges: []
+      messges: [],
+      searchText: ''
     }
   }
   componentDidMount(){
@@ -33,13 +34,26 @@ export default class MessagesTab extends Component {
       messges: messages
     })
   }
+  _onChange(text){
+    (text.length > 0) ?
+    this.setState({
+      messges: this.state.messges.filter((item,i) => item.title.includes(text.toLowerCase()))
+    }) :
+    this.setState({
+      messges: messages
+    })
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Search/>
+        <Search
+          onChangeText={(searchText) => {
+            this.setState({searchText}),
+            this._onChange(searchText)
+          }}
+          />
+        <Text>{this.state.searchText}</Text>
           <MessageList
-            //backgroundColor={'red'}
-            //headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
             items={this.state.messges}
             footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
             onPress={(id) => console.log(id)}
