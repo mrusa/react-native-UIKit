@@ -3,6 +3,8 @@
 
 A collection of stateless (or minimally stateful) stylized and configurable UI components for rapid prototyping in react native.
 
+### suggestions/pull requests very much welcome
+
 ongoing development..
 
 #### Getting Started
