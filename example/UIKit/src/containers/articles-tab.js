@@ -3,10 +3,11 @@ import React, {
   StyleSheet,
   Text,
   View,
-  StatusBarIOS
+  StatusBar
 } from 'react-native';
 
-import {Search, ArticleList, Carousel } from 'react-native-uikit'
+// import {Search, ArticleList, Carousel } from 'react-native-uikit'
+import {Search, ArticleList, Carousel } from '../../lib'
 
 export default class ArticlesTab extends Component {
   constructor(props){
@@ -16,7 +17,7 @@ export default class ArticlesTab extends Component {
     }
   }
   componentDidMount() {
-    StatusBarIOS.setStyle('light-content');
+    StatusBar.setBarStyle('light-content');
   }
   _renderCarousel(){
     return(
@@ -49,13 +50,6 @@ export default class ArticlesTab extends Component {
             ]}
             footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
             onPress={(id) => console.log(id)}
-            //cellHeight={100}
-            //categoryWeight={'bold'}
-            //categoryColor={'red'}
-            //categorySize={16}
-            //titleSize={16}
-            //titleColor={'red'}
-            //dateColor={'#666'}
           />
       </View>
     );
@@ -65,9 +59,6 @@ export default class ArticlesTab extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
-    //alignItems: 'center',
-    //backgroundColor: '#F5FCFF',
   },
 
 });

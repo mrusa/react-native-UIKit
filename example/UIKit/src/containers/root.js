@@ -57,7 +57,6 @@ export default class Root extends Component {
         <TabBarIOS
           translucent={false}
            tintColor={primary}
-           //title={'News Feed'}
            barTintColor="#fff">
            <TabBarIOS.Item
              title="News Feed"
@@ -85,8 +84,6 @@ export default class Root extends Component {
           </TabBarIOS.Item>
           <TabBarIOS.Item
             icon={{uri: profile, scale: 3}}
-            // icon={require('./flux.png')}
-            //title="More"
             title="Profile"
             selected={this.state.selectedTab === 'greenTab'}
             onPress={() => {
@@ -98,7 +95,6 @@ export default class Root extends Component {
           </TabBarIOS.Item>
           <TabBarIOS.Item
             icon={{uri: bars, scale: 3}}
-            // icon={require('./flux.png')}
             title="Articles"
             selected={this.state.selectedTab === 'articlesTab'}
             onPress={() => {
@@ -118,8 +114,5 @@ export default class Root extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //justifyContent: 'center',
-    //alignItems: 'center',
-    //backgroundColor: '#F5FCFF',
   },
 });

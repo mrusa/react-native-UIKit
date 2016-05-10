@@ -5,7 +5,8 @@ import React, {
   View
 } from 'react-native';
 
-import { AvatarHeader, Card } from 'react-native-uikit';
+/// import { AvatarHeader, Card } from 'react-native-uikit';
+import { AvatarHeader, Card } from '../../lib';
 
 const PostCard = ({avatar, content}) => (
   <View>

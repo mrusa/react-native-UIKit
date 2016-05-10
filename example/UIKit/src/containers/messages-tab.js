@@ -11,7 +11,8 @@ import _ from 'lodash';
 
 var messages = require('../../db/messages.json')
 
-import { MessageList, Search } from 'react-native-uikit'
+// import { MessageList, Search } from 'react-native-uikit'
+import { MessageList, Search } from '../../lib'
 
 export default class MessagesTab extends Component {
   constructor(props){
