@@ -47,14 +47,12 @@ ___
     <View style={{paddingTop: 10, paddingHorizontal: 10, backgroundColor: '#fff'}}>
       <LikeBtn
         active={true}
-        //color={primary}
         likes={232}
         onPress={() => console.log('liked')}
       />
       <ArticleText
         username={'John Doe'}
         text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '}
-        //highLightColor={primary}
         onPress={() => console.log('link to profile')}
       />
       <Divider color={'#eee'}/>
@@ -125,13 +123,6 @@ ___
   ]}
   footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
   onPress={(id) => console.log(id)}
-  //cellHeight={100}
-  //categoryWeight={'bold'}
-  //categoryColor={'red'}
-  //categorySize={16}
-  //titleSize={16}
-  //titleColor={'red'}
-  //dateColor={'#666'}
 />
 ```
 | Prop | Type | Description |
@@ -617,7 +608,6 @@ ___
 
 ```javascript
 <MessageList
-  //backgroundColor={'red'}
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
   items={[
     {id:0, active:false, user: 'Jon Snow', title: 'Winter is Coming', message: 'Hey Rob, have you seen the weather report on tv ?', timestamp: 1460223614421},
