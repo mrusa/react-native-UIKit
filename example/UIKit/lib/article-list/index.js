@@ -39,7 +39,7 @@ const ArticleList = ({
             <Text style={{color: categoryColor, fontWeight: categoryWeight, marginBottom: 3, fontSize: categorySize}}>{rowData.category}</Text>
             <Text style={[styles.text, {color: titleColor, fontSize:titleSize}]}>{_.truncate(rowData.title, {'length': 70, 'separator': /,? +/})}</Text>
           </View>
-          <DateItem color={dateColor} timestamp={1460227647478}/>
+          <DateItem color={dateColor} timestamp={rowData.timestamp}/>
         </View>
 
       </View>
