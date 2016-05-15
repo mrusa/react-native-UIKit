@@ -130,7 +130,6 @@ ___
 | items   | Array | data |
 | cellHeight   | Number | height of cell  |
 | categoryWeight  | String | font weight of category |
-| timestamp  | Number | article date - Unix Timestamp (milliseconds)  |
 | categorySize   | Number | font size of category |
 | titleSize   | Number | font size of title   |
 | titleColor   | String | color of title   |
