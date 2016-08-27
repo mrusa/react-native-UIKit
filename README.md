@@ -1,11 +1,8 @@
 # react-native-UIKit
 
 
-A collection of stateless (or minimally stateful) stylized and configurable UI components for rapid prototyping in react native.
+A collection of stateless (or minimally stateful) stylized and configurable UI presentation components for rapid prototyping in react native.
 
-### suggestions/pull requests welcome
-
-ongoing development..
 
 #### Getting Started
 `npm i react-native-uikit -S`
@@ -13,6 +10,8 @@ ongoing development..
 import what you need
 
 `import { Button, Card } from 'react-native-uikit';`
+
+any margin issues occur between components wraping the offender in a <View></View> should fix it.
 
 #### Components
 
@@ -40,7 +39,7 @@ ___
       gutter={10}
     />
   <ImageCustom
-      src={'http://i1.2photo.ru/u/w/539022.jpg'}
+      src={'https://upload.wikimedia.org/wikipedia/commons/0/05/20100726_Kalamitsi_Beach_Ionian_Sea_Lefkada_island_Greece.jpg'}
       height={300}
       onPress={() => console.log('pressed')}
     />
@@ -69,7 +68,12 @@ ___
 
 
 ### AlertMessage
+[source](https://github.com/andyfenelon/react-native-UIKit/tree/master/lib/alert-message)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/alertmessage.jpg)
+
+
+
 
 `import { AlertMessage } from 'react-native-uikit'`
 
@@ -87,6 +91,9 @@ ___
 | onPress   | Func | called on press of close button  |
 
 ### ArticleText
+
+[source](https://github.com/andyfenelon/react-native-UIKit/tree/master/lib/article-text)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/articletext.jpg)
 
 `import { ArticleText } from 'react-native-uikit'`
@@ -106,6 +113,9 @@ ___
 | onPress   | Func | called on press   |
 
 ### ArticleList
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/article-list/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/article-list.jpg)
 
 `import { ArticleList } from 'react-native-uikit'`
@@ -114,12 +124,12 @@ ___
 <ArticleList
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
   items={[
-    {id:0, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
-    {id:1, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
-    {id:2, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://i.imgur.com/YaQDc.jpg?1'},
-    {id:3, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
-    {id:4, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
-    {id:5, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
+    {id:0, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'https://placehold.it/200/798466'},
+    {id:1, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'https://placehold.it/200/311112'},
+    {id:2, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'https://placehold.it/200/D4BB69'},
+    {id:3, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'https://placehold.it/200/ABB2B8'},
+    {id:4, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'https://placehold.it/200/798466'},
+    {id:5, category:'Misc', timestamp: 1463338637801, title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', src:'https://placehold.it/200/919888'},
   ]}
   footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
   onPress={(id) => console.log(id)}
@@ -139,6 +149,9 @@ ___
 | onPress   | Func | called on press return cell id |
 
 ### Avatar
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/avatar/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/avatar.jpg)
 
 `import { Avatar} from 'react-native-uikit'`
@@ -159,6 +172,9 @@ ___
 | onPress   | Func | called on press   |
 
 ### AvatarHeader
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/avatar-header/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/avartar-header.jpg)
 
 `import { AvatarHeader } from 'react-native-uikit'`
@@ -182,6 +198,9 @@ ___
 | onPress   | Func | called on press   |
 
 ### Button
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/button/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/button.jpg)
 
 `import { Button } from 'react-native-uikit'`
@@ -203,6 +222,9 @@ ___
 | children   | String | button text |
 
 ### ButtonOutline
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/button-outline/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/button-outline.jpg)
 
 `import { ButtonOutline } from 'react-native-uikit'`
@@ -227,6 +249,9 @@ ___
 | children   | String | button text |
 
 ### Card
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/card/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/card.jpg)
 
 `import { Card } from 'react-native-uikit'`
@@ -253,6 +278,9 @@ ___
 
 
 ### Carousel
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/carousel/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/carousel.jpg)
 
 `import { Carousel } from 'react-native-uikit'`
@@ -260,12 +288,12 @@ ___
 ```javascript
 <Carousel
   images={[
-    {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
-    {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
-    {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
-    {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
-    {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
-    {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
+    {id:0, src:'https://placehold.it/600/311112'},
+    {id:1, src:'https://placehold.it/600/59C480'},
+    {id:2, src:'https://placehold.it/600/546C80'},
+    {id:3, src:'https://placehold.it/600/D58554'},
+    {id:4, src:'https://placehold.it/600/F0CD9B'},
+    {id:5, src:'https://placehold.it/600/311112'},
   ]}
   height={300}
 />
@@ -277,6 +305,9 @@ ___
 | gutter   | Number | padding to sides |
 
 ### Close
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/close/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/close.jpg)
 
 `import { Close } from 'react-native-uikit'`
@@ -295,6 +326,9 @@ ___
 | onPress   | Func | called on press  |
 
 ### DateItem
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/date-item/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/date-item.jpg)
 
 `import { DateItem } from 'react-native-uikit'`
@@ -313,6 +347,9 @@ ___
 | marginLeft  | Number | margin left |
 
 ### Divider
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/divider/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/divider.jpg)
 
 `import { Divider } from 'react-native-uikit'`
@@ -327,6 +364,8 @@ ___
 | color   | String | color of divider |
 
 ### FieldError
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/field-error/index.js)
 
 `import { FieldError } from 'react-native-uikit'`
 
@@ -346,6 +385,9 @@ ___
 | marginBottom   | Number | marginBottom |
 
 ### Grid
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/grid/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-tiles.jpg)
 
 `import { Grid } from 'react-native-uikit'`
@@ -354,16 +396,16 @@ ___
 <Grid
   headerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee', marginBottom: 3}}>HEADER CONTENT</Text>}
   images={[
-    {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
-    {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
-    {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
-    {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
-    {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
-    {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
-    {id:6, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
-    {id:7, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
-    {id:8, src:'http://i.imgur.com/YaQDc.jpg?1'},
-    {id:9, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
+    {id:0, src:'https://placehold.it/200/798466'},
+    {id:1, src:'https://placehold.it/200/311112'},
+    {id:2, src:'https://placehold.it/200/ABB2B8'},
+    {id:3, src:'https://placehold.it/200/D4BB69'},
+    {id:4, src:'https://placehold.it/200/798466'},
+    {id:5, src:'https://placehold.it/200/919888'},
+    {id:6, src:'https://placehold.it/200/ABB2B8'},
+    {id:7, src:'https://placehold.it/200/919888'},
+    {id:8, src:'https://placehold.it/200/A9C781'},
+    {id:9, src:'https://placehold.it/200/311112'},
   ]}
   footerContent={<Text style={{textAlign:'center', fontSize: 20, padding: 10, backgroundColor: '#eee'}}>FOOTER CONTENT</Text>}
   onPress={(id) => console.log(id)}
@@ -378,6 +420,9 @@ ___
 | spacing   | Number | spacing between cells |
 
 ### GalleryOffset
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/gallery-offset/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/gallery-offset-row.jpg)
 
 `import { GalleryOffset } from 'react-native-uikit'`
@@ -385,12 +430,12 @@ ___
 ```javascript
 <GalleryOffset
   imagesArray={[
-    'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg',
-    'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg',
-    'http://i.imgur.com/YaQDc.jpg?1',
-    'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg',
-    'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg',
-    'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg',
+    'https://placehold.it/600/311112',
+    'https://placehold.it/600/A9C781',
+    'https://placehold.it/600/919888',
+    'https://placehold.it/600/ABB2B8',
+    'https://placehold.it/600/ABB2B8',
+    'https://placehold.it/600/919888',
   ]}
   display={'column'}
 />
@@ -400,28 +445,15 @@ ___
 | images   | Array | images array |
 
 
-### Heading
-
-`import { Heading } from 'react-native-uikit'`
-
-```javascript
-<Heading
-  size={50}
-  weight={'bold'}
->HELLO THERE</Heading>
-```
-| Prop | Type | Description |
-| :------| :-----------| :-----------|
-| size  | Number | text size |
-| weight  | String | font Weight |
 
 ### ImageCustom
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/image-custom/index.js)
 
 `import { ImageCustom } from 'react-native-uikit'`
 
 ```javascript
 <ImageCustom
-  src={'https://s-media-cache-ak0.pinimg.com/736x/9c/11/d8/9c11d813826489f82b3f4c02a06ea815.jpg'}
+  src={'https://placehold.it/600/ABB2B8'}
   height={300}
   overlayColor={'#222'}
   overlayOpacity={0.8}
@@ -444,6 +476,7 @@ ___
 
 
 ### InputField
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/input-field/index.js)
 
 `import { InputField } from 'react-native-uikit'`
 
@@ -467,6 +500,7 @@ ___
 | autoCorrect | Bool | default false |
 
 ### LikeBtn
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/like-btn/index.js)
 
 `import { LikeBtn } from 'react-native-uikit'`
 
@@ -488,6 +522,9 @@ ___
 
 
 ### ListBasic
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/list-basic/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/list-basic.jpg)
 
 `import { ListBasic } from 'react-native-uikit'`
@@ -513,6 +550,8 @@ ___
 | footerContent   | Component | content for footer (optional)|
 
 ### LoginFb
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/login-fb/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/fb-login.jpg)
 
 `import { LoginFb } from 'react-native-uikit'`
@@ -527,6 +566,9 @@ ___
 | onPress | Func | called onPress |
 
 ### LoginForm
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/login-form/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/login-form.jpg)
 
 `import { LoginForm } from 'react-native-uikit'`
@@ -550,8 +592,8 @@ ___
 | inputRadius | String | radius of inputs |
 | btnRadius | String | radius of submit button |
 
-### MapSection
-
+### MapSection (Deprecated  )
+###### better alternative   https://github.com/lelandrichardson/react-native-maps
 `import { MapSection } from 'react-native-uikit'`
 
 ```javascript
@@ -582,6 +624,9 @@ ___
 
 ### Message
 
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/message/index.js)
+
+
 `import { Message } from 'react-native-uikit'`
 
 ```javascript
@@ -602,6 +647,9 @@ ___
 | timestamp  | Number | Unix Timestamp (milliseconds)  |
 
 ### MessageList
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/message-list/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/messages.jpg)
 
 `import { MessageList } from 'react-native-uikit'`
@@ -627,6 +675,9 @@ ___
 | onPress   | Func | called by press returns message id |
 
 ### ProfileHeader
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/profile-header/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/profile-header.jpg)
 
 `import { ProfileHeader } from 'react-native-uikit'`
@@ -634,7 +685,7 @@ ___
 ```javascript
 <ProfileHeader
   profileImg={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
-  backgroundImg={'http://petapixel.com/assets/uploads/2014/05/ae5a74db2757e40b78ad13eb119a9224.jpg'}
+  backgroundImg={'https://placehold.it/600/ABB2B8'}
 />
 ```
 | Prop | Type | Description |
@@ -645,14 +696,17 @@ ___
 | blurRadius | Number | background img blur radius (default 0)  |
 
 ### RatingBox
-
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/rating-box/index.js)
 `import { RatingBox } from 'react-native-uikit'`
 
 ```javascript
-<RatingBox />
+<RatingBox rating={4} outOf={5}/>
 ```
 
 ### ReviewCell
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/review-cell/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/review.jpg)
 
 `import { ReviewCell } from 'react-native-uikit'`
@@ -663,6 +717,8 @@ ___
   description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'}
   src={'https://lh5.googleusercontent.com/proxy/lvLgnhcoHke5BEhTG-bVydssje9jV_GytcBidVZh4ADXEuiybVwXN4mlIbgxxOKn2pF1uharMho8lAqGSXcMGKJMigr42UH_qZ1THp4bZplV7uyThhmwEtq38oAhKW7V5Y_6j46jAEkxkrewm9wrd_T4K2JBUw8=w271-h180'}
   onPress={() => console.log('pressed')}
+  rating={4}
+  outOf={5}
 />
 ```
 | Prop | Type | Description |
@@ -672,13 +728,15 @@ ___
 | src | String | item thumb src |
 | onPress | Func | called on press |
 
-### Search
+### Search (Deprecated  )
+###### better alternative   https://github.com/umhan35/react-native-search-bar
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/search.jpg)
 
 `import { Search } from 'react-native-uikit'`
 
 ```javascript
-<Search
+<Search (Depreciated suggested )
   placeHolder={'Search for cool stuff..'}
   //backgroundColor={'red'}
   //innerBackground={'#eee'}
@@ -701,6 +759,9 @@ ___
 | onChangeText | Func | called with search text on text change |
 
 ### ThumbSwiper
+
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/thumb-swiper/index.js)
+
 ![](https://raw.githubusercontent.com/andyfenelon/react-native-UIKit/master/docs/img/thumb-swiper.jpg)
 
 `import { ThumbSwiper } from 'react-native-uikit'`
@@ -708,12 +769,16 @@ ___
 ```javascript
 <ThumbSwiper
   images={[
-    {id:0, src:'http://2.bp.blogspot.com/-QnUrv6hrusQ/UTuCbLI45xI/AAAAAAAAvEo/REbD2Sp3r84/s1600/benoit-paille1.jpg'},
-    {id:1, src:'http://justsomething.co/wp-content/uploads/2013/09/black-and-white-photography-benoit-courti-1.jpg'},
-    {id:2, src:'http://i.imgur.com/YaQDc.jpg?1'},
-    {id:3, src:'http://farm4.staticflickr.com/3284/3032859171_9a71ea30c1_z.jpg'},
-    {id:4, src:'http://livefastmag.com/wp-content/uploads/2011/10/1499c4834a64469dd570a47a08d503d2.jpg'},
-    {id:5, src:'http://41.media.tumblr.com/7fcdee1b773bda7859eee69d2eb1e0f8/tumblr_nfvzenuIqW1tof0p4o1_1280.jpg'},
+    {id:0, src:'https://placehold.it/200/798466'},
+    {id:1, src:'https://placehold.it/200/311112'},
+    {id:2, src:'https://placehold.it/200/ABB2B8'},
+    {id:3, src:'https://placehold.it/200/D4BB69'},
+    {id:4, src:'https://placehold.it/200/798466'},
+    {id:5, src:'https://placehold.it/200/919888'},
+    {id:6, src:'https://placehold.it/200/ABB2B8'},
+    {id:7, src:'https://placehold.it/200/919888'},
+    {id:8, src:'https://placehold.it/200/A9C781'},
+    {id:9, src:'https://placehold.it/200/311112'},
   ]}
   onPress={(id) => console.log(id)}
 />
@@ -724,6 +789,9 @@ ___
 | images | Array| images |
 
 ### Time
+[source](https://github.com/andyfenelon/react-native-UIKit/blob/master/lib/time/index.js)
+
+11.47 AM
 
 `import { Time } from 'react-native-uikit'`
 
