@@ -1,29 +1,17 @@
-'use strict';
-import React, { Component } from 'react';
-import  {
+import React from 'react';
+import {
   StyleSheet,
   Text,
   View,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 
-import _ from 'lodash'
+import { truncate } from 'lodash';
 
-import {gutter, grey, lightGrey} from '../variables'
+import { gutter, grey, lightGrey } from '../variables';
 
-import {RatingBox} from '../'
-
-const ReviewCell = ({title, description, src, onPress, gutter, outOf, rating }) => (
-  <TouchableOpacity style={[styles.row, {borderColor: lightGrey, marginLeft: gutter}]} onPress={onPress}>
-    <View style={[styles.content, {paddingBottom: gutter}]}>
-      <Text style={[styles.title, {marginTop: gutter}]}>{title}</Text>
-      <Text style={styles.description}>{_.truncate(description, {'length': 44, 'separator': /,? +/})}</Text>
-      <RatingBox rating={rating} outOf={outOf}/>
-    </View>
-    <Image source={{uri: src}} style={[styles.thumb,{height: 75, width: 70}]}/>
-  </TouchableOpacity>
-);
+import { RatingBox } from '../';
 
 const styles = StyleSheet.create({
   row: {
@@ -32,13 +20,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   title: {
-    flex:1,
+    flex: 1,
     fontSize: 17,
   },
   description: {
-    flex:1,
+    flex: 1,
     fontSize: 13,
-    color: grey
+    color: grey,
   },
   content: {
     height: 75,
@@ -46,14 +34,40 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
 });
+
+const ReviewCell = ({ title, description, src, onPress, gutter, outOf, rating }) => (
+  <TouchableOpacity
+    style={[styles.row, { borderColor: lightGrey, marginLeft: gutter }]}
+    onPress={onPress}
+  >
+    <View style={[styles.content, { paddingBottom: gutter }]}>
+      <Text style={[styles.title, { marginTop: gutter }]}>
+        {title}
+      </Text>
+      <Text style={styles.description}>
+        {truncate(description, { 'length': 44, 'separator': /,? +/ })}
+      </Text>
+      <RatingBox rating={rating} outOf={outOf} />
+    </View>
+    <Image
+      source={{ uri: src }}
+      style={[styles.thumb, { height: 75, width: 70 }]}
+    />
+  </TouchableOpacity>
+);
+
 ReviewCell.defaultProps = {
-  gutter: gutter,
-}
+  gutter,
+};
+
 ReviewCell.propTypes = {
   title: React.PropTypes.string,
   description: React.PropTypes.string,
   src: React.PropTypes.string,
   onPress: React.PropTypes.func,
   gutter: React.PropTypes.number,
-}
+  outOf: React.PropTypes.number.isRequired,
+  rating: React.PropTypes.number.isRequired,
+};
+
 export default ReviewCell;
