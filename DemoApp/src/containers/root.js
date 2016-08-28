@@ -1,8 +1,6 @@
-
 import React, { Component } from 'react';
-import  {
+import {
   StyleSheet,
-  Text,
   View,
   TabBarIOS,
   StatusBar
@@ -23,27 +21,27 @@ const news = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2zt
 const profile = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAH6AAAB+gEXikRvAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAQtQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA17MN4QAAAFh0Uk5TAAECBQkLDA0OEBUYGiAjJSYoKi0vMjg6PkFLTlVWWl9iaGxveXyEhpWWnqKlpqeora6vsLG1usLDxsfJzM3O1NXY2tzd3uLj5ujq7e/w8fLz9fb4+fz9/m7JgK8AAAGgSURBVBgZtcEJNwJhFAbglyikkm1QIUuW7EtokTUkWeP9/7+E4zjOjJk7c7/meB7g/8Sn5wsb5fJGYX46DnMjxQ5/dYojMJPcfKfD+2YSBhK3dLlNQG3ogh4uhqDUU6GnSg90ZiiYgU6JghJU0hSloZGnKA+NNYrWoHFM0TE0GhQ1oNGkqAmNR4oeodGmqA2NS4ouoXFC0Qk09inah0aZojIUMvSRQbBT+jhFsBv6uEGwK/q4QrAqfVQRbIE+FhAs2qaoHYVC5oGChwxUInV6qkegtEJPK9Cy6MmCVm+THpq9UFulh1XoxZ/o8hSHgWW6LMNEX4N/NPpgxHqjw5sFQ3k65GFsnTbrMDdHmzmYW6LNEsxt0WYLxgZbtGkNwkx/7owOZ7l+qMVmd1/o8rI7G4PG1MErBa8HUwgyWaKv0iT8TBwy0OEEJGN7VNkbg5fh7Q8qfWwPwyV7TwP3WTgNFGmoOACb1DWNXafwa/yOXbgbxw+rxa60LHwbfWaXnkfxJVJj12oRAAWGUADSHYbQSWORoSxih6Hs4Og8lCOE9QnnxX9VGgkyFQAAAABJRU5ErkJggg==';
 const bars = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAAbeAAAG3gG6t8riAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAIRQTFRF////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvSgy4QAAACt0Uk5TAAMFBggLDhAVGystMzg6O0JESVFUWV1gcIGHio6ZnZ+w1tvg6u7x9PX4+wIY4ZgAAAB/SURBVBgZ7cEHAoJADATAjYIFO1ZExXa2/P9/viDJPWBnQERkknpvqgUhuanj3kdkqa41IsOPOn5jhKbnq+kyB1EmKUyCDE1SUzoiVKlrhkilrgVCTVLT64QMUpgERJmqtjO1E4QGb3V8R4is1LVBpPdQx7NEqNgeTLsSRESWP5FzP3mQfaekAAAAAElFTkSuQmCC';
 
-const primary = '#3E364D'
+const primary = '#3E364D';
 
 export default class Root extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      // selectedTab: 'newsFeed',
-      selectedTab: 'allTab',
-    }
+      selectedTab: 'newsFeed',
+    //  selectedTab: 'allTab',
+    };
     StatusBar.setBarStyle('light-content');
   }
   render() {
     const rightButtonConfig = {
       title: 'Next',
       handler: () => console.log('hello!'),
-      tintColor: '#fff'
+      tintColor: '#fff',
     };
 
     const titleConfig = {
       title: 'UIKit',
-      tintColor: '#fff'
+      tintColor: '#fff',
     };
 
     return (
@@ -56,22 +54,24 @@ export default class Root extends Component {
 
         <TabBarIOS
           translucent={false}
-           tintColor={primary}
-           barTintColor="#fff">
-           <TabBarIOS.Item
-             title="News Feed"
-             icon={{uri: news, scale: 3}}
-             selected={this.state.selectedTab === 'newsFeed'}
-             onPress={() => {
-               this.setState({
-                 selectedTab: 'newsFeed',
-               });
-             }}>
+          tintColor={primary}
+          barTintColor="#fff"
+        >
+          <TabBarIOS.Item
+            title="News Feed"
+            icon={{uri: news, scale: 3}}
+            selected={this.state.selectedTab === 'newsFeed'}
+            onPress={() => {
+              this.setState({
+                selectedTab: 'newsFeed',
+              });
+            }}
+          >
             <NewsFeed/>
           </TabBarIOS.Item>
 
           <TabBarIOS.Item
-            icon={{uri: messages, scale: 3}}
+            icon={{ uri: messages, scale: 3 }}
             badge={this.state.notifCount > 0 ? this.state.notifCount : undefined}
             selected={this.state.selectedTab === 'redTab'}
             title="Messages"
@@ -79,44 +79,47 @@ export default class Root extends Component {
               this.setState({
                 selectedTab: 'redTab'
               });
-            }}>
-            <MessagesTab/>
+            }}
+          >
+            <MessagesTab />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            icon={{uri: profile, scale: 3}}
+            icon={{ uri: profile, scale: 3 }}
             title="Profile"
             selected={this.state.selectedTab === 'greenTab'}
             onPress={() => {
               this.setState({
                 selectedTab: 'greenTab',
               });
-            }}>
-            <Profile/>
+            }}
+          >
+            <Profile />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            icon={{uri: bars, scale: 3}}
+            icon={{ uri: bars, scale: 3 }}
             title="Articles"
             selected={this.state.selectedTab === 'articlesTab'}
             onPress={() => {
               this.setState({
                 selectedTab: 'articlesTab',
               });
-            }}>
-            <ArticlesTab/>
+            }}
+          >
+            <ArticlesTab />
           </TabBarIOS.Item>
           <TabBarIOS.Item
-            icon={{uri: bars, scale: 3}}
+            icon={{ uri: bars, scale: 3 }}
             title="All Components"
             selected={this.state.selectedTab === 'allTab'}
             onPress={() => {
               this.setState({
                 selectedTab: 'allTab',
               });
-            }}>
-            <AllComponents/>
+            }}
+          >
+            <AllComponents />
           </TabBarIOS.Item>
         </TabBarIOS>
-
 
       </View>
     );

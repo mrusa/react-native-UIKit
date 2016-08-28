@@ -1,15 +1,11 @@
-
-import React, { Component } from 'react';
-import  {
-  StyleSheet,
-  Text,
-  View
+import React from 'react';
+import {
+  View,
 } from 'react-native';
 
-/// import { AvatarHeader, Card } from 'react-native-uikit';
 import { AvatarHeader, Card } from '../../lib';
 
-const PostCard = ({avatar, content}) => (
+const PostCard = ({ avatar, content }) => (
   <View>
     <AvatarHeader src={'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'}
       heading={avatar.username}
@@ -29,4 +25,5 @@ const PostCard = ({avatar, content}) => (
     />
   </View>
 );
+
 export default PostCard;

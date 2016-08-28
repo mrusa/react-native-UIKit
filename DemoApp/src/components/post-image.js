@@ -1,14 +1,9 @@
-
 import React, { Component } from 'react';
-import  {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { View } from 'react-native';
 
-import {AvatarHeader, ImageCustom, LikeBtn, ArticleText, Divider } from '../../lib';
+import { AvatarHeader, ImageCustom, LikeBtn, ArticleText, Divider } from '../../lib';
 
-const PostImage = ({avatar, content}) => (
+const PostImage = ({ avatar, content }) => (
   <View>
     <AvatarHeader
       src={avatar.src}
@@ -19,7 +14,7 @@ const PostImage = ({avatar, content}) => (
       height={40}
       gutter={10}
     />
-  <ImageCustom
+    <ImageCustom
       src={content.src}
       height={300}
       onPress={() => console.log('pressed')}
@@ -27,18 +22,17 @@ const PostImage = ({avatar, content}) => (
     <View style={{paddingTop: 10, paddingHorizontal: 10, backgroundColor: '#fff'}}>
       <LikeBtn
         active={true}
-        //color={primary}
         likes={content.likes}
         onPress={() => console.log('liked')}
       />
       <ArticleText
         username={avatar.username}
         text={content.text}
-        //highLightColor={primary}
         onPress={() => console.log('link to profile')}
       />
-      <Divider color={'#eee'}/>
+      <Divider color={'#eee'} />
     </View>
   </View>
 );
+
 export default PostImage;

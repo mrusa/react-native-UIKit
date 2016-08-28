@@ -9,8 +9,8 @@ import {
   View,
 } from 'react-native';
 
-import Login from './src/containers/login'
-import Root from './src/containers/root'
+import Login from './src/containers/login';
+import Root from './src/containers/root';
 
 class DemoApp extends Component {
   constructor(props) {
@@ -22,12 +22,19 @@ class DemoApp extends Component {
   }
   login() {
     this.setState({
-      loggedin: true
-    })
+      loggedin: true,
+    });
   }
   render() {
     return (
-      <View style={{ flex:1 }}>{this.state.loggedin ? <Root/> : <Login skip={this.login}/>}</View>
+      <View style={{ flex:1 }}>
+        {this.state.loggedin
+          ?
+          <Root />
+          :
+          <Login skip={this.login} />
+        }
+      </View>
     );
   }
 
