@@ -29,14 +29,9 @@ export default class Root extends Component {
   constructor(props){
     super(props);
     this.state = {
-      // TODO change back
-      // selectedTab: 'newsFeed',
-      selectedTab: 'allTab'
+      selectedTab: 'newsFeed',
     }
     StatusBar.setBarStyle('light-content');
-  }
-  componentDidMount() {
-
   }
   render() {
     const rightButtonConfig = {
