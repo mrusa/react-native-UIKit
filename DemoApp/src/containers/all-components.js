@@ -5,19 +5,20 @@ import {
   View,
   ScrollView
 } from 'react-native';
-/*
+
 import { AlertMessage, ArticleText, ArticleList, Avatar, AvatarHeader, Button,
   ButtonOutline, Card, Carousel, Close, DateItem, Divider, FieldError, Grid, GalleryOffset,
   Heading, ImageCustom, InputField, LikeBtn, ListBasic, LoginForm, Message, ProfileHeader,
   MessageList, RatingBox, ReviewCell, ThumbSwiper, Time
 } from '../../lib'
-*/
+
+/*
 import { AlertMessage, ArticleText, ArticleList, Avatar, AvatarHeader, Button,
   ButtonOutline, Card, Carousel, Close, DateItem, Divider, FieldError, Grid, GalleryOffset,
   Heading, ImageCustom, InputField, LikeBtn, ListBasic, LoginForm, Message, ProfileHeader,
   MessageList, RatingBox, ReviewCell, ThumbSwiper, Time
 } from 'react-native-uikit';
-
+*/
 const AllComponents = () => (
   <ScrollView style={{flex:1}}>
     <AlertMessage

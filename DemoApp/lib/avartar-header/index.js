@@ -1,43 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   View,
 } from 'react-native';
 
-import {gutter} from '../variables'
-
-import {Heading, Avatar, DateItem } from '../'
-
-const AvartarHeader = ({src, timestamp, heading, circle, backgroundColor, height, gutter}) => (
-    <View style={[styles.header, {backgroundColor: backgroundColor, padding: gutter}]}>
-      <Avatar
-        circle={circle}
-        size={height}
-        src={src}
-      />
-      <View style={[styles.titleContainer, {height: height}]}>
-        <Heading size={15} weight={'600'}>{heading}</Heading>
-        <DateItem timestamp={timestamp}/>
-      </View>
-    </View>
-);
+import { gutter } from '../variables';
+import { Heading, Avatar, DateItem } from '../';
 
 const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    //flex:1,
   },
   titleContainer: {
     flexDirection: 'column',
     justifyContent: 'space-between',
-  }
+  },
 });
+
+const AvartarHeader = ({ src, timestamp, heading, circle, backgroundColor, height, gutter }) => (
+  <View style={[styles.header, { backgroundColor, padding: gutter}]}>
+    <Avatar
+      circle={circle}
+      size={height}
+      src={src}
+    />
+    <View style={[styles.titleContainer, { height }]}>
+      <Heading size={15} weight={'600'}>{heading}</Heading>
+      <DateItem timestamp={timestamp} />
+    </View>
+  </View>
+);
 
 AvartarHeader.defaultProps = {
   height: 40,
-  gutter: gutter,
-}
+  gutter,
+};
 
 AvartarHeader.propTypes = {
   src: React.PropTypes.string.isRequired,
@@ -47,6 +45,6 @@ AvartarHeader.propTypes = {
   backgroundColor: React.PropTypes.string,
   height: React.PropTypes.number,
   gutter: React.PropTypes.number,
-}
+};
 
 export default AvartarHeader;

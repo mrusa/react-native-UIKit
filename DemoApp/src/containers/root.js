@@ -29,7 +29,8 @@ export default class Root extends Component {
   constructor(props){
     super(props);
     this.state = {
-      selectedTab: 'newsFeed',
+      // selectedTab: 'newsFeed',
+      selectedTab: 'allTab',
     }
     StatusBar.setBarStyle('light-content');
   }

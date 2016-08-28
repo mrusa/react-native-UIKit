@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import  {
+import React from 'react';
+import {
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 
-import {gutter, error} from '../variables'
+import { gutter, error } from '../variables';
 
-const FieldError = ({errorMsg, error, color, marginBottom}) => (
-  <View style={[styles.container, {marginBottom: marginBottom}]}>
-    {error ? <Text style={{color: color}}>{errorMsg}</Text> : null}
+const FieldError = ({ errorMsg, error, color, marginBottom }) => (
+  <View style={[styles.container, { marginBottom }]}>
+    {error ? <Text style={{ color }}>
+      {errorMsg}
+    </Text> : null}
   </View>
 );
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
-    justifyContent:'center',
+    justifyContent: 'center',
     paddingLeft: 10,
   },
 });
@@ -23,12 +25,14 @@ var styles = StyleSheet.create({
 FieldError.defaultProps = {
   error: false,
   color: error,
-  marginBottom: gutter
-}
+  marginBottom: gutter,
+};
+
 FieldError.propTypes = {
   errorMsg: React.PropTypes.string,
   error: React.PropTypes.bool,
   color: React.PropTypes.string,
   marginBottom: React.PropTypes.number,
-}
+};
+
 export default FieldError;
