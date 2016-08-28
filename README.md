@@ -11,7 +11,11 @@ import what you need
 
 `import { Button, Card } from 'react-native-uikit';`
 
-any margin issues occur between components wraping the offender in a <View></View> should fix it.
+any margin issues occur between components wraping the offender in a
+```javascript
+<View></View>
+```
+should fix it.
 
 #### Components
 
