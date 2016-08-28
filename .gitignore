@@ -34,3 +34,5 @@ example/old/node_modules/
 example/UIKit/node_modules/
 example/Demo/node_modules/
 example/npm-debug.log
+
+DemoApp/node_modules/
